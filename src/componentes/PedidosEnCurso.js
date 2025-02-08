@@ -29,7 +29,7 @@ const PedidosEnCurso = ({
                     //console.log(responseBuscarEstado.data);
                     
                 }).catch(error => {
-                    console.log(error);
+                    console.log(error, usuario.id);
                 })
             }
         }, []); 
