@@ -27,6 +27,7 @@ const PedidosEnCurso = ({
                 ClienteService.getBuscarPorDosEstadosIdcliente(usuario.id).then(responseBuscarEstado => {
                    return setDetalle(responseBuscarEstado.data);
                     //console.log(responseBuscarEstado.data);
+                    console.log( usuario.id);
                     
                 }).catch(error => {
                     console.log(error, usuario.id);
