@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import ScrollTop from './ScrollTop'
 import ClienteService from '../servicios/ClienteService';
 import '../estilos/DetallePedidoFin.css';
