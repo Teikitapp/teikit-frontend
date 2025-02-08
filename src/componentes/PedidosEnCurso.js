@@ -22,18 +22,19 @@ const PedidosEnCurso = ({
     const [newNcasillero, setnewNcasillero] = useState(0);
     //const reload = document.getElementById("reload");
 
-        useEffect(() => {
+       // useEffect(() => {
             if (usuario.id !== null && usuario.id !== undefined) {
                 ClienteService.getBuscarPorDosEstadosIdcliente(usuario.id).then(responseBuscarEstado => {
+                 console.log( usuario.id);
                    return setDetalle(responseBuscarEstado.data);
                     //console.log(responseBuscarEstado.data);
-                    console.log( usuario.id);
+                   
                     
                 }).catch(error => {
                     console.log(error, usuario.id);
                 })
             }
-        }, []); 
+       // }, []); 
 
       // 1: EN_PROCESO, 2: PAGADO(pagado), 3: EN_CASILLERO(listo para retiro), 4:ENTREGADO
   // CASILLERO 1: DISPONIBLE, 2:OCUPADO 
