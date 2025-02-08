@@ -20,7 +20,7 @@ const PedidosEnCurso = ({
     const [modalEnPreparacion, setModalEnPreparacion] = useState(false);  
     const [newNpedido, setnewNpedido] = useState(0);
     const [newNcasillero, setnewNcasillero] = useState(0);
-    const reload = document.getElementById("reload");
+    //const reload = document.getElementById("reload");
 
         useEffect(() => {
             if (usuario.id !== null && usuario.id !== undefined) {
@@ -61,7 +61,7 @@ const PedidosEnCurso = ({
         console.log("actualizarEstadoPedido: ",responseActualizar.data);
     }) 
 
-    window.location.reload(false);
+    //window.location.reload(false);
     setAbierto(false);
  }
  const cerrarConfirmar = () =>{

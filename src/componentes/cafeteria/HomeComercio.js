@@ -47,8 +47,7 @@ const HomeComercio = () => {
           </div>
         ))}
       </div>
-      {/* {listaPedidos.length === 0 || listaPedidos.status !== 200? <h1>SIN PEDIDOS PARA REALIZAR</h1> : listaPedidos} */}
-      /*probando*/
+      
     </div>
 
   )
