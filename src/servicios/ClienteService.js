@@ -1,16 +1,16 @@
 import axios from "axios";
 
-const BD_BASE_URL = process.env.REACT_APP_RAILWAY_PRIVATE_BACKEND_DOMAIN;
+const BACKEND_BASE_URL = process.env.REACT_APP_RAILWAY_PRIVATE_BACKEND_DOMAIN;
 const MERCADOPAGO_BASE_URL = process.env.REACT_APP_RAILWAY_PRIVATE_MERCADOPAGO_DOMAIN;
 
-const CLIENTE_BASE_REST_API_URL = `${BD_BASE_URL}/api/data/clientes`;
-const USUARIO_BASE_REST_API_URL = `${BD_BASE_URL}/api/usuario/listarUsuarios`;
+const CLIENTE_BASE_REST_API_URL = `${BACKEND_BASE_URL}/api/data/clientes`;
+const USUARIO_BASE_REST_API_URL = `${BACKEND_BASE_URL}/api/usuario/listarUsuarios`;
 const PAGO_BASE_REST_API_URL = `${MERCADOPAGO_BASE_URL}/create_preference`;
-const PRODUCTOS_BASE_REST_API_URL = `${BD_BASE_URL}/api/producto/listarProductos`;
-const DETALLE_PEDIDO_BASE_REST_API_URL = `${BD_BASE_URL}/api/detallePedido/ingresarDetallePedido`;
-const PEDIDO_BASE_REST_API_URL = `${BD_BASE_URL}/api/pedido/ingresarPedido`;
-const CASILLERO_BASE_REST_API_URL = `${BD_BASE_URL}/api/casillero/buscarCasilleroDisponible`;
-//const FIN_PEDIDO_BASE_REST_API_URL= "`${BD_BASE_URL}/api/pedido/buscarPedidoPorId/"
+const PRODUCTOS_BASE_REST_API_URL = `${BACKEND_BASE_URL}/api/producto/listarProductos`;
+const DETALLE_PEDIDO_BASE_REST_API_URL = `${BACKEND_BASE_URL}/api/detallePedido/ingresarDetallePedido`;
+const PEDIDO_BASE_REST_API_URL = `${BACKEND_BASE_URL}/api/pedido/ingresarPedido`;
+const CASILLERO_BASE_REST_API_URL = `${BACKEND_BASE_URL}/api/casillero/buscarCasilleroDisponible`;
+//const FIN_PEDIDO_BASE_REST_API_URL= "`${BACKEND_BASE_URL}/api/pedido/buscarPedidoPorId/"
 
 
 class ClienteService {
@@ -51,40 +51,40 @@ class ClienteService {
         
     } 
     getBuscarPorEstadoIdcliente(status, idUsuario){
-        return axios.get(`${BD_BASE_URL}/api/pedido/buscarPedidoPorId/${status}-${idUsuario}`);
+        return axios.get(`${BACKEND_BASE_URL}/api/pedido/buscarPedidoPorId/${status}-${idUsuario}`);
     }
 
     getBuscarPorDosEstadosIdcliente(idUsuario){
-        return axios.get(`${BD_BASE_URL}/api/pedido/buscarPedidoEnProcesoYlistoRetiro/${idUsuario}`);
+        return axios.get(`${BACKEND_BASE_URL}/api/pedido/buscarPedidoEnProcesoYlistoRetiro/${idUsuario}`);
     }
 
     actualizarEstadoPedido(idPedido, nuevoEstado){
-        return axios.put(`${BD_BASE_URL}/api/pedido/actualizarPedido/${idPedido}-${nuevoEstado}`);
+        return axios.put(`${BACKEND_BASE_URL}/api/pedido/actualizarPedido/${idPedido}-${nuevoEstado}`);
     }
 
     actualizarEstadoCasillero(idCasillero, nuevoEstado){
-        return axios.put(`${BD_BASE_URL}/api/casillero/actualizarEstadoCasillero/${idCasillero}-${nuevoEstado}`);
+        return axios.put(`${BACKEND_BASE_URL}/api/casillero/actualizarEstadoCasillero/${idCasillero}-${nuevoEstado}`);
     }
 
     obtenerCliente(request){              
-        return axios.post(`${BD_BASE_URL}/api/data/buscarClienteUserPass`, request);
+        return axios.post(`${BACKEND_BASE_URL}/api/data/buscarClienteUserPass`, request);
     } 
 
     obtenerUsuario(request){              
-        return axios.post(`${BD_BASE_URL}/api/usuario/buscarUsuarioUserPass`, request);      
+        return axios.post(`${BACKEND_BASE_URL}/api/usuario/buscarUsuarioUserPass`, request);      
     } 
 
     obtenerComercio(request){              
-        return axios.post(`${BD_BASE_URL}/api/data/buscarClienteUserPass`, request);       
+        return axios.post(`${BACKEND_BASE_URL}/api/data/buscarClienteUserPass`, request);       
     } 
 
     registrarUsuario(request){              
-        return axios.post(`${BD_BASE_URL}/api/usuario/guardarUsuarios`, request);       
+        return axios.post(`${BACKEND_BASE_URL}/api/usuario/guardarUsuarios`, request);       
     } 
 
     // Servicios Comercios
     obtenerPedidos(idComercio){              
-        return axios.get(`${BD_BASE_URL}/api/pedido/listarPedidosYdetalle/${idComercio}`);       
+        return axios.get(`${BACKEND_BASE_URL}/api/pedido/listarPedidosYdetalle/${idComercio}`);       
     } 
 }
 // eslint-disable-next-line
