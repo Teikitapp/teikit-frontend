@@ -5,7 +5,7 @@ const BACKEND_BASE_URL = process.env.REACT_APP_RAILWAY_PRIVATE_BACKEND_DOMAIN;
 
 const CLIENTE_BASE_REST_API_URL = `${BACKEND_BASE_URL}/api/data/clientes`;
 const USUARIO_BASE_REST_API_URL = `${BACKEND_BASE_URL}/api/usuario/listarUsuarios`;
-const PAGO_BASE_REST_API_URL = `https://www.teikit.cl/teikit-mercado-pago.railway.internal/create_preference`;
+const PAGO_BASE_REST_API_URL = `https://teikit-mercado-pago.railway.internal/create_preference`;
 const PRODUCTOS_BASE_REST_API_URL = `${BACKEND_BASE_URL}/api/producto/listarProductos`;
 const DETALLE_PEDIDO_BASE_REST_API_URL = `${BACKEND_BASE_URL}/api/detallePedido/ingresarDetallePedido`;
 const PEDIDO_BASE_REST_API_URL = `${BACKEND_BASE_URL}/api/pedido/ingresarPedido`;
