@@ -72,11 +72,10 @@ const RegistrarUsuarios = () => {
                 <ModalBody>
                     <FormGroup>
                         <Label for='name'>Nombre y Apellido</Label>
-                        <small>Ejemplo: Alexis Sánchez</small>
                         <Input 
                             onChange={(name) => { funNombre(name) }} 
                             type="text" 
-                            placeholder="Ejemplo: Alexis Sánchez" 
+                            placeholder="Alexis Sánchez" 
                         />
 
                         <Label for='email'>Correo</Label>

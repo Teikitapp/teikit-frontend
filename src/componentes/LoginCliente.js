@@ -58,7 +58,7 @@ const LoginCliente = ({ setRespLoginComercio }) => {
                 <ModalBody>
                     <FormGroup>
                         <Label for='usuario'>Usuario</Label>
-                        <Input onChange={(user) => { funUsuario(user) }} placeholder='example@gmail.com' type="email" id="usuario" />
+                        <Input onChange={(user) => { funUsuario(user) }} placeholder='ejemplo@correo.com' type="email" id="usuario" />
 
                         <Label for='password'>Contraseña</Label>
                         <Input onChange={(pass) => { funPass(pass) }} type="password" id="password" />
