@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const BACKEND_API_URL = process.env.BACKEND_API_URL;
-const MP_API_URL = process.env.MP_API_URL;
+const BACKEND_API_URL = process.env.REACT_APP_BACKEND_API_URL;
+const MP_API_URL = process.env.REACT_APP_MP_API_URL;
 
 const CLIENTE_BASE_REST_API_URL = `${BACKEND_API_URL}/api/data/clientes`;
 const USUARIO_BASE_REST_API_URL = `${BACKEND_API_URL}/api/usuario/listarUsuarios`;
