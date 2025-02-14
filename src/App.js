@@ -59,15 +59,16 @@ function App() {
 
           <Routes>
             <Route path="/" element={<Navigate to="/login" />} />
-            <Route path="/login" element={<Login setRespLogin={setRespLogin} />} />
-            <Route path="/loginComercio" element={<LoginCliente setRespLoginComercio={setRespLoginComercio} />} />
+            <Route path="/login" element={<Login setRespLogin={setRespLogin} setUsuarios={setUsuario} />} />
             <Route path="/registrarUsuario" element={<RegistrarUsuarios />} />
-            <Route element={<ProtegerRutas respLogin={respLogin} />}>
-              <Route path="/home" element={<Home />} />
-              <Route path="/pedidos" element={<Pedidos />} />
-            </Route>
+
+            <Route path="/loginComercio" element={<LoginCliente setRespLoginComercio={setRespLoginComercio} />} />
             <Route element={<ProtegerRutasComercio respLoginComercio={respLoginComercio} />}>
               <Route path="/homeComercio" element={<HomeComercio />} />
+            </Route>
+
+            <Route element={<ProtegerRutas respLogin={respLogin} />}>
+              <Route path="/home" element={<Home email={usuario.email} nombre={usuario.nombreApellido} />} />
 
               <Route path='/home' element={<Home
                 allProducts={allProducts}
