@@ -58,16 +58,16 @@ function App() {
           </Routes> */}
 
           <Routes>
-            <Route path='/registrarUsuario' element={<RegistrarUsuarios />}></Route>
-
-            <Route path='/loginComercio' element={<LoginCliente setRespLoginComercio={setRespLoginComercio} />}></Route>
-            <Route element={<ProtegerRutasComercio respLoginComercio={respLoginComercio} />}>
-              <Route path='/homeComercio' element={<HomeComercio />}></Route>
-            </Route>
-
-            <Route path='/' element={<Login />}></Route>
-            <Route path='/login' element={<Login setRespLogin={setRespLogin} setUsuarios={setUsuario} />}></Route>
+            <Route path="/" element={<Navigate to="/login" />} />
+            <Route path="/login" element={<Login setRespLogin={setRespLogin} />} />
+            <Route path="/loginComercio" element={<LoginCliente setRespLoginComercio={setRespLoginComercio} />} />
+            <Route path="/registrarUsuario" element={<RegistrarUsuarios />} />
             <Route element={<ProtegerRutas respLogin={respLogin} />}>
+              <Route path="/home" element={<Home />} />
+              <Route path="/pedidos" element={<Pedidos />} />
+            </Route>
+            <Route element={<ProtegerRutasComercio respLoginComercio={respLoginComercio} />}>
+              <Route path="/homeComercio" element={<HomeComercio />} />
 
               <Route path='/home' element={<Home
                 allProducts={allProducts}
