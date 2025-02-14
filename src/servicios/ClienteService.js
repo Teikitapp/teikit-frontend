@@ -12,6 +12,7 @@ const PEDIDO_BASE_REST_API_URL = `${BACKEND_BASE_URL}/api/pedido/ingresarPedido`
 const CASILLERO_BASE_REST_API_URL = `${BACKEND_BASE_URL}/api/casillero/buscarCasilleroDisponible`;
 //const FIN_PEDIDO_BASE_REST_API_URL= "`${BACKEND_BASE_URL}/api/pedido/buscarPedidoPorId/"
 
+console.log("Mercado Pago URL:", PAGO_BASE_REST_API_URL);
 
 class ClienteService {
     getAllClientes(){
