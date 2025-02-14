@@ -12,8 +12,6 @@ const PEDIDO_BASE_REST_API_URL = `${BACKEND_BASE_URL}/api/pedido/ingresarPedido`
 const CASILLERO_BASE_REST_API_URL = `${BACKEND_BASE_URL}/api/casillero/buscarCasilleroDisponible`;
 //const FIN_PEDIDO_BASE_REST_API_URL= "`${BACKEND_BASE_URL}/api/pedido/buscarPedidoPorId/"
 
-console.log("Mercado Pago URL:", PAGO_BASE_REST_API_URL);
-
 class ClienteService {
     getAllClientes(){
         return axios.get(CLIENTE_BASE_REST_API_URL);
@@ -27,8 +25,10 @@ class ClienteService {
     }
 
     createPreference(cantidad, total, idDelPedido, casillero){
-        console.log("desde el servicio");
         
+        console.log("desde el servicio");
+        console.log("Mercado Pago URL:", PAGO_BASE_REST_API_URL);
+
         return axios.post((PAGO_BASE_REST_API_URL),{
             title:"PRUEBA TEIKIT",
             quantity:cantidad,
