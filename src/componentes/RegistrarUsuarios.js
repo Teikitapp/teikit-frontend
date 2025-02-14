@@ -5,19 +5,32 @@ import ClienteService from '../servicios/ClienteService';
 import { Link } from "react-router-dom";
 import validator from "validator";
 
-
 const RegistrarUsuarios = () => {
 
     const verLogin = true;
     const [usuario, setUsuario] = useState("");
     const [pass, setPass] = useState("");
+    const [passRepetida, setPassRepetida] = useState("");  // Nuevo estado para la contraseña repetida
     const [nombre, setNombre] = useState("");
     const [ingresa, setIngresa] = useState(null);
+    const [error, setError] = useState("");  // Estado para almacenar el error si las contraseñas no coinciden
+    const [campoVacio, setCampoVacio] = useState("");  // Estado para manejar el error de campos vacíos
 
     const guardar = () => {
-        if (!validator.isEmail(usuario)) {
-            alert("Correo incorrecto.")
+        // Verificar que los campos no estén vacíos
+        if (nombre === "" || pass === "" || passRepetida === "" || usuario === "") {
+            setCampoVacio("Todos los campos son obligatorios.");
+            return; // No continuar si algún campo está vacío
         } else {
+            setCampoVacio("");  // Limpiar el mensaje de error de campos vacíos
+        }
+
+        if (!validator.isEmail(usuario)) {
+            alert("Correo incorrecto.");
+        } else if (pass !== passRepetida) {  // Verificar que las contraseñas coincidan
+            setError("Las contraseñas no coinciden. Por favor, repítalas correctamente.");
+        } else {
+            setError("");  // Limpiar el error si las contraseñas coinciden
 
             let body = {
                 "nombreApellido": nombre,
@@ -30,8 +43,8 @@ const RegistrarUsuarios = () => {
                         setIngresa(response.data.id);
                         setUsuario("");
                         setPass("");
+                        setPassRepetida("");  // Limpiar la contraseña repetida
                         setNombre("");
-
                     } else {
                         setIngresa(response.data.id);
                         console.log(ingresa);
@@ -39,7 +52,6 @@ const RegistrarUsuarios = () => {
                 }).catch(error => {
                     setIngresa(0);
                     console.log(error);
-
                 })
             }
         }
@@ -47,6 +59,7 @@ const RegistrarUsuarios = () => {
 
     const funUsuario = (u) => { setUsuario(u.target.value); }
     const funPass = (p) => { setPass(p.target.value); }
+    const funPassRepetida = (p) => { setPassRepetida(p.target.value); }  // Función para manejar la contraseña repetida
     const funNombre = (p) => { setNombre(p.target.value); }
 
     return (
@@ -60,15 +73,26 @@ const RegistrarUsuarios = () => {
                 <ModalBody>
                     <FormGroup>
                         <Label for='name'>Nombre</Label>
-                        <Input onChange={(name) => { funNombre(name) }} type="text" />
+                        <small>Ejemplo: Alexis Sánchez</small>  {/* Agregado un ejemplo */}
+                        <Input 
+                            onChange={(name) => { funNombre(name) }} 
+                            type="text" 
+                            placeholder="Ejemplo: Alexis Sánchez"  // Placeholder para el nombre
+                        />
 
                         <Label for='email'>Correo</Label>
                         <Input onChange={(user) => { funUsuario(user) }} placeholder='example@gmail.com' type="email" />
 
                         <Label for='password'>Contraseña</Label>
-                        <Input onChange={(pass) => { funPass(pass) }} type='text' />
+                        <Input onChange={(pass) => { funPass(pass) }} type='password' />
 
-                        <Label className='mensajeError'> {ingresa === 0 ? "No se ha podido ingresar su solicitud, Intente mas atrde." : ""}</Label>
+                        <Label for='passwordRepeat'>Repetir Contraseña</Label>
+                        <Input onChange={(passRepeat) => { funPassRepetida(passRepeat) }} type='password' />  {/* Campo para repetir la contraseña */}
+
+                        {campoVacio && <Label className='mensajeError'>{campoVacio}</Label>}  {/* Mostrar mensaje de error si algún campo está vacío */}
+                        {error && <Label className='mensajeError'>{error}</Label>}  {/* Mostrar mensaje de error si las contraseñas no coinciden */}
+
+                        <Label className='mensajeError'> {ingresa === 0 ? "No se ha podido ingresar su solicitud, Intente más tarde." : ""}</Label>
 
                         <Label className='mensajeExito'> {ingresa > 0 ? "Se ha registrado exitosamente." : ""}</Label>
                         <div className='divIngresar'>
