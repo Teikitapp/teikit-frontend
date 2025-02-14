@@ -1,11 +1,11 @@
 import axios from "axios";
 
-const BACKEND_BASE_URL = process.env.REACT_APP_RAILWAY_PRIVATE_BACKEND_DOMAIN;
-//const MERCADOPAGO_BASE_URL = process.env.REACT_APP_RAILWAY_PRIVATE_MERCADOPAGO_DOMAIN;
+const BACKEND_BASE_URL = process.env.REACT_APP_RAILWAY_PUBLIC_BACKEND_DOMAIN;
+const MERCADOPAGO_BASE_URL = process.env.REACT_APP_RAILWAY_PUBLIC_MERCADOPAGO_DOMAIN;
 
 const CLIENTE_BASE_REST_API_URL = `${BACKEND_BASE_URL}/api/data/clientes`;
 const USUARIO_BASE_REST_API_URL = `${BACKEND_BASE_URL}/api/usuario/listarUsuarios`;
-const PAGO_BASE_REST_API_URL = `mercado-pago-api-production.up.railway.app/create_preference`;
+const PAGO_BASE_REST_API_URL = `${MERCADOPAGO_BASE_URL}/create_preference`;
 const PRODUCTOS_BASE_REST_API_URL = `${BACKEND_BASE_URL}/api/producto/listarProductos`;
 const DETALLE_PEDIDO_BASE_REST_API_URL = `${BACKEND_BASE_URL}/api/detallePedido/ingresarDetallePedido`;
 const PEDIDO_BASE_REST_API_URL = `${BACKEND_BASE_URL}/api/pedido/ingresarPedido`;
