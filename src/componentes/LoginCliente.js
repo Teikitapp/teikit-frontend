@@ -51,8 +51,8 @@ const LoginCliente = ({ setRespLoginComercio }) => {
         <div className='divLogin'>
 
             <Modal isOpen={verLogin === true}>
-                <ModalHeader>
-                    <h4>Iniciar Sesión Comercio</h4>
+                <ModalHeader tag="h4">
+                    Iniciar Sesión Comercio
                 </ModalHeader>
 
                 <ModalBody>

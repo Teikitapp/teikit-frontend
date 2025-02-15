@@ -99,8 +99,8 @@ const Login = ({ setRespLogin, setUsuarios }) => {
         <div className='divLogin'>
 
             <Modal isOpen={verLogin === true}>
-                <ModalHeader>
-                    <h4>Iniciar Sesión Usuario</h4>
+                <ModalHeader tag="h4">
+                    Iniciar Sesión Usuario
                 </ModalHeader>
 
                 <ModalBody>

@@ -123,7 +123,9 @@ const PedidosEnCurso = ({
 
                                     <ModalBody>
                                         <FormGroup>
-                                            <Label for='usuario'><h4>¿Está seguro que desea abrir casillero N°{newNcasillero}?</h4></Label>
+                                            <Label for='usuario' tag="p">
+                                                <strong>¿Está seguro que desea abrir casillero N°{newNcasillero}?<strong>
+                                            </Label>
                                             <br/>
                                             <div className='divConfirmacion'>
                                             <Button className='botonAceptar' onClick={() => confirmaAbrir()}>Aceptar</Button>
@@ -146,7 +148,9 @@ const PedidosEnCurso = ({
 
                                     <ModalBody>
                                         <FormGroup>
-                                            <Label for='usuario'><h4>Su pedido del casillero N°{newNcasillero} aun no se encuentra listo para su retiro.</h4></Label>
+                                        <Label for='usuario' tag="p">
+                                            <strong>Su pedido del casillero N°{newNcasillero} aún no se encuentra listo para su retiro.</strong>
+                                        </Label>
                                             <br/>
                                             <div className='divConfirmacion'>
                                             
