@@ -124,7 +124,7 @@ const PedidosEnCurso = ({
                                     <ModalBody>
                                         <FormGroup>
                                             <Label for='usuario' tag="p">
-                                                <strong>¿Está seguro que desea abrir casillero N°{newNcasillero}?<strong>
+                                                <strong>¿Está seguro que desea abrir casillero N°{newNcasillero}?</strong>
                                             </Label>
                                             <br/>
                                             <div className='divConfirmacion'>
