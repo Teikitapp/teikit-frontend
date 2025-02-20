@@ -18,6 +18,7 @@ const Pagar = ({
   const [isLoading, setIsLoading] = useState(false);
   const [unClick, setUnClick] = useState(false);
 
+  //public key
   initMercadoPago('APP_USR-a5418ad8-cbab-439e-bde4-0c9fc2e471cf', { locale: "es-CL" });
   const [preferenciaId, setPreferenciaId] = useState(null);
   const handleBuy = async (idP) => {
