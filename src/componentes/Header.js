@@ -18,6 +18,7 @@ const Header = ({
 }) => {
 
     const [active, setActive] = useState(false);
+    const [menuAbierto, setMenuAbierto] = useState(false);
     const navigate = useNavigate();
 
     // Función para eliminar un producto
@@ -53,6 +54,7 @@ const Header = ({
 
     // Función para abrir y cerrar el menú
     const abrir_cerrar_menu = () => {
+        setMenuAbierto(!menuAbierto);
         setActive(false);
         let menu_desplegable = document.getElementById('menu');
         menu_desplegable.classList.toggle('abrir_menu');
@@ -64,6 +66,16 @@ const Header = ({
         localStorage.setItem('clave', "");
         localStorage.setItem('usuario', "");
         navigate("/login");
+    };
+
+    // Función para cerrar el menú al hacer clic en el fondo
+    const cerrarMenuDesdeFondo = () => {
+        if (menuAbierto) {
+            setMenuAbierto(false);
+            setActive(false);
+            let menu_desplegable = document.getElementById('menu');
+            menu_desplegable.classList.remove('abrir_menu');
+        }
     };
 
     return (
@@ -199,6 +211,14 @@ const Header = ({
                 </div>
 
             </div>
+
+            {/* Fondo opaco cuando el menú está abierto */}
+            {menuAbierto && (
+                <div
+                    className="overlay"
+                    onClick={cerrarMenuDesdeFondo}
+                ></div>
+            )}
         </div>
     );
 };

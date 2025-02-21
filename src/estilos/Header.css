@@ -20,6 +20,16 @@
 
 }
 
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    z-index: 999; /* Asegúrate de que esté encima del contenido */
+}
+
 /* .desplegable{
     background: #1e1e1e;
 } */
@@ -339,8 +349,12 @@ ul {
 /* Header */
 
 
+/* Restante de los estilos del menú */
 .container-icon {
-	position: relative;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
 }
 
 .count-products {
@@ -370,7 +384,7 @@ ul {
 
 	background-color: #fff;
 	width: 400px;
-	z-index: 1;
+    z-index: 1001;
 	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 	border-radius: 10px;
 }
