@@ -6,12 +6,13 @@
     height: 100vh;
 } */
 
+/* Estilo del logo */
 .logo {
-    /* padding: 1px 8px 4px 0px; */
     padding-left: 700px;
     height: 90px;
     background-color: rgba(245, 76, 9, 255);
 }
+
 
 .menu {
     cursor: pointer;
@@ -20,14 +21,16 @@
 
 }
 
+/* Estilo de fondo semitransparente */
 .overlay {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
-    z-index: 999; /* Asegúrate de que esté encima del contenido */
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro pero transparente */
+    z-index: 999; /* Asegúrate de que esté encima del contenido pero debajo del menú */
+    display: none; /* Inicialmente oculto */
 }
 
 .barras {
@@ -69,22 +72,20 @@ ul li a:hover {
     display: block;
 }
 
-/* Estilo del menú desplegable */
+/* Menú desplegable */
 .desplegable {
-    transform: translate(-100%);
-    transition: 0.5s;
+    transform: translate(-100%); /* Inicia fuera de la pantalla */
+    transition: transform 0.5s ease;
     font-size: 1.5rem;
     width: 50%;
     height: 100vh;
     background: #FC4B08;
-    backdrop-filter: blur(2px);
-    z-index: 1000; /* Asegúrate de que el menú esté encima del fondo opaco */
+    backdrop-filter: blur(2px); /* Efecto de difuminado */
+    z-index: 1000; /* Asegúrate de que esté por encima del fondo opaco */
     position: fixed;
     top: 0;
     left: 0;
 }
-
-
 
 li a {
     padding: 10px 20px 2px 30px;
@@ -106,14 +107,14 @@ ul {
     border: none;
 } */
 
+/* Estilo del botón del menú */
 .boton_menu {
-
     background-color: #FC4B08;
-    background-repeat: no-repeat;
     height: 30px;
     width: 30px;
     background-size: 30px 30px;
     background-position: center;
+    cursor: pointer;
 }
 
 /*con esta clase abro y cierro el menu con toggle*/
@@ -125,32 +126,29 @@ ul {
     transition: 0.5s;
 }
 
-/*con esta clase cambio las barras por una x*/
+/* Cambio de icono al abrir el menú */
 .colocar_x {
     background-image: url('../imagenes/equis.png');
     background-color: #FC4B08;
     background-repeat: no-repeat;
     height: 30px;
     width: 30px;
-    /* background-size: 30px 30px; */
     background-position: center;
-
 }
+
 .divHeader{
     height: 0px;
 }
 
+/* Estilo del contenedor del menú */
 .headerMenu {
     display: flex;
-    /* flex-direction: row-reverse; */
     color: #FC4B08;
     background-color: white;
     cursor: pointer;
     font-weight: bold;
     padding-inline-end: 10px;
     font-family: Arial;
-    text-shadow: 0px 0px 0px #FC4B08;
-    /* z-index: 100%; */
 }
 
 .headerMenuImagen {
@@ -575,10 +573,18 @@ ul {
     background-color: #ffc14e; /* Cambiar el color al pasar el ratón */
 }
 
-/* Si quieres ajustar el tamaño de los botones en pantallas más pequeñas */
-@media (max-width: 600px) {
-    .cantidad-ajustable button {
-        font-size: 12px; /* Reducir el tamaño de la fuente en pantallas pequeñas */
-        padding: 6px; /* Ajustar el padding en pantallas pequeñas */
+/* Configuración para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .desplegable {
+        width: 100%; /* Menú desplegable a pantalla completa */
+        bottom: 0;
+    }
+
+    .logo {
+        padding-left: 20px; /* Ajusta el logo para móviles */
+    }
+
+    .menu {
+        height: 50px;
     }
 }
