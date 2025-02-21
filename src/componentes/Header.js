@@ -188,7 +188,7 @@ const Header = ({
                                 <button className='btn-clear-all' onClick={onCleanCart}>
                                     Vaciar Carrito
                                 </button>
-                                <Link onClick={() => { setAllProducts(allProducts); setCountProducts(countProducts); setTotal(total); setActive(false); }} to="/pedidos/finalizarPedido">
+                                <Link onClick={() => { setAllProducts(allProducts); setCountProducts(countProducts); setTotal(total); setActive(false); }} to="/pedidos/verDetalle/finalizarPedido">
                                     <button className='btnFinalizarPedido' >Finalizar pedido
                                     </button></Link>
                             </>
