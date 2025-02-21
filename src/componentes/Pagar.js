@@ -19,7 +19,7 @@ const Pagar = ({
   const [unClick, setUnClick] = useState(false);
 
   //public key
-  initMercadoPago('APP_USR-ea0acb19-3225-4e42-8845-a528391f6cc0', { locale: "es-CL" });
+  initMercadoPago('TEST-5a5984e5-83e0-4cfd-9a22-d191f4eac884', { locale: "es-CL" });
   const [preferenciaId, setPreferenciaId] = useState(null);
   const handleBuy = async (idP) => {
     setUnClick(true)
