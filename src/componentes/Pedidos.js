@@ -56,7 +56,7 @@ const Pedidos = ({
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)} // Actualiza el término de búsqueda mientras escribes
                 />
-                <button className='botonLupa' value="">
+                <button className='botonLupa' value="" disabled>
                   <img className="lupa" src={lupa} alt='logo'></img>
                 </button>
               </fieldset>
