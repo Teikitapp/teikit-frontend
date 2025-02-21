@@ -11,7 +11,6 @@ const Login = ({ setRespLogin, setUsuarios }) => {
     const [usuario, setUsuario] = useState("");
     const [pass, setPass] = useState("");
     const [ingresa, setIngresa] = useState(null);
-
     const navigate = useNavigate();
 
     const ingresar = () => {
@@ -42,8 +41,8 @@ const Login = ({ setRespLogin, setUsuarios }) => {
     const funPass = (p) => { setPass(p.target.value); }
 
     const handleSubmit = (e) => {
-        e.preventDefault();  // Prevenir el comportamiento por defecto del formulario
-        ingresar();  // Llamar a la función de ingreso cuando se presiona Enter
+        e.preventDefault(); ¡
+        ingresar();
     }
 
     return (
@@ -54,7 +53,7 @@ const Login = ({ setRespLogin, setUsuarios }) => {
                 </ModalHeader>
 
                 <ModalBody>
-                    <form onSubmit={handleSubmit}> {/* Formulario para capturar Enter */}
+                    <form onSubmit={handleSubmit}>
                         <FormGroup>
                             <Label for='usuario'>Usuario</Label>
                             <Input 
@@ -71,9 +70,9 @@ const Login = ({ setRespLogin, setUsuarios }) => {
                                 id="password" 
                             />
 
-                            <Label className='mensajeError'> {ingresa === 0 ? "Contraseña o usuario incorrecto." : ""}</Label>
+                            <Label className='mensajeError'> {ingresa === 0 ? "Usuario o contraseña incorrecto." : ""}</Label>
                             <div className='divIngresar'>
-                                <Button id="ingresar" className='btnIngresar' type="submit">Ingresar</Button> {/* Cambié aquí a type="submit" */}
+                                <Button id="ingresar" className='btnIngresar' type="submit">Ingresar</Button>
                             </div>
                         </FormGroup>
                     </form>
