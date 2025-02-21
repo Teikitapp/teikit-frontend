@@ -547,9 +547,9 @@ ul {
 /* Agrandar botones de + y - en el carrito */
 .cantidad-ajustable button {
     font-size: 24px; /* Tamaño de la fuente más grande */
-    padding: 12px 20px; /* Ajustar el padding para hacerlo más grande */
+    padding: 10px 10px; /* Ajustar el padding para hacerlo más grande */
     background-color: #ffffff; /* Color de fondo */
-    color: white; /* Color del texto */
+    color: rgb(0, 0, 0); /* Color del texto */
     border: none; /* Sin borde */
     border-radius: 8px; /* Bordes redondeados */
     cursor: pointer; /* Aparece como puntero al pasar por encima */
@@ -557,7 +557,7 @@ ul {
 }
 
 .cantidad-ajustable button:hover {
-    background-color: #ffffff; /* Cambiar el color al pasar el ratón */
+    background-color: #9f9f9f; /* Cambiar el color al pasar el ratón */
 }
 
 /* Si quieres ajustar el tamaño de los botones en pantallas más pequeñas */
