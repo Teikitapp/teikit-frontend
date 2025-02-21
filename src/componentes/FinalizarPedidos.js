@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import '../estilos/FinalizarPedidos.css';
 import ScrollTop from './ScrollTop';
 import DatePicker, { registerLocale } from 'react-datepicker';
