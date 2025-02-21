@@ -34,7 +34,7 @@ const CardDetalle = ({ nombreComercio, allProducts,
                     : item
             );
 
-            allProducts.map(item => {
+            allProducts.forEach(item => {
                 const iteTemporal = allProducts.find(item => item.id === product.id);
                 if (iteTemporal.id === product.id && iteTemporal.quantity !== product.quantity) {
                     setCountProducts((countProducts - iteTemporal.quantity) + product.quantity);
