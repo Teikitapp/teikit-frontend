@@ -41,12 +41,18 @@ const FinalizarPedidos = ({
     setHorarioRetiro(t.target.value);
   };
 
-  const dateChance = date => {
+  const dateChance = (date) => {
+    if (!date) { 
+      setFecha(null); 
+      setFechaRetiro(null); 
+      return; 
+    }
+    
     setFecha(date);
-    let temp = "";
-    temp = date.toLocaleDateString('es-ES');
+    let temp = date.toLocaleDateString('es-ES');
     setFechaRetiro(temp);
   };
+  
 
   const isWeekendDay = (date) => {
     return isWeekend(date);
