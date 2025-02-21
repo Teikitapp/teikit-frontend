@@ -105,7 +105,7 @@ const Header = ({
                                         <div className='cardTexto'>
                                             <p>{email}</p>
                                             <p className='cardNombre'>{nombre} </p>
-                                            <<button className='cardBotonSalir' onClick={salir}>Salir</button>
+                                            <li><button className='cardBotonSalir' onClick={salir}>Salir</button></li>
                                         </div>
                                     </div>
                                 </div>
