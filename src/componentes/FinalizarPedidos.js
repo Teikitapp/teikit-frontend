@@ -135,7 +135,7 @@ const FinalizarPedidos = ({
                 <Link to="/pedidos"><button className='botonSeguirComprando'>Seguir comprando </button></Link>
                 <Link to="/pagar"><button
                   disabled={allProducts.length === 0 || (horaRetiro === null || horaRetiro === "Seleccione hora retiro") || fecha === null} 
-                  className='botonPagar'>ir a Pagar </button></Link>
+                  className='botonPagar'>Ir a Pagar </button></Link>
               </div>
             </div>
           </div>
