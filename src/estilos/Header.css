@@ -74,17 +74,21 @@ ul li a:hover {
 
 /* Menú desplegable */
 .desplegable {
-    transform: translate(-100%); /* Inicia fuera de la pantalla */
-    transition: transform 0.5s ease;
-    font-size: 1.5rem;
-    width: 50%;
-    height: 100vh;
-    background: #FC4B08;
-    backdrop-filter: blur(2px); /* Efecto de difuminado */
-    z-index: 1000; /* Asegúrate de que esté por encima del fondo opaco */
-    position: fixed;
+    position: fixed; /* Cambiar a fixed si deseas que se quede fijo al abrir */
     top: 0;
     left: 0;
+    width: 250px; /* O el tamaño adecuado */
+    height: 100vh;
+    background-color: white; /* El color de fondo de tu menú */
+    z-index: 1000; /* Asegúrate de que se superponga sobre el fondo */
+    transition: transform 0.3s ease; /* Transición suave */
+}
+.desplegable.abrir_menu {
+    transform: translateX(0); /* Esto abre el menú */
+}
+
+.desplegable {
+    transform: translateX(-100%); /* Esto lo mantiene oculto inicialmente */
 }
 
 li a {
@@ -159,13 +163,13 @@ ul {
 
 /*aca configuro como se veria en celular*/
 
-.desplegable {
+/*.desplegable {
     width: 300px;
     height: 675px;
     font-size: 1.6rem;
     bottom: 80px;
     position: relative;
-}
+}*/
 
 /* button {
     margin: 10px 10px 10px 15px;
