@@ -40,7 +40,7 @@ const Login = ({ setRespLogin, setUsuarios }) => {
     const funPass = (p) => { setPass(p.target.value); }
 
     const handleSubmit = (e) => {
-        e.preventDefault(); ¡
+        e.preventDefault();
         ingresar();
     }
 
