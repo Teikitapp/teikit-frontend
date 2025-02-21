@@ -99,11 +99,13 @@ const Header = ({
                                 <hr className='hrHorizontal' />
                                 <div className='cardMenu'>
                                     <div className='contenidoCard'>
-                                        <div className='cardAvatar'><img className='imgAvatar' src={dog} alt='logo de freeCode'></img> </div>
+                                        <div className='cardAvatar'>
+                                            <img className='imgAvatar' src={dog} alt='logo de freeCode'></img> 
+                                            </div>
                                         <div className='cardTexto'>
-                                            <li>{email}</li>
-                                            <li className='cardNombre'>{nombre} </li>
-                                            <li><button className='cardBotonSalir' onClick={salir}>Salir</button></li>
+                                            <p>{email}</p>
+                                            <p className='cardNombre'>{nombre} </p>
+                                            <<button className='cardBotonSalir' onClick={salir}>Salir</button>
                                         </div>
                                     </div>
                                 </div>
