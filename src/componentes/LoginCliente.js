@@ -23,7 +23,6 @@ const LoginCliente = ({ setRespLoginComercio }) => {
                 setRespLoginComercio(response.data.length);
                 if (response.data.length > 0) {
                     setIngresa(response.data.length);
-                    setUsuarios(response.data[0]);
                     setVerLogin(false);
                     navigate("/homeComercio");
 
