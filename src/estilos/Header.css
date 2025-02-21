@@ -30,9 +30,6 @@
     z-index: 999; /* Asegúrate de que esté encima del contenido */
 }
 
-/* .desplegable{
-    background: #1e1e1e;
-} */
 .barras {
     display: none;
 }
@@ -72,15 +69,19 @@ ul li a:hover {
     display: block;
 }
 
+/* Estilo del menú desplegable */
 .desplegable {
-    /*width: 50%;
-        height: 100vh;*/
     transform: translate(-100%);
     transition: 0.5s;
     font-size: 1.5rem;
     width: 50%;
+    height: 100vh;
     background: #FC4B08;
     backdrop-filter: blur(2px);
+    z-index: 1000; /* Asegúrate de que el menú esté encima del fondo opaco */
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 
