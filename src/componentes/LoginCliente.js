@@ -13,9 +13,8 @@ const LoginCliente = ({ setRespLoginComercio }) => {
     const [ingresa, setIngresa] = useState(null);
     const navigate = useNavigate();
 
-    // Maneja la lógica para iniciar sesión
-    const ingresar = (e) => {
-        e.preventDefault();  // Para evitar el comportamiento por defecto de recargar la página
+
+    const ingresar = () => {
 
         let bodyComercio = {
             "email": usuario,
@@ -27,8 +26,9 @@ const LoginCliente = ({ setRespLoginComercio }) => {
                 setRespLoginComercio(response.data.length);
                 if (response.data.length > 0) {
                     setIngresa(response.data.length);
+                    ///setUsuarios(response.data[0]);
                     console.log("INGRESA COMERCIO");
-                    setVerLogin(false); // Esconde el login para navegar
+                    setVerLogin(false);//esconde el login para navegar
                     navigate("/homeComercio");
 
                 } else {
@@ -39,6 +39,7 @@ const LoginCliente = ({ setRespLoginComercio }) => {
             }).catch(error => {
                 setIngresa(0);
                 console.log(error);
+
             })
         }
     }
@@ -55,7 +56,7 @@ const LoginCliente = ({ setRespLoginComercio }) => {
                 </ModalHeader>
 
                 <ModalBody>
-                    <FormGroup onSubmit={ingresar}>
+                    <FormGroup>
                         <Label for='usuario'>Usuario</Label>
                         <Input onChange={(user) => { funUsuario(user) }} placeholder='ejemplo@correo.com' type="email" id="usuario" />
 
@@ -64,7 +65,7 @@ const LoginCliente = ({ setRespLoginComercio }) => {
 
                         <Label className='mensajeError'> {ingresa === 0 ? "Contraseña o usuario incorrecto." : ""}</Label>
                         <div className='divIngresar'>
-                            <Button id="ingresar" className='btnIngresar' type="submit">Ingresar</Button>
+                            <Button id="ingresar" className='btnIngresar' onClick={() => ingresar()}>Ingresar</Button>
                         </div>
 
                     </FormGroup>
