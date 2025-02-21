@@ -27,34 +27,33 @@ const CardDetalle = ({ nombreComercio, allProducts,
     };
 
     const agregarProducto = product => {
-        if (allProducts.find(item => item.id === product.id)) {
-            const products = allProducts.map(item =>
+        // Si el producto ya existe en el carrito, solo incrementa su cantidad
+        const productExists = allProducts.find(item => item.id === product.id);
+        if (productExists) {
+            const updatedProducts = allProducts.map(item =>
                 item.id === product.id
-                    ? { ...item, quantity: valorCantidad }
+                    ? { ...item, quantity: item.quantity + valorCantidad }  // Se acumula la cantidad
                     : item
             );
 
-            allProducts.forEach(item => {
-                const iteTemporal = allProducts.find(item => item.id === product.id);
-                if (iteTemporal.id === product.id && iteTemporal.quantity !== product.quantity) {
-                    setCountProducts((countProducts - iteTemporal.quantity) + product.quantity);
-                    setTotal((total - (product.valor * iteTemporal.quantity)) + (product.valor * product.quantity));
-                }
-            });
+            // Actualizamos el countProducts y total acumulando la cantidad y el valor
+            setCountProducts(countProducts + valorCantidad);
+            setTotal(total + (valor * valorCantidad));
 
-            return setAllProducts([...products]);
+            setAllProducts(updatedProducts);
+        } else {
+            // Si el producto no existe, lo agrega al carrito con la cantidad seleccionada
+            setAllProducts([...allProducts, product]);
+            setCountProducts(countProducts + valorCantidad);
+            setTotal(total + (valor * valorCantidad));
         }
-
-        setTotal(total + (product.valor * product.quantity)); 
-        setCountProducts(countProducts + product.quantity); 
-        setAllProducts([...allProducts, product]);
     };
 
     function restarYsumar(accion) {
         if (accion === "sumar") {
             estadoValorClick(valorCantidad + 1);
         } else {
-            if (valorCantidad > 1) { 
+            if (valorCantidad > 1) {  // Prevenir que la cantidad sea menor a 1
                 estadoValorClick(valorCantidad - 1);
             }
         }
@@ -80,7 +79,7 @@ const CardDetalle = ({ nombreComercio, allProducts,
             <div className='divCantidadYboton'>
                 <div className='cantidad'>
                     <label onClick={() => { restarYsumar("restar") }} className="bi bi-dash cardBotonMenos"></label>
-                    <label className='textoCantidad'>{valorCantidad}</label> 
+                    <label className='textoCantidad'>{valorCantidad}</label>
                     <label onClick={() => { restarYsumar("sumar") }} className='bi bi-plus-lg cardBotonMas'></label>
                 </div>
 
