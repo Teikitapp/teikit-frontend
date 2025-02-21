@@ -100,12 +100,12 @@ const Header = ({
                                 <div className='cardMenu'>
                                     <div className='contenidoCard'>
                                         <div className='cardAvatar'>
-                                            <img className='imgAvatar' src={dog} alt='logo de freeCode'></img> 
-                                            </div>
+                                            <img className='imgAvatar' src={dog} alt='logo de freeCode'></img>
+                                        </div>
                                         <div className='cardTexto'>
-                                            <p>{email}</p>
-                                            <p className='cardNombre'>{nombre} </p>
-                                            <li><button className='cardBotonSalir' onClick={salir}>Salir</button></li>
+                                            <p>{email}</p>  {/* Aquí va el email */}
+                                            <p className='cardNombre'>{nombre}</p>  {/* Aquí va el nombre */}
+                                            <button className='cardBotonSalir' onClick={salir}>Salir</button>  {/* Botón sin el <li> */}
                                         </div>
                                     </div>
                                 </div>
