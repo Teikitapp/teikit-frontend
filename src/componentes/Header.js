@@ -103,9 +103,9 @@ const Header = ({
                                             <img className='imgAvatar' src={dog} alt='logo de freeCode'></img>
                                         </div>
                                         <div className='cardTexto'>
-                                            <p>{email}</p>  {/* Aquí va el email */}
-                                            <p className='cardNombre'>{nombre}</p>  {/* Aquí va el nombre */}
-                                            <button className='cardBotonSalir' onClick={salir}>Salir</button>  {/* Botón sin el <li> */}
+                                            <li>{email}</li>  
+                                            <li className='cardNombre'>{nombre}</li>  
+                                            <li><button className='cardBotonSalir' onClick={salir}>Salir</button></li>  
                                         </div>
                                     </div>
                                 </div>
