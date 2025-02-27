@@ -31,7 +31,7 @@ function App() {
   const mes = today.getMonth() + 1;
   const anio = today.getFullYear();
   const dia = today.getDate();
-  const fechaHoy = dia + "/" + mes + "/" + anio;
+  let fechaHoy = dia + "/" + mes + "/" + anio;
 
    let d = fechaHoy.split('/');
       let a = d[0];
