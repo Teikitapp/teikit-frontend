@@ -33,6 +33,13 @@ function App() {
   const dia = today.getDate();
   const fechaHoy = dia + "/" + mes + "/" + anio;
 
+   let d = fechaHoy.split('/');
+      let a = d[0];
+      let b = d[1];
+      let c = d[2];
+      if(a.length === 1){a = "0"+a; fechaHoy = a +"/"+ b +"/"+ c; }
+      if(b.length === 1){b = "0"+b; fechaHoy = a +"/"+ b +"/"+ c;}
+
 
   useEffect(() => {
     ClienteService.getAllClientes().then(response => {
