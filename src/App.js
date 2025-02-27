@@ -33,12 +33,13 @@ function App() {
   let dia = today.getDate();
   let fechaHoy = dia + "/" + mes + "/" + anio;
 
-   let d = fechaHoy.split('/');
-      let a = d[0];
-      let b = d[1];
-      let c = d[2];
-      if(a.length === 1){a = "0"+a; fechaHoy = a +"/"+ b +"/"+ c; }
-      if(b.length === 1){b = "0"+b; fechaHoy = a +"/"+ b +"/"+ c;}
+  let d = fechaHoy.split('/');
+  let a = d[0];
+  let b = d[1];
+  let c = d[2];
+  if (a.length === 1) a = "0" + a;
+  if (b.length === 1) b = "0" + b;
+  fechaHoy = a + "/" + b + "/" + c;
 
 
   useEffect(() => {
