@@ -52,7 +52,7 @@ const PedidosEnCurso = ({
   // Confirmar apertura del casillero
   const confirmaAbrir = async () => {
     try {
-      const actualizarCasillero = await ClienteService.actualizarEstadoCasillero(newNcasillero, 1);
+      const actualizarCasillero = await ClienteService.actualizarEstadoCasillero(newNcasillero, 4);
       console.log('Estado del casillero actualizado:', actualizarCasillero.data);
 
       const actualizarPedido = await ClienteService.actualizarEstadoPedido(newNpedido, 4);
