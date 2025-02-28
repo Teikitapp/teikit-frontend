@@ -53,7 +53,7 @@ const PedidosEnCurso = ({
   const confirmaAbrir = async () => {
     try {
 
-      ClienteService.actualizarEstadoCasillero(newNcasillero, 4 ).then(R =>{
+      ClienteService.actualizarEstadoCasillero(newNcasillero, 1 ).then(R =>{
           console.log("actualizarEstadoCasillero: ",R.data);
       });
 
