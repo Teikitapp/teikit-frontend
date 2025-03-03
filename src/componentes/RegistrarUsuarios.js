@@ -38,14 +38,14 @@ const RegistrarUsuarios = () => {
             }
             if (nombre !== "" && pass !== "" && usuario !== "") {
                 ClienteService.registrarUsuario(body).then(response => {
-                    if (response.data.id > 0) {
-                        setIngresa(response.data.id);
+                    if (response.data === "Usuario ingresado con éxito") {
+                        setIngresa(response.data);
                         setUsuario("");
                         setPass("");
-                        setPassRepetida("");
                         setNombre("");
+
                     } else {
-                        setIngresa(response.data.id);
+                        setIngresa(response.data);
                         console.log(ingresa);
                     }
                 }).catch(error => {
@@ -95,9 +95,8 @@ const RegistrarUsuarios = () => {
                             {campoVacio && <Label className='mensajeError'>{campoVacio}</Label>}
                             {error && <Label className='mensajeError'>{error}</Label>}
 
-                            <Label className='mensajeError'> {ingresa === 0 ? "No se ha podido ingresar su solicitud, Intente más tarde." : ""}</Label>
-
-                            <Label className='mensajeExito'> {ingresa > 0 ? "Se ha registrado exitosamente." : ""}</Label>
+                              {/*  <Label className='mensajeError'> {ingresa === 0 ? "No se ha podido ingresar su solicitud, Intente mas atrde." : ""}</Label>*/}
+                            <Label className='mensajeExito'> {ingresa === "Usuario ingresado con éxito" ? "Usuario ingresado con éxito." : ingresa === "Usuario ya existe" ? "Usuario ya existe" : ""}</Label>
                             <div className='divIngresar'>
                                 <Button id="ingresar" className='btnIngresar' type="submit">Registrar</Button> {/* El botón ahora hace submit */}
                             </div>
