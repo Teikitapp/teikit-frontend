@@ -61,44 +61,48 @@ const RegistrarUsuarios = () => {
     const funPassRepetida = (p) => { setPassRepetida(p.target.value); }
     const funNombre = (p) => { setNombre(p.target.value); }
 
+    const handleSubmit = (e) => {
+        e.preventDefault();  // Evita el comportamiento predeterminado de enviar el formulario
+        guardar();  // Llama a la función que maneja el envío
+    }
+
     return (
         <div className='divLogin'>
-
             <Modal isOpen={verLogin === true}>
                 <ModalHeader>
                     <p>Registrar usuario</p>
                 </ModalHeader>
 
                 <ModalBody>
-                    <FormGroup>
-                        <Label for='name'>Nombre y Apellido</Label>
-                        <Input 
-                            onChange={(name) => { funNombre(name) }} 
-                            type="text" 
-                            placeholder="Alexis Sánchez" 
-                        />
+                    <form onSubmit={handleSubmit}> {/* Formulario que maneja el evento submit */}
+                        <FormGroup>
+                            <Label for='name'>Nombre y Apellido</Label>
+                            <Input 
+                                onChange={(name) => { funNombre(name) }} 
+                                type="text" 
+                                placeholder="Alexis Sánchez" 
+                            />
 
-                        <Label for='email'>Correo</Label>
-                        <Input onChange={(user) => { funUsuario(user) }} placeholder='ejemplo@correo.com' type="email" />
+                            <Label for='email'>Correo</Label>
+                            <Input onChange={(user) => { funUsuario(user) }} placeholder='ejemplo@correo.com' type="email" />
 
-                        <Label for='password'>Contraseña</Label>
-                        <Input onChange={(pass) => { funPass(pass) }} type='password' />
+                            <Label for='password'>Contraseña</Label>
+                            <Input onChange={(pass) => { funPass(pass) }} type='password' />
 
-                        <Label for='passwordRepeat'>Repetir Contraseña</Label>
-                        <Input onChange={(passRepeat) => { funPassRepetida(passRepeat) }} type='password' />
+                            <Label for='passwordRepeat'>Repetir Contraseña</Label>
+                            <Input onChange={(passRepeat) => { funPassRepetida(passRepeat) }} type='password' />
 
-                        {campoVacio && <Label className='mensajeError'>{campoVacio}</Label>}
-                        {error && <Label className='mensajeError'>{error}</Label>}
+                            {campoVacio && <Label className='mensajeError'>{campoVacio}</Label>}
+                            {error && <Label className='mensajeError'>{error}</Label>}
 
-                        <Label className='mensajeError'> {ingresa === 0 ? "No se ha podido ingresar su solicitud, Intente más tarde." : ""}</Label>
+                            <Label className='mensajeError'> {ingresa === 0 ? "No se ha podido ingresar su solicitud, Intente más tarde." : ""}</Label>
 
-                        <Label className='mensajeExito'> {ingresa > 0 ? "Se ha registrado exitosamente." : ""}</Label>
-                        <div className='divIngresar'>
-                            <Button id="ingresar" className='btnIngresar' onClick={() => guardar()}>Registrar</Button>
-                        </div>
-
-                    </FormGroup>
-
+                            <Label className='mensajeExito'> {ingresa > 0 ? "Se ha registrado exitosamente." : ""}</Label>
+                            <div className='divIngresar'>
+                                <Button id="ingresar" className='btnIngresar' type="submit">Registrar</Button> {/* El botón ahora hace submit */}
+                            </div>
+                        </FormGroup>
+                    </form>
                 </ModalBody>
 
                 <ModalFooter className='footerModalLogin'>

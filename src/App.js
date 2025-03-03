@@ -28,10 +28,18 @@ function App() {
   const [fechaRetiro, setFechaRetiro] = useState("");
   const [horarioRetiro, setHorarioRetiro] = useState("");
   const today = new Date();
-  const mes = today.getMonth() + 1;
-  const anio = today.getFullYear();
-  const dia = today.getDate();
-  const fechaHoy = dia + "/" + mes + "/" + anio;
+  let mes = today.getMonth() + 1;
+  let anio = today.getFullYear();
+  let dia = today.getDate();
+  let fechaHoy = dia + "/" + mes + "/" + anio;
+
+  let d = fechaHoy.split('/');
+  let a = d[0];
+  let b = d[1];
+  let c = d[2];
+  if (a.length === 1) a = "0" + a;
+  if (b.length === 1) b = "0" + b;
+  fechaHoy = a + "/" + b + "/" + c;
 
 
   useEffect(() => {

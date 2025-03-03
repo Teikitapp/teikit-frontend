@@ -1,11 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import logo from '../imagenes/logoTeikit2.png';
 import menu from '../imagenes/menu2.png';
 import dog from '../imagenes/dog.png';
 import logoBlanco2 from '../imagenes/teikitMenu.png';
 import "../estilos/Header.css";
 import { Link, useNavigate } from 'react-router-dom';
-
 
 const Header = ({
     allProducts,
@@ -16,50 +15,64 @@ const Header = ({
     setTotal,
     email,
     nombre
-
 }) => {
 
     const [active, setActive] = useState(false);
     const navigate = useNavigate();
 
+    // Función para eliminar un producto
     const onDeleteProduct = product => {
-        const results = allProducts.filter(
-            item => item.id !== product.id
-        );
-        console.log("desde HEADER: ", allProducts);
-
-
+        const results = allProducts.filter(item => item.id !== product.id);
         setTotal(total - product.valor * product.quantity);
         setCountProducts(countProducts - product.quantity);
         setAllProducts(results);
     };
 
+    // Función para limpiar todo el carrito
     const onCleanCart = () => {
         setAllProducts([]);
         setTotal(0);
         setCountProducts(0);
     };
 
+    // Función para ajustar la cantidad de un producto
+    const adjustQuantity = (product, action) => {
+        const updatedProducts = allProducts.map(item => {
+            if (item.id === product.id) {
+                const updatedQuantity = action === 'increment' ? item.quantity + 1 : item.quantity - 1;
+                if (updatedQuantity > 0) {
+                    item.quantity = updatedQuantity;
+                    setTotal(total + (action === 'increment' ? item.valor : -item.valor));
+                    setCountProducts(countProducts + (action === 'increment' ? 1 : -1));
+                }
+            }
+            return item;
+        });
+        setAllProducts(updatedProducts);
+    };
+
+    // Función para abrir y cerrar el menú
     const abrir_cerrar_menu = () => {
         setActive(false);
         let menu_desplegable = document.getElementById('menu');
         menu_desplegable.classList.toggle('abrir_menu');
     };
+
+    // Función para cerrar sesión
     const salir = () => {
         abrir_cerrar_menu();
         localStorage.setItem('clave', "");
         localStorage.setItem('usuario', "");
         navigate("/login");
-    }
-
+    };
 
     return (
         <div className='divContenedor'>
             <div className='divHead'>
-                <div>      
+                <div>
                     <header className='divHeader'>
                         <div className="">
-                            <img onClick={abrir_cerrar_menu} className='menu' src={menu} alt='logo de freeCode' />                      
+                            <img onClick={abrir_cerrar_menu} className='menu' src={menu} alt='logo de freeCode' />
                         </div>
                         <nav id='menu' className="desplegable">
                             <div className='headerMenu' onClick={abrir_cerrar_menu} >
@@ -68,12 +81,10 @@ const Header = ({
                             <ul>
                                 <li>
                                     <Link to="/home" onClick={abrir_cerrar_menu} >Home</Link>
-
                                 </li>
                                 <hr className='hrHorizontal' />
                                 <li>
                                     <Link to="/pedidos" onClick={abrir_cerrar_menu} >Pedidos</Link>
-
                                 </li>
                                 <hr className='hrHorizontal' />
                                 <li> <Link to="/home" onClick={() => setActive(!active)} >Carrito</Link></li>
@@ -88,25 +99,26 @@ const Header = ({
                                 <hr className='hrHorizontal' />
                                 <div className='cardMenu'>
                                     <div className='contenidoCard'>
-                                        <div className='cardAvatar'><img className='imgAvatar' src={dog} alt='logo de freeCode'></img> </div>
-                                        <div className='cardTexto'>
-                                            <li>{email}</li>
-                                            <li className='cardNombre'>{nombre} </li>
-                                            <li><button className='cardBotonSalir' onClick={salir}>Salir</button></li>
+                                        <div className='cardAvatar'>
+                                            <img className='imgAvatar' src={dog} alt='logo de freeCode'></img>
                                         </div>
-                                    </div>                                   
+                                        <div className='cardTexto'>
+                                            <li>{email}</li>  
+                                            <li className='cardNombre'>{nombre}</li>  
+                                            <li><button className='cardBotonSalir' onClick={salir}>Salir</button></li>  
+                                        </div>
+                                    </div>
                                 </div>
                             </ul>
                         </nav>
                     </header>
                 </div>
 
-                <img className='logo' src={logo} alt='logo de freeCode' />               
+                <img className='logo' src={logo} alt='logo de freeCode' />
                 <div className='container-icon' onChange={abrir_cerrar_menu}>
                     <div
                         className='container-cart-icon carrito'
                         onClick={() => setActive(!active)}
-
                     >
                         <svg
                             xmlns='http://www.w3.org/2000/svg'
@@ -146,6 +158,10 @@ const Header = ({
                                                 <span className='precio-producto-carrito'>
                                                     ${product.valor}
                                                 </span>
+                                                <div className='cantidad-ajustable'>
+                                                    <button onClick={() => adjustQuantity(product, 'decrement')}>-</button>
+                                                    <button onClick={() => adjustQuantity(product, 'increment')}>+</button>
+                                                </div>
                                             </div>
                                             <svg
                                                 xmlns='http://www.w3.org/2000/svg'
@@ -174,7 +190,7 @@ const Header = ({
                                 <button className='btn-clear-all' onClick={onCleanCart}>
                                     Vaciar Carrito
                                 </button>
-                                <Link onClick={() => { setAllProducts(allProducts); setCountProducts(countProducts); setTotal(total); setActive(false); }} to="finalizarPedido">
+                                <Link onClick={() => { setAllProducts(allProducts); setCountProducts(countProducts); setTotal(total); setActive(false); }} to="/pedidos/verDetalle/finalizarPedido">
                                     <button className='btnFinalizarPedido' >Finalizar pedido
                                     </button></Link>
                             </>
@@ -186,7 +202,7 @@ const Header = ({
 
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Header
+export default Header;

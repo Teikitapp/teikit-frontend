@@ -5,67 +5,15 @@ import ClienteService from '../servicios/ClienteService';
 import { useNavigate } from 'react-router';
 import { Link } from "react-router-dom";
 
-
 const Login = ({ setRespLogin, setUsuarios }) => {
 
     const [verLogin, setVerLogin] = useState(true);
     const [usuario, setUsuario] = useState("");
     const [pass, setPass] = useState("");
     const [ingresa, setIngresa] = useState(null);
-
-    //const u = localStorage.getItem('usuario');
-    //const p = localStorage.getItem('clave');
-    //console.log("obtener: ",u,p);
     const navigate = useNavigate();
-    //let location = useLocation();
-    //console.log(location.pathname) 
-
-    /* if((u !== "" && u !== null) && (p !== "" && p !== null) && pass ==="" && usuario ===""){
-        setPass(p);
-        setUsuario(u);
-        let  body ={
-            "email": u,
-            "passUsuario": p
-           }
-        
-        ClienteService.obtenerUsuario(body).then(response => {
-            setRespLogin(response.data.length)
-            if (response.data.length  > 0) {
-               
-                setIngresa(response.data.length);
-                setUsuarios(response.data[0]);
-                setVerLogin(false);
-                localStorage.removeItem('usuario');
-                localStorage.removeItem('clave');
-                console.log("obtener: ",u,p);
-                navigate("/detallePedido");
-               
-               
-            }else{
-                
-                
-                setIngresa(response.data.length);
-                console.log(ingresa);
-            }
-
-
-        }).catch(error => {
-            console.log(error);
-
-        })
-      
-    } */
-
-
-
 
     const ingresar = () => {
-        //alert("ingresar:"+ usuario +" "+ pass)
-        //localStorage.setItem('clave', pass);
-        //localStorage.setItem('usuario', usuario);      
-        //console.log("guardar: ", localStorage);  
-        //localStorage.removeItem('usuario');
-
         let body = {
             "email": usuario,
             "passUsuario": pass
@@ -78,7 +26,6 @@ const Login = ({ setRespLogin, setUsuarios }) => {
                     setUsuarios(response.data[0]);
                     setVerLogin(false);
                     navigate("/home");
-
                 } else {
                     setIngresa(response.data.length);
                     console.log(ingresa);
@@ -86,38 +33,49 @@ const Login = ({ setRespLogin, setUsuarios }) => {
             }).catch(error => {
                 setIngresa(0);
                 console.log(error);
-
             })
         }
-
     }
 
     const funUsuario = (u) => { setUsuario(u.target.value); }
     const funPass = (p) => { setPass(p.target.value); }
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        ingresar();
+    }
+
     return (
         <div className='divLogin'>
-
             <Modal isOpen={verLogin === true}>
                 <ModalHeader tag="h4">
                     Iniciar Sesión Usuario
                 </ModalHeader>
 
                 <ModalBody>
-                    <FormGroup>
-                        <Label for='usuario'>Usuario</Label>
-                        <Input onChange={(user) => { funUsuario(user) }} placeholder='ejemplo@correo.com' type="email" id="usuario" />
+                    <form onSubmit={handleSubmit}>
+                        <FormGroup>
+                            <Label for='usuario'>Usuario</Label>
+                            <Input 
+                                onChange={(user) => { funUsuario(user) }} 
+                                placeholder='ejemplo@correo.com' 
+                                type="email" 
+                                id="usuario" 
+                            />
 
-                        <Label for='password'>Contraseña</Label>
-                        <Input onChange={(pass) => { funPass(pass) }} type="password" id="password" />
+                            <Label for='password'>Contraseña</Label>
+                            <Input 
+                                onChange={(pass) => { funPass(pass) }} 
+                                type="password" 
+                                id="password" 
+                            />
 
-                        <Label className='mensajeError'> {ingresa === 0 ? "Contraseña o usuario incorrecto." : ""}</Label>
-                        <div className='divIngresar'>
-                            <Button id="ingresar" className='btnIngresar' onClick={() => ingresar()}>Ingresar</Button>
-                        </div>
-
-                    </FormGroup>
-
+                            <Label className='mensajeError'> {ingresa === 0 ? "Usuario o contraseña incorrecto." : ""}</Label>
+                            <div className='divIngresar'>
+                                <Button id="ingresar" className='btnIngresar' type="submit">Ingresar</Button>
+                            </div>
+                        </FormGroup>
+                    </form>
                 </ModalBody>
 
                 <ModalFooter className='footerModalLogin'>
@@ -132,4 +90,4 @@ const Login = ({ setRespLogin, setUsuarios }) => {
     )
 }
 
-export default Login
+export default Login;

@@ -13,22 +13,17 @@ const LoginCliente = ({ setRespLoginComercio }) => {
     const [ingresa, setIngresa] = useState(null);
     const navigate = useNavigate();
 
-
     const ingresar = () => {
-
         let bodyComercio = {
             "email": usuario,
             "passCliente": pass
         }
-
         if (usuario !== "" && pass !== "") {
             ClienteService.obtenerComercio(bodyComercio).then(response => {
                 setRespLoginComercio(response.data.length);
                 if (response.data.length > 0) {
                     setIngresa(response.data.length);
-                    ///setUsuarios(response.data[0]);
-                    console.log("INGRESA COMERCIO");
-                    setVerLogin(false);//esconde el login para navegar
+                    setVerLogin(false);
                     navigate("/homeComercio");
 
                 } else {
@@ -39,37 +34,48 @@ const LoginCliente = ({ setRespLoginComercio }) => {
             }).catch(error => {
                 setIngresa(0);
                 console.log(error);
-
             })
         }
     }
 
     const funUsuario = (u) => { setUsuario(u.target.value); }
     const funPass = (p) => { setPass(p.target.value); }
+    const handleSubmit = (e) => {
+        e.preventDefault();  
+        ingresar();
+    }
 
     return (
         <div className='divLogin'>
-
             <Modal isOpen={verLogin === true}>
                 <ModalHeader tag="h4">
                     Iniciar Sesión Comercio
                 </ModalHeader>
 
                 <ModalBody>
-                    <FormGroup>
-                        <Label for='usuario'>Usuario</Label>
-                        <Input onChange={(user) => { funUsuario(user) }} placeholder='ejemplo@correo.com' type="email" id="usuario" />
+                    <form onSubmit={handleSubmit}>
+                        <FormGroup>
+                            <Label for='usuario'>Usuario</Label>
+                            <Input 
+                                onChange={(user) => { funUsuario(user) }} 
+                                placeholder='ejemplo@correo.com' 
+                                type="email" 
+                                id="usuario" 
+                            />
 
-                        <Label for='password'>Contraseña</Label>
-                        <Input onChange={(pass) => { funPass(pass) }} type="password" id="password" />
+                            <Label for='password'>Contraseña</Label>
+                            <Input 
+                                onChange={(pass) => { funPass(pass) }} 
+                                type="password" 
+                                id="password"
+                             />
 
-                        <Label className='mensajeError'> {ingresa === 0 ? "Contraseña o usuario incorrecto." : ""}</Label>
-                        <div className='divIngresar'>
-                            <Button id="ingresar" className='btnIngresar' onClick={() => ingresar()}>Ingresar</Button>
-                        </div>
-
-                    </FormGroup>
-
+                            <Label className='mensajeError'> {ingresa === 0 ? "Usuario o contraseña incorrecto." : ""}</Label>
+                            <div className='divIngresar'>
+                                <Button id="ingresar" className='btnIngresar' type="submit">Ingresar</Button>
+                            </div>
+                        </FormGroup>
+                    </form>
                 </ModalBody>
 
                 <ModalFooter className='footerModalLogin'>
