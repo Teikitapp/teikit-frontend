@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "^4.12.4",
-    "@material-ui/pickers": "^3.3.11",
     "@mercadopago/sdk-react": "^0.0.19",
-    "@mui/x-date-pickers": "^5.0.20",
+    "@mui/material": "^6.4.6",
+    "@mui/system": "^6.4.6",
+    "@mui/x-date-pickers": "^7.27.1",
     "@syncfusion/ej2-react-calendars": "^27.1.57",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -17,12 +17,9 @@
     "express": "^4.21.1",
     "i": "^0.3.7",
     "qrcode": "^1.5.4",
-    "react": "^18.3.1",
+    "react": "^18",
     "react-datepicker": "^7.5.0",
-    "react-dom": "^18.3.1",
-    "react-qr-code": "^2.0.15",
-    "react-qr-reader": "^3.0.0-beta-1",
-    "react-qr-scanner": "^1.0.0-alpha.11",
+    "react-dom": "^18",
     "react-router": "^6.27.0",
     "react-router-dom": "^6.27.0",
     "react-scripts": "5.0.1",
@@ -54,5 +51,15 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.26.9",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@babel/plugin-syntax-flow": "^7.26.0",
+    "@babel/plugin-transform-private-property-in-object": "^7.25.9",
+    "@babel/plugin-transform-react-jsx": "^7.25.9",
+    "@testing-library/dom": "^10.4.0",
+    "@types/react": "^19.0.10",
+    "typescript": "^5.8.2"
   }
 }
