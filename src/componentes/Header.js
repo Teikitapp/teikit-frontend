@@ -5,6 +5,7 @@ import dog from '../imagenes/dog.png';
 import logoBlanco2 from '../imagenes/teikitMenu.png';
 import "../estilos/Header.css";
 import { Link, useNavigate } from 'react-router-dom';
+import { Tooltip } from 'react-tooltip'
 
 const Header = ({
     allProducts,
@@ -72,12 +73,20 @@ const Header = ({
                 <div>
                     <header className='divHeader'>
                         <div className="">
-                            <img onClick={abrir_cerrar_menu} className='menu' src={menu} alt='logo de freeCode' />
+                           <img data-tooltip-id="my-tooltip"
+                             data-tooltip-content="Abrir Menú"
+                             data-tooltip-place="top"  
+                             onClick={abrir_cerrar_menu} className='menu' src={menu} alt='logo de freeCode' />  
                         </div>
                         <nav id='menu' className="desplegable">
-                            <div className='headerMenu' onClick={abrir_cerrar_menu} >
-                                <img className='headerMenuImagen' src={logoBlanco2} alt='logo' />
+                             <div className='headerMenu' onClick={abrir_cerrar_menu} >
+                                <img
+                                data-tooltip-id="my-tooltip"
+                                data-tooltip-content="Cerrar Menú"
+                                data-tooltip-place="right"   
+                                className='headerMenuImagen' src={logoBlanco2} alt='logo' />
                             </div>
+                            <Tooltip id="my-tooltip" />  
                             <ul>
                                 <li>
                                     <Link to="/home" onClick={abrir_cerrar_menu} >Home</Link>
