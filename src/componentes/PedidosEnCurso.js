@@ -24,7 +24,7 @@ const PedidosEnCurso = ({
 
   // Obtener pedidos pendientes del usuario
   useEffect(() => {
-    if (usuario.id) {
+    if (usuario.id !== null && usuario.id !== undefined) {
       ClienteService.getBuscarPorDosEstadosIdcliente(usuario.id)
         .then((response) => {
           console.log('Usuario ID:', usuario.id);
@@ -57,6 +57,18 @@ const PedidosEnCurso = ({
 
       const actualizarPedido = await ClienteService.actualizarEstadoPedido(newNpedido, 4);
       console.log('Estado del pedido actualizado:', actualizarPedido.data);
+
+      if (usuario.id !== null && usuario.id !== undefined) {
+      ClienteService.getBuscarPorDosEstadosIdcliente(usuario.id)
+        .then((response) => {
+          console.log('Usuario ID:', usuario.id);
+          setDetalle(response.data);
+        })
+        .catch((error) => {
+          console.error('Error al obtener pedidos:', error);
+        });
+     }
+      
     } catch (error) {
       console.error('Error al actualizar estados:', error);
     }
