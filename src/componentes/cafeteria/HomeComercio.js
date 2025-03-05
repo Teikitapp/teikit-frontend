@@ -15,6 +15,14 @@ const HomeComercio = () => {
   let date = newDate.getDate();
   let month = newDate.getMonth() + 1;
   let year = newDate.getFullYear();
+
+  date = date.toString();
+  month = month.toString();
+   // eslint-disable-next-line 
+  if (date.length === 1){date = "0" + date}
+   // eslint-disable-next-line 
+  if (month.length === 1){month = "0" + month}
+
   let fechaHoy = date + "-" + month + "-" + year;
   const navigate = useNavigate();
   const salir = () => {
@@ -25,10 +33,10 @@ const HomeComercio = () => {
   useEffect(() => {
     ClienteService.obtenerPedidos(1).then(response => {
       console.log("RESPONSE: ", response);    
-      if(response.data.length <= 0){
+      if(response.data.length === 0){
         setBool(true);
       }else{
-        setBool(true);
+        setBool(false);
       }
       setListaPedidos(response.data);
        
@@ -37,7 +45,7 @@ const HomeComercio = () => {
     })
 
 
-  },);
+  }, );
 
   return (
     <div className='divComercio'>
@@ -54,7 +62,7 @@ const HomeComercio = () => {
           <div className='formatoCard' key={product.id}>
             <CardProductosComercio lista={product} setListaPedidos={setListaPedidos} />
           </div>
-        )) : <h1>SIN PEDIDOS PARA REALIZAR</h1> }
+        )) : <h1 className='sinPedidos'>SIN PEDIDOS PARA REALIZAR</h1> }
       </div>
       
     </div>
