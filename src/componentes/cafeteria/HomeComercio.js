@@ -41,6 +41,7 @@ const HomeComercio = () => {
       </div>
       <div className='divFecha'><h1>Día: {fechaHoy}</h1></div>
       <div className='divCardTodosProductos'>
+        {listaPedidos.length === 0  ? <h1>SIN PEDIDOS PARA REALIZAR</h1> : ""}
         {listaPedidos.map(product => (
           <div className='formatoCard' key={product.id}>
             <CardProductosComercio lista={product} setListaPedidos={setListaPedidos} />
