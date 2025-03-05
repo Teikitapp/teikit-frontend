@@ -2,13 +2,13 @@
 .divComercio{   
     padding-bottom: 500px;
     padding-bottom: 500px;
-    display: flex
-;
+    display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     align-content: space-around;
     justify-content: space-around;
     align-items: flex-end;
+    background-color: bisque;
 } 
 .imgComercio{
     height: 180px;
