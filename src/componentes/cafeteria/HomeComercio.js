@@ -25,7 +25,9 @@ const HomeComercio = () => {
   useEffect(() => {
     ClienteService.obtenerPedidos(1).then(response => {
       console.log("RESPONSE: ", response);    
-      if(response.data.length === 0){
+      if(listaPedidos){
+        setBool(true);
+      }else{
         setBool(true);
       }
       setListaPedidos(response.data);
