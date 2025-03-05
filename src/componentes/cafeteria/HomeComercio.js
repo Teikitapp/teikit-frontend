@@ -37,7 +37,7 @@ const HomeComercio = () => {
     })
 
 
-  }, []);
+  },);
 
   return (
     <div className='divComercio'>
