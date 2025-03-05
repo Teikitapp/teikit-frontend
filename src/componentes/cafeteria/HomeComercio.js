@@ -45,12 +45,11 @@ const HomeComercio = () => {
       </div>
       <div className='divFecha'><h1>Día: {fechaHoy}</h1></div>
       <div className='divCardTodosProductos'>
-        {bool === true  ? <h1>SIN PEDIDOS PARA REALIZAR</h1> : ""}
-        {listaPedidos.map(product => (
+        {bool === false ? listaPedidos.map(product => (
           <div className='formatoCard' key={product.id}>
             <CardProductosComercio lista={product} setListaPedidos={setListaPedidos} />
           </div>
-        ))}
+        )) : <h1>SIN PEDIDOS PARA REALIZAR</h1> }
       </div>
       
     </div>
