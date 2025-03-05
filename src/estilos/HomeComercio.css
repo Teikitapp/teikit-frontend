@@ -60,3 +60,7 @@
     align-items: flex-start;
   
 } 
+.sinPedidos{
+    color: coral;
+    font-family: monospace;
+}
