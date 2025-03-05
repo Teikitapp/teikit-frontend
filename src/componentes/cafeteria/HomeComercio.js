@@ -24,11 +24,11 @@ const HomeComercio = () => {
 
   useEffect(() => {
     ClienteService.obtenerPedidos(1).then(response => {
-      console.log("RESPONSE: ", response);
-      setListaPedidos(response.data);
-      if(response.data.length===0){
+      console.log("RESPONSE: ", response);    
+      if(response.data.length == 0){
         setBool(true);
       }
+      setListaPedidos(response.data);
        
     }).catch(error => {
       console.log(error);
