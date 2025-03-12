@@ -174,6 +174,67 @@
   .select-css option[selected] {
       background-color: orange;
   }
+
+ @media screen and (max-width: 700px){
+    .divTitulocliente {
+      background-color: rgba(245, 76, 9, 255);
+      color: white;
+      text-shadow: 1px 1px 0px white;
+      width: 433px;
+    }
+
+    .tituloCliente {
+      font-size: 16px;
+      width: 430px;
+      display: inline-block;
+    }
+
+  .cajabuscar {
+    float: none;
+    /* width: 100%; */
+    /* max-width: 453px; */
+    margin-bottom: 25px;
+    margin-top: 30px;
+    /* margin-left: auto; */
+    /* margin-right: 28px; */
+    display: inline-block;
+    /* text-align: left; */
+    padding-left: 30px;
+ }
+
+ #s {
+  width: 300px;
+  background-color: #ced4da;
+  float: left;
+  padding: 8px 0;
+  text-indent: 10px;
+  color: brown;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+  height: 50px;
+  border-start-start-radius: 20px;
+  border-end-start-radius: 20px;
+  border: 1px solid #aaa;
+}
+
+#buscarform fieldset {
+  width: 410px;
+  padding: 0px 0px 50px 0px;
+}
+
+.divContenedorCajaBuscra{
+   width: 430px;
+}
+ 
+.fondoPedidos {
+  /* flex: 1 1; */
+  display: inline-flex;
+  /* flex-wrap: wrap; */
+  /* align-content: space-between; */
+  /* justify-content: center; */
+  width: 435px;
+ }
+}
   
   
   /* OTROS ESTILOS*/
