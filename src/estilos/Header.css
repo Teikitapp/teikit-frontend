@@ -569,3 +569,35 @@ ul {
         padding: 6px; /* Ajustar el padding en pantallas pequeñas */
     }
 }
+
+
+@media screen and (max-width: 700px){
+    .iconoCarrito{
+        padding-right: 40px;
+    }
+
+    .menu {
+        cursor: pointer;
+        height: 70px;
+        padding: 10px 30px 0px 15px;
+    }
+    .logo {
+        height: 60px;
+        background-color: rgba(245, 76, 9, 255);
+        padding-right: 30px;
+        padding-left: 65px;
+        /* padding-top: 16px; */
+    }
+    .carrito {
+        cursor: pointer;
+        height: 70px;
+        padding: 25px 0px 0px 0px;
+    }
+    .container-icon {
+        position: relative;
+        width: 75px;
+    }
+    .divHeader {
+        width: 80px;
+    }
+}
