@@ -57,3 +57,41 @@
 }
 
 
+@media screen and (max-width: 700px){
+    .footer{
+        background-color: #D9D9D9;
+        text-align: center;
+        height: 1585px;
+        width: 430px;
+    }
+    .espacioTitulo {
+        padding: 40px 50px 10px 50px;;
+        text-shadow: 1px 1px 1px black;
+    }
+    .formatoTextos { 
+        display: contents;
+    }
+    .posicionFija {
+    }
+    .col-3 {
+    }
+
+    .textoNegro {
+        color: black;
+        font-size: 24px;
+        font-family: Arial;
+        width: 405px;
+    }
+
+    .textoNaranjo {
+        color: #FC4B08;
+        text-shadow: 1px 1px 1px #FC4B08;
+        font-family: arial;
+        width: 405px;
+    }
+    .textoNaranjoTeikit{
+        color: #FC4B08;
+        text-shadow: 1px 1px 1px #FC4B08;
+        font-family: arial;
+    }
+}
