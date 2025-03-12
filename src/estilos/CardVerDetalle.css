@@ -199,3 +199,50 @@ padding-right: 18px;
     border: 3px solid rgba(242, 130, 65, 255);
     text-shadow: 0px 0px 0px rgba(242, 130, 65, 255);
 }
+@media screen and (max-width: 700px){
+    .divCantidadYboton {
+        width: 400px;
+        display: inline-flex;
+        height: 275px;
+        /* padding-top: 5px; */
+        justify-content: flex-start;
+        flex-wrap: initial;
+        align-content: space-around;
+    }
+
+    .textoCardProductoVerDetalle {
+        /* padding-top: 20px; */
+        background-color: rgba(242, 130, 65, 255);
+        height: 170px;
+        /* padding-right: 25px; */
+        font-size: 18px;
+        border-radius: 20px;
+        width: 380px;
+        /* padding-right: 35px; */
+        padding: 25px;
+    }
+
+    .divLogoYtexto {
+        display: flex;
+        height: 230px;
+        padding-top: 12px;
+        width: 400px;
+    }
+
+    .divTexto {
+        padding-left: 30px;
+    }
+
+    .sectorProductoVerDetalle{
+        text-align: justify;
+        color:  rgba(242, 130, 65, 255);
+        font-size: 16px;
+    }
+
+    .nombreProductoVerDetalle{
+        text-align: justify;
+        color:  rgba(242, 130, 65, 255);
+        font-weight: bold;
+        font-size: 18px;
+    }
+}
