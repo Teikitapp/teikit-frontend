@@ -64,6 +64,68 @@
     color: coral;
     font-family: monospace;
 }
+/*@media screen and (min-width: 730px){
+    .divComercio {
+        padding-bottom: 500px;
+        padding-bottom: 500px;
+        display: flex;
+        align-items: center;
+        background-color: bisque;
+        width: 1440px;
+    }
+}*/
+
+@media screen and (max-width: 700px){
+
+    .imgComercio {
+        height: 130px;
+        border-radius: 40px;
+        padding: 15px 0px 15px 0px;
+        width: 380px;
+    } 
+
+    /*.divCardTodosProductos {
+        bottom: 0;
+        width: 430px;
+        text-align: center;
+        padding-left: 85px;
+        align-content: flex-start;
+        display: flex;
+        flex: 1 1 1;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-top: 20px;
+    }*/
+    .divCardTodosProductos {
+        bottom: 0;
+        width: 430px;
+        /* height: 100%; */
+        text-align: center;
+        /* padding-left: 85px; */
+        display: inline-flex;
+        flex: 1 1 1;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-top: 20px;
+        align-content: stretch;
+    }
+
+    .divFecha {
+        color: rgba(245, 76, 9, 255);
+        padding: 10px;
+    }
+
+    .divComercio {
+        padding-bottom: 500px;
+        padding-bottom: 500px;
+        display: inline-flex;
+        align-items: center;
+        background-color: bisque;
+        width: 430px;
+        height: 1800px;
+    }
+}
+
 @media screen and (min-width: 730px){
     .divComercio {
         padding-bottom: 500px;
