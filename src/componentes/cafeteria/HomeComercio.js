@@ -8,6 +8,7 @@ import "../../estilos/HomeComercio.css";
 
 const HomeComercio = () => {
 
+   let cont = 0;
   const [listaPedidos, setListaPedidos] = useState([]);
   const [bool, setBool] = useState(false);
 
