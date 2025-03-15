@@ -53,7 +53,7 @@ const HomeComercio = () => {
         console.log(error);
       })
     }
-  }, []);
+  }, );
 
   return (
     <div className='divComercio'>
