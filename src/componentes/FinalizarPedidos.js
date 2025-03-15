@@ -60,7 +60,7 @@ const FinalizarPedidos = ({
       let c = d[2];
       if(a.length === 1){a = "0"+a; temp = a +"/"+ b +"/"+ c; }
       if(b.length === 1){b = "0"+b; temp = a +"/"+ b +"/"+ c;}
-      log.console(temp);
+      console.log(temp);
     return temp;
   }
   
