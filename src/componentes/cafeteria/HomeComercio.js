@@ -39,7 +39,12 @@ const HomeComercio = () => {
    cont++;
       ClienteService.obtenerPedidos(1).then(response => {
         console.log("RESPONSE: ", response);    
-         setBool(false);
+           if(response.data.length === 0){
+            setBool(true);
+          }else{
+            setBool(false);
+          }
+          setListaPedidos(response.data);
       }).catch(error => {
         console.log(error);
       })
