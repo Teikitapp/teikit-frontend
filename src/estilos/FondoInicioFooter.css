@@ -56,6 +56,12 @@
     text-shadow: 1px 1px 1px black;
 }
 
+.textoNaranjoTeikit{
+    color: #FC4B08;
+    text-shadow: 1px 1px 1px #FC4B08;
+    font-family: arial;
+}
+
 
 @media screen and (max-width: 700px){
     .footer{
@@ -88,6 +94,11 @@
         text-shadow: 1px 1px 1px #FC4B08;
         font-family: arial;
         width: 405px;
+    }
+    .textoNaranjoTeikit{
+        color: #FC4B08;
+        text-shadow: 1px 1px 1px #FC4B08;
+        font-family: arial;
     }
     .textoNaranjoTeikit{
         color: #FC4B08;
