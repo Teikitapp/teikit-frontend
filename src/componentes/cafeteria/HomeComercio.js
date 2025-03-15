@@ -36,6 +36,7 @@ const HomeComercio = () => {
       console.log(cont);
       if(cont<2){
       ClienteService.obtenerPedidos(1).then(response => {
+          cont++;
         console.log("RESPONSE: ", response);    
         
           if(response.data.length === 0){
