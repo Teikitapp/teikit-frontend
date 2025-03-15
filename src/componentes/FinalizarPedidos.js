@@ -79,7 +79,7 @@ const FinalizarPedidos = ({
   };
 
   const availableHours = filterHours([
-    "9:25", "10:45", "12:10", "13:30", "15:40", "17:00", "18:20"
+    "9:00", "9:30", "10:00", "13:00", "14:30", "16:00"
   ]);
 
   return (
