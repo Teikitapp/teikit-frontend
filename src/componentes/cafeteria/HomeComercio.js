@@ -8,7 +8,7 @@ import "../../estilos/HomeComercio.css";
 
 const HomeComercio = () => {
 
-   let cont = 0;
+   //let cont = 0;
   const [listaPedidos, setListaPedidos] = useState([]);
   const [bool, setBool] = useState(false);
 
@@ -34,7 +34,7 @@ const HomeComercio = () => {
    useEffect(() => {
    // cont++;
       console.log(cont);
-      if(cont === 0 ){
+    //  if(cont === 0 ){
       ClienteService.obtenerPedidos(1).then(response => {
           cont++;
         console.log("RESPONSE: ", response);    
@@ -50,7 +50,6 @@ const HomeComercio = () => {
       }).catch(error => {
         console.log(error);
       })
-    }
 
 }, []);
 
