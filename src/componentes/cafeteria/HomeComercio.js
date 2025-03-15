@@ -8,7 +8,7 @@ import "../../estilos/HomeComercio.css";
 
 const HomeComercio = () => {
 
-   //let cont = 0;
+  let cont = 0;
   const [listaPedidos, setListaPedidos] = useState([]);
   const [bool, setBool] = useState(false);
 
@@ -29,14 +29,17 @@ const HomeComercio = () => {
   const salir = () => {
     navigate("/loginComercio");
   }
+  const excel = () => {
+    navigate("/subirExcel");
+  }
 
 
-   useEffect(() => {
-   // cont++;
-    //  console.log(cont);
-    //  if(cont === 0 ){
+
+  useEffect(() => {
+    cont++;
+      console.log(cont);
+      if(cont<2){
       ClienteService.obtenerPedidos(1).then(response => {
-        //  cont++;
         console.log("RESPONSE: ", response);    
         
           if(response.data.length === 0){
@@ -45,14 +48,12 @@ const HomeComercio = () => {
             setBool(false);
           }
           setListaPedidos(response.data);
-      
-        
+         
       }).catch(error => {
         console.log(error);
       })
-
-}, []);
-
+    }
+  }, []);
 
   return (
     <div className='divComercio'>
@@ -61,6 +62,7 @@ const HomeComercio = () => {
       </div>
       <div className='divButton'>
       <button className='cardBotonSalir' onClick={salir}>Cerrar sesión</button>
+      <button className='cardBotonSalir' onClick={excel}>Agregar productos</button>
       </div>
       <div className='divFecha'><h1>Día: {fechaHoy}</h1></div>
       <div className='divCardTodosProductos'>
