@@ -4,6 +4,12 @@ import '../estilos/FondoInicioFooter.css';
 const InicioFooter = () => {
     return (
         <div className='footer'>
+        <a href="https://wa.me/+56965970365"
+        class="whatsapp_float"
+        target="_blank"
+        rel="noopener noreferrer">
+        <i class="fa fa-whatsapp whatsapp-icon"></i>
+            
             <h1 className='espacioTitulo'>¿Por qué <label className='textoNaranjo'>TEIKIT</label>?</h1>
             <div className='formatoTextos'>
                 <div className='col-3 posicionFija'>
