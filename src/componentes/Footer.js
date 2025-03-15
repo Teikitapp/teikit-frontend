@@ -11,7 +11,7 @@ const InicioFooter = () => {
         <i class="fa fa-whatsapp whatsapp-icon"></i>
         </a>
             
-            <h1 className='espacioTitulo'>¿Por qué <label className='textoNaranjo'>TEIKIT</label>?</h1>
+            <h1 className='espacioTitulo'>¿Por qué <label className='textoNaranjoTeikit'>TEIKIT</label>?</h1>
             <div className='formatoTextos'>
                 <div className='col-3 posicionFija'>
                     <h1 className='textoNaranjo espacioEnteTexto'>Cómodidad</h1>
