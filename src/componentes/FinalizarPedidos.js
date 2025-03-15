@@ -50,8 +50,18 @@ const FinalizarPedidos = ({
     
     setFecha(date);
     let temp = date.toLocaleDateString('es-ES');
-    setFechaRetiro(temp);
+    setFechaRetiro(formateaDate(temp));
   };
+
+    const formateaDate = (temp) => {
+      let d = temp.split('/');
+      let a = d[0];
+      let b = d[1];
+      let c = d[2];
+      if(a.length === 1){a = "0"+a; temp = a +"/"+ b +"/"+ c; }
+      if(b.length === 1){b = "0"+b; temp = a +"/"+ b +"/"+ c;}
+    return temp;
+  }
   
 
   const isWeekendDay = (date) => {
