@@ -9,6 +9,7 @@ const InicioFooter = () => {
         target="_blank"
         rel="noopener noreferrer">
         <i class="fa fa-whatsapp whatsapp-icon"></i>
+        </a>
             
             <h1 className='espacioTitulo'>¿Por qué <label className='textoNaranjo'>TEIKIT</label>?</h1>
             <div className='formatoTextos'>
