@@ -37,7 +37,7 @@ const HomeComercio = () => {
   useEffect(() => {
       ClienteService.obtenerPedidos(1).then(response => {
         console.log("RESPONSE: ", response);    
-         
+         setBool(false);
       }).catch(error => {
         console.log(error);
       })
