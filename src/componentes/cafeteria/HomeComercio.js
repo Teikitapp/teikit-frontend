@@ -11,6 +11,7 @@ const HomeComercio = () => {
   const [listaPedidos, setListaPedidos] = useState([]);
   const [bool, setBool] = useState(false);
 
+  let cont = 0;
   let newDate = new Date()
   let date = newDate.getDate();
   let month = newDate.getMonth() + 1;
@@ -34,7 +35,8 @@ const HomeComercio = () => {
 
 
 
-  useEffect(() => {
+ if(cont === 0){
+   cont++;
       ClienteService.obtenerPedidos(1).then(response => {
         console.log("RESPONSE: ", response);    
          setBool(false);
@@ -42,7 +44,7 @@ const HomeComercio = () => {
         console.log(error);
       })
     
-  }, [] );
+  };
 
   return (
     <div className='divComercio'>
