@@ -45,16 +45,11 @@ const CardProducto = ({lista, setListaPedidos}) => {
                             <div className='' key={product.id}>           
                                 <label className=''>{product.nombreProducto} </label>                  
                                 <label className='espacioIz'>{product.cantidad} </label>                                                                   
-        
-                        
-                            </div>   
-                            
+                               
+                            </div>                               
                                         
                         ))}                             
-                    </div>   
-                    
-                    
-               
+                    </div>               
             </div>
         </div>
     )
