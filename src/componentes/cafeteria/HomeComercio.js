@@ -34,7 +34,7 @@ const HomeComercio = () => {
    useEffect(() => {
    // cont++;
       console.log(cont);
-      if(cont == 0 ){
+      if(cont === 0 ){
       ClienteService.obtenerPedidos(1).then(response => {
           cont++;
         console.log("RESPONSE: ", response);    
