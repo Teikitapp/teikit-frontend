@@ -84,6 +84,10 @@ class ClienteService {
     obtenerPedidos(idComercio){              
         return axios.get(`${BACKEND_API_URL}/api/pedido/listarPedidosYdetalle/${idComercio}`);       
     } 
+
+     guardarProductos(data){              
+        return axios.post(`${BACKEND_API_URL}/api/producto/guardarProducto`,data);       
+    }
 }
 // eslint-disable-next-line
 export default new ClienteService();
