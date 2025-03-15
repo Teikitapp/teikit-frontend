@@ -16,6 +16,7 @@ import LoginCliente from './componentes/LoginCliente';
 import ProtegerRutasComercio from './componentes/ProtegerRutasComercio';
 import HomeComercio from './componentes/cafeteria/HomeComercio';
 import RegistrarUsuarios from './componentes/RegistrarUsuarios';
+import SubirExcel from './componentes/SubirExcel';
 
 function App() {
   const [allProducts, setAllProducts] = useState([]);
