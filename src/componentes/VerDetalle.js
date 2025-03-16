@@ -50,5 +50,4 @@ const VerDetalle = ({
     </div>
   )
 }
-
-//export default VerDetalle;
+export default VerDetalle;
