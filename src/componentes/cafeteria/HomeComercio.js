@@ -4,7 +4,7 @@ import logoCafeteria from "../../imagenes/logoCafeteria.png";
 import { useNavigate } from 'react-router';
 import ClienteService from '../../servicios/ClienteService';
 import "../../estilos/HomeComercio.css";
-
+import * as XLSX from 'xlsx';
 
 
 const HomeComercio = () => {
