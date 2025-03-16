@@ -51,4 +51,4 @@ const VerDetalle = ({
   )
 }
 
-export default VerDetalle;
+//export default VerDetalle;
