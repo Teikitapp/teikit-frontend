@@ -29,9 +29,9 @@ const HomeComercio = () => {
   const salir = () => {
     navigate("/loginComercio");
   }
-  const excel = () => {
+  /*const excel = () => {
     navigate("/subirExcel");
-  }
+  }*/
 
 
 
@@ -62,7 +62,7 @@ const HomeComercio = () => {
       </div>
       <div className='divButton'>
       <button className='cardBotonSalir' onClick={salir}>Cerrar sesión</button>
-      <button className='cardBotonSalir' onClick={excel}>Agregar productos</button>
+     /* <button className='cardBotonSalir' onClick={excel}>Agregar productos</button>*/
       </div>
       <div className='divFecha'><h1>Día: {fechaHoy}</h1></div>
       <div className='divCardTodosProductos'>
