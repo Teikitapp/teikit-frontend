@@ -178,4 +178,4 @@ render() {
   )
 }
 }
-export default HomeComercio
+//export default HomeComercio
