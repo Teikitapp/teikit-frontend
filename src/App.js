@@ -4,7 +4,7 @@ import Pedidos from './componentes/Pedidos';
 import Home from './componentes/Home';
 import VerDetalle from './componentes/VerDetalle';
 import React, { useEffect, useState } from 'react'
-//import SubirExcel from './componentes/cafeteria/SubirExcel';
+import SubirExcel from './componentes/cafeteria/SubirExcel';
 
 import ClienteService from './servicios/ClienteService';
 import FinalizarPedidos from './componentes/FinalizarPedidos';
@@ -72,7 +72,7 @@ function App() {
             <Route path='/loginComercio' element={<LoginCliente setRespLoginComercio={setRespLoginComercio} />}></Route>
             <Route element={<ProtegerRutasComercio respLoginComercio={respLoginComercio} />}>
               <Route path='/homeComercio' element={<HomeComercio />}></Route>
-              /*<Route path='/subirExcel' element={<SubirExcel />}></Route>*/
+              <Route path='/subirExcel' element={<SubirExcel />}></Route>
             </Route>
 
             <Route path='/' element={<Navigate to='/login' />} />
