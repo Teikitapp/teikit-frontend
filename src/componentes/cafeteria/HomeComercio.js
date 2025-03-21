@@ -29,9 +29,9 @@ const HomeComercio = () => {
   const salir = () => {
     navigate("/loginComercio");
   }
-  /*const excel = () => {
+  const excel = () => {
     navigate("/subirExcel");
-  }*/
+  }
 
 
 
