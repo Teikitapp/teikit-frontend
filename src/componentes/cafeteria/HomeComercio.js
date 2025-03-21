@@ -4,7 +4,7 @@ import logoCafeteria from "../../imagenes/logoCafeteria.png";
 import { useNavigate } from 'react-router';
 import ClienteService from '../../servicios/ClienteService';
 import "../../estilos/HomeComercio.css";
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 
 const HomeComercio = () => {
 
@@ -62,7 +62,7 @@ const HomeComercio = () => {
       </div>
       <div className='divButton'>
       <button className='cardBotonSalir' onClick={salir}>Cerrar sesión</button>
-     /* <button className='cardBotonSalir' onClick={excel}>Agregar productos</button>*/
+      <button className='cardBotonSalir' onClick={excel}>Agregar productos</button>
       </div>
       <div className='divFecha'><h1>Día: {fechaHoy}</h1></div>
       <div className='divCardTodosProductos'>

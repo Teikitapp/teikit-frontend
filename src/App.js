@@ -72,7 +72,7 @@ function App() {
             <Route path='/loginComercio' element={<LoginCliente setRespLoginComercio={setRespLoginComercio} />}></Route>
             <Route element={<ProtegerRutasComercio respLoginComercio={respLoginComercio} />}>
               <Route path='/homeComercio' element={<HomeComercio />}></Route>
-              /*<Route path='/subirExcel' element={<SubirExcel />}></Route>*/
+              <Route path='/subirExcel' element={<SubirExcel />}></Route>
             </Route>s
 
             <Route path='/' element={<Navigate to='/login' />} />
