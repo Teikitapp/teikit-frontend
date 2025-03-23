@@ -11,7 +11,7 @@ const HomeComercio = () => {
   const [listaPedidos, setListaPedidos] = useState([]);
   const [bool, setBool] = useState(false);
 
-  let cont = 0;
+  //let cont = 0;
   let newDate = new Date()
   let date = newDate.getDate();
   let month = newDate.getMonth() + 1;
@@ -35,21 +35,23 @@ const HomeComercio = () => {
 
 
 
- if(cont === 0){
-   cont++;
+  useEffect(() => {
+     
       ClienteService.obtenerPedidos(1).then(response => {
         console.log("RESPONSE: ", response);    
-           if(response.data.length === 0){
+        
+          if(response.data.length === 0){
             setBool(true);
           }else{
             setBool(false);
           }
           setListaPedidos(response.data);
+         
       }).catch(error => {
         console.log(error);
       })
     
-  };
+  }, [listaPedidos] );
 
   /*INICIO*/
 
