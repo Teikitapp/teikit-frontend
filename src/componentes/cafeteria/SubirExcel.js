@@ -87,13 +87,16 @@ export default class SubirExcel extends Component {
     render() {
         return (
             <div className='container'>
-                <h1 className='my-5'>Subir excel de productos</h1>
+                <h1 className='textoTituloExcel my-5'>Subir excel de productos</h1>
                 <form onSubmit={this.leerExcel}>
-                    <label>Seleccione archivo:</label>
+                   
                     <input type="file" className='form-control'
                         accept='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
                         name="excel" />
-                    <button className='btn btn-primary mt-3'>Subir</button>
+                        <div className='divAtras'>
+                            <button className='btnExcel '> Subir</button>
+                            <Link  to="/homeComercio"><button className='btnExcel'>Volver</button></Link> 
+                        </div>
                 </form>
                 
                 <div>
