@@ -1,17 +1,17 @@
-import React, { useEffect,useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import CardProductosComercio from '../cafeteria/CardProductosComercio';
 import logoCafeteria from "../../imagenes/logoCafeteria.png";
 import { useNavigate } from 'react-router';
 import ClienteService from '../../servicios/ClienteService';
 import "../../estilos/HomeComercio.css";
-//import { Link } from 'react-router-dom';
+
 
 const HomeComercio = () => {
 
   const [listaPedidos, setListaPedidos] = useState([]);
   const [bool, setBool] = useState(false);
+  const [count,setConut] = useState(1);
 
-  //let cont = 0;
   let newDate = new Date()
   let date = newDate.getDate();
   let month = newDate.getMonth() + 1;
@@ -33,52 +33,51 @@ const HomeComercio = () => {
     navigate("/subirExcel");
   }
 
+  let data = null;
 
 
-  useEffect(() => {
-     
+
+    if(count < 2){
       ClienteService.obtenerPedidos(1).then(response => {
-        console.log("RESPONSE: ", response);    
-        
-          if(response.data.length === 0){
+        console.log("RESPONSE: ", response);          
+          setListaPedidos(response.data);    
+          if(response.data.length > 0){
             setBool(true);
-          }else{
-            setBool(false);
-          }
-          setListaPedidos(response.data);
-         
-      }).catch(error => {
-        console.log(error);
+          }         
+          data = response.data;     
+        }).catch(error => {
+          console.log(error);
       })
-    
-  }, [listaPedidos] );
+    }
 
-  /*INICIO*/
-
+    useEffect(() => {     
+     setConut((count) => count +1)    
+    }, [data] );
 
   return (
     <div className='divComercio'>
     
-      <div>
-       <img className="imgComercio" src={logoCafeteria} alt='logo'></img>
-      </div>
-      <div className='divButton'>
-      <button className='cardBotonSalir' onClick={salir}>Cerrar sesión</button>
-      <button className='cardBotonSalir' onClick={excel}>Agregar productos</button>
-      </div>
-      <div className='divFecha'><h1>Día: {fechaHoy}</h1></div>
-      <div className='divCardTodosProductos'>
-      {/* {bool === true  ? <h1>SIN PEDIDOS PARA REALIZAR</h1> : ""} */}
-        {bool === false ? listaPedidos.map(product => (
-          <div className='formatoCard' key={product.id}>
-            <CardProductosComercio lista={product} setListaPedidos={setListaPedidos} />
-          </div>
-        )) : <h1 className='sinPedidos'>SIN PEDIDOS PARA REALIZAR</h1> }
-      </div>
-      
+    <div>
+     <img className="imgComercio" src={logoCafeteria} alt='logo'></img>
     </div>
+    <div className='divButton'>
+    <button className='cardBotonSalir' onClick={salir}>Cerrar sesión</button>
+    <button className='cardBotonSalir' onClick={excel}>Agregar productos</button>
+    </div>
+    <div className='divFecha'><h1>Día: {fechaHoy}</h1></div>
+    <div className='divCardTodosProductos'>
+    {/* {bool === true  ? <h1>SIN PEDIDOS PARA REALIZAR</h1> : ""} */}
+      { bool === true ? listaPedidos.map(product => (
+        <div className='formatoCard' key={product.id}>
+          <CardProductosComercio lista={product} setListaPedidos={setListaPedidos} />
+        </div>
+      )) : <h1 className='sinPedidos'>SIN PEDIDOS PARA REALIZAR</h1>}
+    </div>
+    
+  </div>
 
-  )
+)
 }
+
 
 export default HomeComercio
