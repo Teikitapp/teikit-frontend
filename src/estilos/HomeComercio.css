@@ -64,6 +64,59 @@
     color: coral;
     font-family: monospace;
 }
+.divAtras{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ 
+.btnExcel{
+    flex-direction: column;
+    height: 40px;
+    width: 170px;
+    font-weight: bold;
+    font-size: 21px;
+    background-color: rgba(242, 130, 65, 255);
+    color: white;
+    border-radius: 15px;
+    border: 3px solid #FC4B08;
+    margin: 4px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+    align-items: center;
+    font-family: "Arial";
+    text-shadow: 1px 1px 0px #FC4B08;
+    margin: 25px;
+}
+.btnExcel:hover{
+    background: #f76530;
+    color: white;
+   
+}
+.textoTituloExcel{
+    text-align: -webkit-center;
+    color: beige;
+}
+
+.form-control-excel{
+    display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    height: 100px;
+}
+
 /*@media screen and (min-width: 730px){
     .divComercio {
         padding-bottom: 500px;
