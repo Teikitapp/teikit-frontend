@@ -20,8 +20,8 @@
     flex-direction: row-reverse;
 }
 .cardBotonSalir{
-    height: 30px;
-    width: 120px;
+    /* height: 30px; */
+    width: 160px;
     justify-content: center;
     font-weight: bold;
     font-size: 20px;
