@@ -99,12 +99,6 @@ export default class SubirExcel extends Component {
                         </div>
                 </form>
                 
-                <div>
-                    <Link to="/homeComercio">
-                        <button className='botonAtras'>Volver</button>
-                    </Link>
-                </div>
-
                 <hr />
                 {
                     this.state.status &&
