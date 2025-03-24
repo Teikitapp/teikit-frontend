@@ -94,7 +94,7 @@ export default class SubirExcel extends Component {
                         accept='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
                         name="excel" />
                         <div className='divAtras'>
-                            <button className='btnExcel '> Subir</button>
+                            <button className='btnExcel'> Subir</button>
                             <Link  to="/homeComercio"><button className='btnExcel'>Volver</button></Link> 
                         </div>
                 </form>
