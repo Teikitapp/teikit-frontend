@@ -13,7 +13,7 @@ const CardProducto = ({lista, setListaPedidos}) => {
     const cambiaEstado = () => {   
         ClienteService.actualizarEstadoPedido(lista.id, 3).then(response => {
           console.log(response);   
-          if (response.status===200) {
+          if (response) {
             ClienteService.obtenerPedidos(lista.idCliente).then(response => {  
                 setListaPedidos(response.data);            
               }).catch(error => {
