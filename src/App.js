@@ -17,6 +17,7 @@ import LoginCliente from './componentes/LoginCliente';
 import ProtegerRutasComercio from './componentes/ProtegerRutasComercio';
 import HomeComercio from './componentes/cafeteria/HomeComercio';
 import RegistrarUsuarios from './componentes/RegistrarUsuarios';
+import LandingPage from './componentes/LandingPage';
 
 function App() {
   const [allProducts, setAllProducts] = useState([]);
@@ -67,6 +68,7 @@ function App() {
           </Routes> */}
 
           <Routes>
+            <Route path='/landingPage' element={<LandingPage />}></Route>
             <Route path='/registrarUsuario' element={<RegistrarUsuarios />}></Route>
 
             <Route path='/loginComercio' element={<LoginCliente setRespLoginComercio={setRespLoginComercio} />}></Route>
