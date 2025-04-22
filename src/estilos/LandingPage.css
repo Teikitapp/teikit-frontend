@@ -1,0 +1,24 @@
+.color-withe{
+    background-color: white;
+    
+}
+.divUno{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-around;
+}
+.divDos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-content: space-around;
+}
+.divTres{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 40px;
+    border-block: 15px;
+    /* width: 0px; */
+    justify-content: flex-end;
+}
