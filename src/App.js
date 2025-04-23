@@ -75,9 +75,9 @@ function App() {
             <Route element={<ProtegerRutasComercio respLoginComercio={respLoginComercio} />}>
               <Route path='/homeComercio' element={<HomeComercio />}></Route>
               <Route path='/subirExcel' element={<SubirExcel />}></Route>
-            </Route>s
+            </Route>
 
-            <Route element={<Navigate to='/login' />} />
+            <Route  element={<Login />}></Route>
             <Route path='/login' element={<Login setRespLogin={setRespLogin} setUsuarios={setUsuario} />}></Route>
             <Route element={<ProtegerRutas respLogin={respLogin} />}>
 
