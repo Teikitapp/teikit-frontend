@@ -68,7 +68,7 @@ function App() {
           </Routes> */}
 
           <Routes>
-            <Route path='/landingPage' element={<LandingPage />}></Route>
+            <Route path='/' element={<LandingPage />}></Route>
             <Route path='/registrarUsuario' element={<RegistrarUsuarios />}></Route>
 
             <Route path='/loginComercio' element={<LoginCliente setRespLoginComercio={setRespLoginComercio} />}></Route>
@@ -77,7 +77,7 @@ function App() {
               <Route path='/subirExcel' element={<SubirExcel />}></Route>
             </Route>s
 
-            <Route path='/' element={<Navigate to='/login' />} />
+            <Route element={<Navigate to='/login' />} />
             <Route path='/login' element={<Login setRespLogin={setRespLogin} setUsuarios={setUsuario} />}></Route>
             <Route element={<ProtegerRutas respLogin={respLogin} />}>
 
