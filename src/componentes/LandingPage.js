@@ -37,8 +37,7 @@ const LandingPage = () => {
         },
       );
     }else{
-      setMensaje("Falta completar datos para enviar el formulario.");
-      console.log("Falta datos para enviar formulario");   
+      setMensaje("Debe completar datos con (*) para enviar el formulario."); 
     }   
   };
 
