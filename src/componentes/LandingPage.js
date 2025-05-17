@@ -65,11 +65,11 @@ const LandingPage = () => {
       <div className="divDos">
         <h1 className='textoComoFunciona'>¿Cómo Funciona?</h1>
         <img className='imagenComoFunciona' src={funcionaImg} alt='logo'></img>
-        <h4 className='texto'>Realiza pedido</h4>
+        <h4 className='subTexto'>Realiza pedido</h4>
         <img className='imagenComoFunciona' src={funcionaImg2} alt='logo'></img>
-        <h4 className='texto'>Selecciona horario</h4>
+        <h4 className='subTexto'>Selecciona horario</h4>
         <img className='imagenComoFunciona' src={funcionaImg3} alt='logo'></img>
-        <h4 className='texto'>Retira tu pedido</h4>
+        <h4 className='subTexto'>Retira tu pedido</h4>
       </div>
 
       <div className="divTres">
