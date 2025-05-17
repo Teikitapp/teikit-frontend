@@ -1,80 +1,356 @@
-.color-withe{
+.color-withe {
     background-color: white;
-    
+
 }
-.divUno{
+
+.divUno {
     display: flex;
     flex-wrap: wrap;
-    align-content: space-between;
-    justify-content: space-around;
-}
-.divDos{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
+    flex-direction: column;
     align-content: space-around;
+    align-items: center;
 }
-.divTres{
+
+.divDos {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+    flex-direction: column;
+    align-items: center;
+}
+
+.divTres {
     display: flex;
     flex-wrap: wrap;
     padding-top: 40px;
-    /* background-color: red; */
     border-block: 15px;
-    /* width: 0px; */
-    justify-content: flex-end;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-content: stretch;
+    align-items: center;
 }
-.texto{
+
+.divCuatro {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 40px;
+    border-block: 15px;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-content: stretch;
+    align-items: center;
+}
+
+.divCinco {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 40px;
+    border-block: 15px;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-content: stretch;
+    align-items: center;
+}
+
+.texto {
     color: #FC4B08;
-    text-shadow: 1px 1px 1px #FC4B08;
-    font-family: arial;
-    width: 1325px;
     padding-top: 35px;
+    font-family: Arial, Helvetica, sans-serif;
 }
-.imagenDos{
+
+.textoSubTituloQueEs {
+    padding: 40px 200px 40px 200px;
+    text-align: center;
+    color: #FC4B08;
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.textoComoFunciona {
+    text-align: center;
+    font-size: 70px;
+    color: #FC4B08;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding-top: 150px;
+}
+
+.imagenComoFunciona {
     padding-top: 0px;
+    width: 400px;
 }
-.imagenTres{
+
+.imagenTres {
     width: 1100px;
 }
 
-@media screen and (max-width: 700px){
-    .divUno{
-        display: flex;
-        flex-wrap: wrap;
-        align-content: space-between;
-        justify-content: space-around;
+.textoTitulo {
+    text-align: left;
+    padding: 10px 0px 0px 220px;
+    font-size: 70px;
+    color: #FC4B08;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.mensaje {
+    padding-top: 10px;
+    font-size: 20px;
+}
+
+.divRrss {
+    text-align: center;
+    padding-top: 80px;
+}
+
+.img-rrss {
+    width: 60px;
+    padding: 2px;
+}
+
+.divInit {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-direction: row-reverse;
+}
+
+.botonIr {
+    height: 75px;
+    width: 390px;
+    font-weight: bold;
+    background-color: #fc4b08;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 45px;
+    margin: 20px 20px 0px 0px;
+    border: none;
+}
+
+
+.botonIr:hover {
+    background: #f18449;
+    color: white;
+}
+
+input[type="submit"]:hover {
+    background: #f18449;
+    color: white;
+}
+
+
+.field {
+    display: block;
+    font-size: 15px;
+    color: #777;
+    padding-top: 50px;
+}
+
+.labelTexarea {
+    display: block;
+    font-size: 15px;
+    color: #777;
+}
+
+.inputCorreo {
+    /* display: block;
+    min-width: 250px;
+    line-height: 1.5;
+    font-size: 14px; */
+    display: block;
+    width: 400px;
+    line-height: -3.5;
+    font-size: 20px;
+    height: 45px;
+    border-color: #FC4B08;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+input[type="submit"] {
+    display: block;
+    font-size: 14px;
+    background-color: #FC4B08;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    width: 400px;
+    height: 40px;
+    font-size: 20px;
+}
+
+.textareaEmail {
+    overflow: auto;
+    resize: vertical;
+    width: 400px;
+    height: 200px;
+    border-block-color: #FC4B08;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+@media screen and (max-width: 1050px) {
+    .imagen {
+        width: 500px;
     }
-    .divDos{
+}
+
+@media screen and (max-width: 950px) {
+    .imagen {
+        width: 500px;
+    }
+
+    .textoComoFunciona {
+        padding: 0px 5px 0px 5px;
+        text-align: center;
+        font-size: 60px;
+        color: #FC4B08;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        padding-top: 150px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .divUno {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    .divDos {
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-end;
         align-content: space-around;
     }
-    .divTres{
+
+    .divCuatro {
         display: flex;
         flex-wrap: wrap;
         padding-top: 40px;
-        /* background-color: red; */
         border-block: 15px;
-        /* width: 0px; */
-        justify-content: flex-end;
+        align-items: center;
+        justify-content: space-evenly;
     }
-    .imagen{
-        width: 430px;
-    }
-    .color-withe{
-        background-color: white;
-        display: flex;
-        flex-wrap: wrap;
-    }
+
     .texto {
         color: #FC4B08;
         text-shadow: 1px 1px 1px #FC4B08;
         font-family: arial;
-        width: 425px;
-        padding-top: 35px;
+        /*width: 425px;*/
+        width: 350px;
+        /*padding: 30px 0px 30px 30px; */
     }
-    .imagenDos{
+
+    .imagenDos {
         padding-top: 30px;
     }
- }
+
+
+
+
+    .divInit {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        align-items: baseline;
+
+    }
+
+    .divTresLineas {
+        text-align: right;
+    }
+
+    .textoTitulo {
+        text-align: left;
+        font-size: 35px;
+        color: #FC4B08;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        /*padding: 0px 40px 0px 15px;*/
+        padding: 0px 0px 0px 5px;
+    }
+
+    .textoSubTituloQueEs {
+        padding: 10px 30px 10px 30px;
+        text-align: center;
+        color: #FC4B08;
+        font-size: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+    }
+
+    .textoComoFunciona {
+        padding: 0px 5px 0px 5px;
+        text-align: center;
+        font-size: 35px;
+        color: #FC4B08;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        padding-top: 150px;
+    }
+    .imagen {
+        width: 360px;
+        padding-top: 50px;
+    }
+    .botonIr {
+        height: 75px;
+        width: 300px;
+        font-weight: bold;
+        background-color: #fc4b08;
+        color: white;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 45px;
+        margin: 20px 10px 0px 0px;
+        border: none;
+    }
+    .imagenComoFunciona {
+        padding-top: 0px;
+        width: 300px;
+        padding: 0px 0px 0px 25px;
+    }
+    .color-withe {
+        background-color: white;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    .textareaEmail {
+        overflow: auto;
+        resize: vertical;
+        width: 300px;
+        height: 200px;
+        border-block-color: #FC4B08;
+        border-radius: 10px;
+        padding: 10px;
+    }
+    .inputCorreo {
+        display: block;
+        width: 300px;
+        line-height: -3.5;
+        font-size: 20px;
+        height: 45px;
+        border-color: #FC4B08;
+        border-radius: 10px;
+        padding: 10px;
+    }
+    input[type="submit"] {
+        display: block;
+        font-size: 14px;
+        background-color: #FC4B08;
+        color: #fff;
+        border: none;
+        border-radius: 20px;
+        width: 300px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+}
