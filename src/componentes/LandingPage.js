@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
 import landingPage from "../imagenes/landingInicio.png";
-import funcionaImg from "../imagenes/funciona1.png";
-import funcionaImg2 from "../imagenes/funciona2.png";
-import funcionaImg3 from "../imagenes/funciona3.png";
-import imagenQueEs from "../imagenes/imgQueEs.png";
+import funcionaImg from "../imagenes/funcionaUno.png";
+import funcionaImg2 from "../imagenes/funcionaDos.png";
+import funcionaImg3 from "../imagenes/funcionaTres.png";
+import imagenQueEs from "../imagenes/imagenQueEs.png";
 import instagram from "../imagenes/rrss-instagram2.png";
 import whatsapp from "../imagenes/rrss-whatsapp2.png";
 import linkedln from "../imagenes/rrss-linkedln2.png";
 import disenio from "../imagenes/disenioLineas.png";
+import lineasBlanco from "../imagenes/linea.png";
 import "../estilos/LandingPage.css";
 import { Link } from 'react-router-dom'
 import emailjs from '@emailjs/browser';
@@ -37,7 +38,8 @@ const LandingPage = () => {
         },
       );
     }else{
-      setMensaje("Debe completar datos con (*) para enviar el formulario."); 
+      setMensaje("Debe completar datos con (*) para enviar el formulario.");
+      console.log("Falta datos para enviar formulario");   
     }   
   };
 
@@ -97,9 +99,11 @@ const LandingPage = () => {
         </form>
       </div>
       <div className='divRrss'>
+        <img className='linea'  src={lineasBlanco} alt='logo'></img>
         <a href='https://www.instagram.com/teikit_cl/'><img className='img-rrss'  src={instagram} alt='logo'></img></a>
         <a href="https://wa.me/+56965970365" rel="noopener noreferrer"><img className='img-rrss' src={whatsapp} alt='logo'></img></a>
         <a href='https://www.linkedin.com/company/teikit-chile/posts/?feedView=all'><img className='img-rrss' src={linkedln} alt='logo'></img></a>
+        <img className='linea'  src={lineasBlanco} alt='logo'></img>
       </div>
 
       <div className="divCinco">
