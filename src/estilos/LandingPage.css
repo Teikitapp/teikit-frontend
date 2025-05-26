@@ -9,6 +9,11 @@
     align-content: space-around;
     align-items: center;
 }
+.imagen{
+    vertical-align: middle;
+    border-style: none;
+    width: 350px;
+}
 
 .divDos {
     display: flex;
@@ -32,7 +37,7 @@
 .divCuatro {
     display: flex;
     flex-wrap: wrap;
-    padding: 40px 0px 100px 0px;
+    padding: 20px 0px 100px 0px;
     border-block: 15px;
     justify-content: space-evenly;
     flex-direction: column;
@@ -58,14 +63,14 @@
     text-align: center;
     font-weight: bold;
     
-    font-size: 40px;
+    font-size: 20px;
     padding-left: 150px;
-    padding: 0px 30px 0px 40px;
+    padding: 20px 30px 4px 40px;
     text-shadow: 1px 1px 1px #f8f9fa;
 }
 
 .textoSubTituloQueEs {
-    padding: 40px 200px 40px 200px;
+    padding: 40px 250px 40px 250px;
     text-align: center;
     color: #FC4B08;
     font-size: 35px;
@@ -75,17 +80,22 @@
 
 .textoComoFunciona {
     text-align: center;
-    font-size: 70px;
+    font-size: 43px;
     color: #FC4B08;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    padding-top: 150px;
+   
+    padding: 150px 5px 30px 5px;
 }
 
 .imagenComoFunciona {
     padding-top: 0px;
-    width: 400px;
+    width: 140px;
+    transition: transform 0.5s ease;
 }
+.imagenComoFunciona:hover {
+    transform: rotate(15deg);
+  }
 
 .imagenTres {
     width: 1100px;
@@ -93,8 +103,8 @@
 
 .textoTitulo {
     text-align: left;
-    padding: 10px 0px 0px 150px;
-    font-size: 70px;
+    padding: 2px 0px 0px 190px;
+    font-size: 35px;
     color: #FC4B08;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
@@ -117,25 +127,38 @@
 .img-rrss {
     width: 60px;
     padding: 2px;
+    overflow:hidden;
+}
+
+.img-rrss:hover {
+    -webkit-transform:scale(1.1);
+    transform:scale(1.1);
+}
+
+.imgLineas{
+    width: 130px;
+    /* padding-top: 70px; */
+    vertical-align: middle;
+    border-style: none;
 }
 
 .divInit {
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: baseline;
     flex-direction: row-reverse;
 }
 
 .botonIr {
-    height: 75px;
-    width: 390px;
+    height: 50px;
+    width: 260px;
     font-weight: bold;
     background-color: #fc4b08;
     color: white;
     border-radius: 10px;
     cursor: pointer;
-    font-size: 45px;
+    font-size: 30px;
     margin: 20px 20px 0px 0px;
     border: none;
 }
@@ -173,7 +196,7 @@ input[type="submit"]:hover {
     display: block;
     width: 400px;
     line-height: -3.5;
-    font-size: 20px;
+    font-size: 15px;
     height: 45px;
     border-color: #FC4B08;
     border-radius: 10px;
@@ -181,28 +204,68 @@ input[type="submit"]:hover {
 }
 
 input[type="submit"] {
-    display: block;
-    font-size: 14px;
-    background-color: #FC4B08;
-    color: #fff;
-    border: none;
-    border-radius: 20px;
-    width: 400px;
-    height: 40px;
+   /* display: block;
+    width: 390px;
+    line-height: -3.5;
     font-size: 20px;
+    height: 40px;
+    border-color: #FC4B08;
+    background-color: #FC4B08;
+    border-radius: 10px;
+    color: white;*/
+
+    display: block;
+    height: 40px;
+    width: 400px;
+    font-weight: bold;
+    background-color: #fc4b08;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    margin: 20px 20px 0px 0px;
+    border: none;
 }
 
 .textareaEmail {
     overflow: auto;
     resize: vertical;
     width: 400px;
-    height: 200px;
+    height: 150px;
     border-color: #FC4B08;
     border-radius: 10px;
     padding: 10px;
 }
 .linea{
     width: 400px;
+}
+.divNav{
+    padding: 5px 100px 5px 100px;
+}
+.nav {
+    display: flex;
+    background-color: #FC4B08;
+    width: 1100px;
+    height: 40px;
+    border-radius: 10px;
+    text-align: center;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+/*.nav {
+    display: flex;
+    background-color: beige;
+    width: 730px;
+    height: 65px;
+    border-radius: 30px;
+    text-align: center;
+    margin: 50px;
+    border: 1px solid orangered;
+    align-items: flex-end;
+}*/
+.teikit{
+    width: 40px;
+    text-align: center;
 }
 
 @media screen and (max-width: 1050px) {
@@ -212,6 +275,22 @@ input[type="submit"] {
     .linea{
         width: 200px;
     }
+    .divNav {
+        padding: 5px 5px 5px 5px;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: nowrap;
+    }
+    .nav {
+        display: flex;
+        background-color: #FC4B08;
+        width: 950px;
+        height: 40px;
+        border-radius: 10px;
+        text-align: center;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
 }
 
 @media screen and (max-width: 950px) {
@@ -220,7 +299,7 @@ input[type="submit"] {
     }
 
     .textoComoFunciona {
-        padding: 0px 5px 0px 5px;
+        padding: 0px 5px 70px 5px;
         text-align: center;
         font-size: 60px;
         color: #FC4B08;
@@ -230,6 +309,30 @@ input[type="submit"] {
     }
     .linea{
         width: 200px;
+    }
+    .divNav {
+        padding: 5px 5px 5px 5px;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: nowrap;
+    }
+    .nav {
+        display: flex;
+        background-color: #FC4B08;
+        width: 760px;
+        height: 40px;
+        border-radius: 10px;
+        text-align: center;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+    .textoSubTituloQueEs {
+        padding: 40px 150px 40px 150px;
+        text-align: center;
+        color: #FC4B08;
+        font-size: 35px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
     }
 }
 
@@ -272,9 +375,6 @@ input[type="submit"] {
         padding-top: 30px;
     }
 
-
-
-
     .divInit {
         display: flex;
         flex-wrap: nowrap;
@@ -301,7 +401,7 @@ input[type="submit"] {
         padding: 10px 30px 10px 30px;
         text-align: center;
         color: #FC4B08;
-        font-size: 30px;
+        font-size: 20px;
         font-family: Arial, Helvetica, sans-serif;
         font-weight: bold;
     }
@@ -333,9 +433,11 @@ input[type="submit"] {
     }
     .imagenComoFunciona {
         padding-top: 0px;
-        width: 300px;
+        width: 200px;
         padding: 0px 0px 0px 25px;
+        transition: transform 0.5s ease;
     }
+   
     .color-withe {
         background-color: #F5F7DC;
         display: flex;
@@ -374,5 +476,91 @@ input[type="submit"] {
         height: 40px;
         font-size: 20px;
     }
+    .divNav {
+         padding: 5px 10px 5px 10px; 
+    }
 
+    .nav {
+        display: flex;
+        background-color: #FC4B08;
+        width: 350px;
+        height: 40px;
+        border-radius: 10px;
+        text-align: center;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+
+}
+
+@media screen and (max-width: 450px) {
+    .imagen {
+        width: 300px;
+    }
+
+    .textoComoFunciona {
+        padding: 0px 5px 0px 5px;
+        text-align: center;
+        font-size: 60px;
+        color: #FC4B08;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        padding-top: 150px;
+    }
+    .linea{
+        width: 50px;
+    }
+    .divNav {
+        padding: 5px 5px 25px 5px;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: nowrap;
+    }
+    .nav {
+        display: flex;
+        background-color: #FC4B08;
+        width: 320px;
+        height: 40px;
+        border-radius: 10px;
+        text-align: center;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+    .botonIr {
+        height: 55px;
+        width: 220px;
+        font-weight: bold;
+        background-color: #fc4b08;
+        color: white;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 25px;
+        margin: 20px 10px 0px 0px;
+        border: none;
+    }
+    .imagenComoFunciona {
+        padding-top: 0px;
+        width: 150px;
+        padding: 0px 0px 0px 25px;
+        
+    }
+    
+    .textoComoFunciona {
+        padding: 0px 5px 15px 5px;
+        text-align: center;
+        font-size: 30px;
+        color: #FC4B08;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        padding-top: 150px;
+    }
+    .divCuatro {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 40px 0px 100px 25px;
+        border-block: 15px;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
 }

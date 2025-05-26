@@ -9,6 +9,7 @@ import whatsapp from "../imagenes/rrss-whatsapp2.png";
 import linkedln from "../imagenes/rrss-linkedln2.png";
 import disenio from "../imagenes/disenioLineas.png";
 import lineasBlanco from "../imagenes/linea.png";
+import teikit from "../imagenes/t-teikit.png";
 import "../estilos/LandingPage.css";
 import { Link } from 'react-router-dom'
 import emailjs from '@emailjs/browser';
@@ -46,9 +47,14 @@ const LandingPage = () => {
 
   return (   
     <div className='color-withe'>
+      <div className="divNav" >
+          <nav className='nav'>
+          <img className='teikit' src={teikit} alt='logo'></img>
+          </nav>
+      </div>
     <div className="divInit" >
         <div className=''> 
-          <img className='' src={disenio} alt='logo'></img>
+          <img className='imgLineas' src={disenio} alt='logo'></img>
         </div>
         <div className=''>
           <h1 className='textoTitulo'>PIDE</h1>
@@ -64,7 +70,7 @@ const LandingPage = () => {
         <Link to="/login"><button className='botonIr'>PIDE AQUÍ</button></Link>
       </div>
 
-      <div className="divDos">
+      <div className="divDos">      
         <h1 className='textoComoFunciona'>¿Cómo Funciona?</h1>
         <img className='imagenComoFunciona' src={funcionaImg} alt='logo'></img>
         <h4 className='subTexto'>Realiza pedido</h4>

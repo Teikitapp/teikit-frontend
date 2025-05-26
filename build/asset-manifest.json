@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.89fa4bac.css",
+    "main.js": "/static/js/main.5c5969ed.js",
+    "static/js/453.8fec1fc3.chunk.js": "/static/js/453.8fec1fc3.chunk.js",
+    "static/media/celular2.png": "/static/media/celular2.4a4f64648d142f6cc9da.png",
+    "static/media/landingInicio.png": "/static/media/landingInicio.eaed6bee337d42000795.png",
+    "static/media/logoCafeteria.png": "/static/media/logoCafeteria.66b71beb359c53dc0234.png",
+    "static/media/imagenQueEs.png": "/static/media/imagenQueEs.3c73573376858c0eb609.png",
+    "static/media/dog.png": "/static/media/dog.ac86ee30daa148a4b19f.png",
+    "static/media/producto.png": "/static/media/producto.f5dfd56622406292394b.png",
+    "static/media/casillasCelular.png": "/static/media/casillasCelular.5d2a8aaf4d4e85bc70ea.png",
+    "static/media/funcionaDos.png": "/static/media/funcionaDos.d3af45c8ad067f71fb69.png",
+    "static/media/funcionaTres.png": "/static/media/funcionaTres.b263e40de14529a07582.png",
+    "static/media/funcionaUno.png": "/static/media/funcionaUno.f499f6b3918665e5f65f.png",
+    "static/media/rrss-whatsapp2.png": "/static/media/rrss-whatsapp2.ca2a5dc6a47040bd07cc.png",
+    "static/media/rrss-instagram2.png": "/static/media/rrss-instagram2.b49041fcd0649f2d147e.png",
+    "static/media/rrss-linkedln2.png": "/static/media/rrss-linkedln2.261d6870cb994c1d38f3.png",
+    "static/media/teikitMenu.png": "/static/media/teikitMenu.ea55333374aba71ebf2a.png",
+    "index.html": "/index.html",
+    "main.89fa4bac.css.map": "/static/css/main.89fa4bac.css.map",
+    "main.5c5969ed.js.map": "/static/js/main.5c5969ed.js.map",
+    "453.8fec1fc3.chunk.js.map": "/static/js/453.8fec1fc3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.89fa4bac.css",
+    "static/js/main.5c5969ed.js"
+  ]
+}
