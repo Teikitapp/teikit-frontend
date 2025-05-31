@@ -67,7 +67,7 @@ const LandingPage = () => {
 
       <div className="divUno" >
         <img className='imagen' src={landingPage} alt='logo'></img>
-        <Link to="/login"><button className='botonIr'>PIDE AQUÍ</button></Link>
+        <Link to="/registrarUsuario"><button className='botonIr'>PIDE AQUÍ</button></Link>
       </div>
 
       <div className="divDos">      
