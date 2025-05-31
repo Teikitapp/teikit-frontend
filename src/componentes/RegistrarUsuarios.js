@@ -16,7 +16,7 @@ const RegistrarUsuarios = () => {
     const [nombre, setNombre] = useState("");
     const [ingresa, setIngresa] = useState(null);
     const [error, setError] = useState("");
-    const [campoVacio, setCampoVacio] = useState("");
+    //const [campoVacio, setCampoVacio] = useState("");
 
     const guardar = () => {
         if (!validator.isEmail(usuario)) {
