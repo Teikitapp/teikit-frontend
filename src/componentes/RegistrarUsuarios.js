@@ -77,7 +77,7 @@ const RegistrarUsuarios = () => {
                     <Label className='labelLogin' for='passwordRepeat'>Repetir Contraseña</Label>
                     <Input className='inputLogin' onChange={(passRepeat) => { funPassRepetida(passRepeat) }} type='password' />
 
-                    {campoVacio && <Label className='mensajeError'>{campoVacio}</Label>}
+                    {/* {campoVacio && <Label className='mensajeError'>{campoVacio}</Label>}*/}
                     {error && <Label className='mensajeError'>{error}</Label>}
 
                     {/*  <Label className='mensajeError'> {ingresa === 0 ? "No se ha podido ingresar su solicitud, Intente mas atrde." : ""}</Label>*/}
