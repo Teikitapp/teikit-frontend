@@ -1,29 +1,35 @@
 import React, { useState } from 'react'
-import { Modal, ModalHeader, ModalBody, ModalFooter, FormGroup, Label, Input, Button } from "reactstrap"
+import { Label, Input, Button } from "reactstrap"
 import "../estilos/Login.css"
 import ClienteService from '../servicios/ClienteService';
 import { useNavigate } from 'react-router';
 import { Link } from "react-router-dom";
+import imgCasillero from "../imagenes/img-login.png";
 
 const LoginCliente = ({ setRespLoginComercio }) => {
 
-    const [verLogin, setVerLogin] = useState(true);
+    //const [verLogin, setVerLogin] = useState(true);
     const [usuario, setUsuario] = useState("");
     const [pass, setPass] = useState("");
     const [ingresa, setIngresa] = useState(null);
     const navigate = useNavigate();
 
+
     const ingresar = () => {
+
         let bodyComercio = {
             "email": usuario,
             "passCliente": pass
         }
+
         if (usuario !== "" && pass !== "") {
             ClienteService.obtenerComercio(bodyComercio).then(response => {
                 setRespLoginComercio(response.data.length);
                 if (response.data.length > 0) {
                     setIngresa(response.data.length);
-                    setVerLogin(false);
+                    ///setUsuarios(response.data[0]);
+                    console.log("INGRESA COMERCIO");
+                   // setVerLogin(false);//esconde el login para navegar
                     navigate("/homeComercio");
 
                 } else {
@@ -34,48 +40,66 @@ const LoginCliente = ({ setRespLoginComercio }) => {
             }).catch(error => {
                 setIngresa(0);
                 console.log(error);
+
             })
         }
     }
 
     const funUsuario = (u) => { setUsuario(u.target.value); }
     const funPass = (p) => { setPass(p.target.value); }
-    const handleSubmit = (e) => {
-        e.preventDefault();  
-        ingresar();
-    }
 
     return (
         <div className='divLogin'>
-            <Modal isOpen={verLogin === true}>
-                <ModalHeader tag="h4">
+
+            <div>
+                <h2 className='tituloLogin'>
                     Iniciar Sesión Comercio
+                </h2>
+
+                <form>
+                    <Label className='labelLogin' for='usuario'>Usuario</Label>
+                    <Input className='inputLogin' onChange={(user) => { funUsuario(user) }} placeholder='example@gmail.com' type="email" id="usuario" />
+
+                    <Label className='labelLogin' for='password'>Contraseña</Label>
+                    <Input className='inputLogin' onChange={(user) => { funPass(user) }} type="password" id="password" />
+
+                    <Label className='mensajeError'> {ingresa === 0 ? "Contraseña o usuario incorrecto." : ""}</Label>
+
+                    <div className='divIngresar'>
+                        <Button id="ingresar" className='btnIngresar' onClick={() => ingresar()}>Ingresar</Button>
+                    </div>
+
+                    <div className='divBtnRegistrar'>
+                        <Link to="/registrarUsuario" className='' ><Button className='btnsLogin'> Registrar Usuario</Button></Link>
+                        <Link to="/loginComercio" className=''><Button className='btnsLogin'>Login Cafetería</Button></Link>
+                        <Link to="/login" className=''><Button className='btnsLogin'>Login Usuario</Button></Link>
+                    </div>
+                </form>
+            </div>
+            <div>
+                <img className='' src={imgCasillero} alt='logo'></img>
+            </div>
+
+            {/* <Modal isOpen={verLogin === true}>
+                <ModalHeader>
+                    <h4>Iniciar Sesión Comercio</h4>
                 </ModalHeader>
 
                 <ModalBody>
-                    <form onSubmit={handleSubmit}>
-                        <FormGroup>
-                            <Label for='usuario'>Usuario</Label>
-                            <Input 
-                                onChange={(user) => { funUsuario(user) }} 
-                                placeholder='ejemplo@correo.com' 
-                                type="email" 
-                                id="usuario" 
-                            />
+                    <FormGroup>
+                        <Label for='usuario'>Usuario</Label>
+                        <Input onChange={(user) => { funUsuario(user) }} placeholder='example@gmail.com' type="email" id="usuario" />
 
-                            <Label for='password'>Contraseña</Label>
-                            <Input 
-                                onChange={(pass) => { funPass(pass) }} 
-                                type="password" 
-                                id="password"
-                             />
+                        <Label for='password'>Contraseña</Label>
+                        <Input onChange={(pass) => { funPass(pass) }} type="password" id="password" />
 
-                            <Label className='mensajeError'> {ingresa === 0 ? "Usuario o contraseña incorrecto." : ""}</Label>
-                            <div className='divIngresar'>
-                                <Button id="ingresar" className='btnIngresar' type="submit">Ingresar</Button>
-                            </div>
-                        </FormGroup>
-                    </form>
+                        <Label className='mensajeError'> {ingresa === 0 ? "Contraseña o usuario incorrecto." : ""}</Label>
+                        <div className='divIngresar'>
+                            <Button id="ingresar" className='btnIngresar' onClick={() => ingresar()}>Ingresar</Button>
+                        </div>
+
+                    </FormGroup>
+
                 </ModalBody>
 
                 <ModalFooter className='footerModalLogin'>
@@ -85,7 +109,7 @@ const LoginCliente = ({ setRespLoginComercio }) => {
                         <Link to="/login" className=''>Login Usuario</Link>
                     </div>
                 </ModalFooter>
-            </Modal>
+            </Modal> */}
 
         </div>
     )

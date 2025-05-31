@@ -1,39 +1,282 @@
-.btnIngresar{
-    height: 50px;
-    width: 180px;
+.btnIngresar {
     font-weight: bold;
     font-size: 20px;
-    background-color: #fc4b08;
-    color: white;
     border-radius: 10px;
     cursor: pointer;
     font-size: 16px;
-    margin: 20px 20px 0px 0px;
+    /* margin: 20px 20px 0px 0px; */
     border: none;
+
+    background-color: white;
+    color: #fc4b08;
+    width: 190px;
+    height: 45px;
 }
-.divIngresar{
+
+.btnIngresar:hover {
+    background: #f18449;
+    color: white;
+}
+
+.divIngresar {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-content: space-around;
 
 }
-.mensajeError{
-    margin: 5px ;
+
+.mensajeError {
+    margin: 5px;
     font-weight: bold;
     color: red;
 }
-.mensajeExito{
-    margin: 5px ;
+
+.mensajeExito {
+    margin: 5px;
     font-weight: bold;
     color: rgb(53, 149, 53);
 }
-.divBtnRegistrar{
+
+.divBtnRegistrar {
     display: flex;
-    width: 900px;
+    width: 420px;
     flex-wrap: nowrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    align-content: flex-end;
+    padding-top: 20px;
 }
-.footerModalLogin{
+
+.footerModalLogin {
     /*background-color: rgba(242, 130, 65, 255);*/
+}
+
+.divLogin {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.inputLogin {
+
+    display: block;
+    width: 460px;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: white;
+    background-color: #fc4b08;
+    border-radius: 2.25rem;
+    border: 1px solid palegreen;
+}
+
+.inputLogin:focus {
+    /* color: black; */
+    background-color: #fc4b08;
+    border-color: beige;
+    box-shadow: 0 0 0 .1rem rgba(237, 232, 208, 2);
+}
+
+.labelLogin {
+    display: inline-block;
+    margin-bottom: .5rem;
+    color: white;
+    font-size: 20px;
+    font-family: math;
+}
+
+.tituloLogin {
+    color: white;
+    font-family: math;
+    margin-block: 16px;
+}
+
+.buttonLogin {
+    background-color: white;
+    color: #fc4b08;
+    font-size: 20px;
+    width: 190px;
+    height: 45px;
+}
+
+.btnsLogin {
+    background-color: white;
+    color: #fc4b08;
+    border-radius: 10px;
+    border-block-color: #fc4b08;
+    font-size: 15px;
+    width: 150px;
+    margin: 2px;
+}
+
+
+
+
+
+@media screen and (max-width: 700px) {
+    .tituloLogin {
+        color: white;
+        font-family: math;
+        margin-block: 16px;
+        width: 190px;
+        font-size: 18px;
+        /*padding: 0px 0px 0px 7px;*/
+    }
+    img {    
+        vertical-align: middle;
+        border-style: none;
+        width: 170px;       
+    }
+    .inputLogin {
+        display: block;
+        width: 170px;
+        height: calc(1.5em + .75rem + 2px);
+        padding: .375rem .75rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: white;
+        background-color: #fc4b08;
+        border-radius: 2.25rem;
+        border: 1px solid palegreen;
+    }
+
+    .labelLogin {
+        display: inline-block;
+        margin-bottom: .5rem;
+        color: white;
+        font-size: 15px;
+        font-family: math;
+    }
+
+    .btnIngresar {
+        font-weight: bold;
+        font-size: 20px;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 12px;
+        /* margin: 20px 20px 0px 0px; */
+        border: none;
+        background-color: white;
+        color: #fc4b08;
+        width: 170px;
+        height: 30px;
+    }
+
+    .btnsLogin {
+        background-color: white;
+        color: #fc4b08;
+        border-radius: 10px;
+        border-block-color: #fc4b08;
+        margin: 2px;
+        font-size: 9px;
+        width: 105px;
+    }
+
+    .divBtnRegistrar {
+        display: flex;
+        flex-wrap: nowrap;
+        /* padding-top: 20px; */
+        justify-content: flex-start;
+        width: 0px;
+    }
+
+    .divLogin {
+        /*display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100px;
+        padding: 0px 0px 0px 10px;*/
+        padding: 0px 0px 0px 7px;
+    }
+    .divIngresar {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: space-around;
+    }
+    .div-contenedor{
+        width: 140px;
+        padding: 0px 0px 0px 7px;
+    }
+    .form{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+@media screen and (max-width: 950px) {
+    img {
+        vertical-align: middle;
+        border-style: none;
+        width: 220px;
+    }
+}
+@media screen and (max-width: 1050px) {
+    .div-contenedor{
+     padding: 0px 0px 0px 15px;
+    }
+    .inputLogin {
+        width: 380px;
+    }
+    .divLogin {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0px 0px 0px 10px;
+    }
+    img {
+        vertical-align: middle;
+        border-style: none;
+        width: 265px;
+    }
+}
+@media screen and (max-width: 450px) {
+    .inputLogin {
+        width: 160px;
+    }
+    img {
+        vertical-align: middle;
+        border-style: none;
+        width: 215px;
+    }
+    .btnsLogin {
+        background-color: white;
+        color: #fc4b08;
+        border-radius: 10px;
+        border-block-color: #fc4b08;
+        margin: 2px;
+        font-size: 6px;
+        width: 80px;
+    }
+}
+@media screen and (max-width: 550px) {
+    .inputLogin {
+        width: 175px;
+        font-size: 11px;
+    }
+    img {
+        vertical-align: middle;
+        border-style: none;
+        width: 135px;
+    }
+    .btnIngresar {
+        font-weight: bold;
+        font-size: 20px;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 12px;
+        /* margin: 20px 20px 0px 0px; */
+        border: none;
+        background-color: white;
+        color: #fc4b08;
+        width: 150px;
+        height: 30px;
+    }
 }
