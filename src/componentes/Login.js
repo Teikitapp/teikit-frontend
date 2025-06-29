@@ -98,12 +98,8 @@ const Login = ({ setRespLogin, setUsuarios }) => {
 
     return (
         <div className='divLogin'>
-
-
             <div className="panel-lite">
-
                 <img className='imgLogin' src={teikit} alt='logo de freeCode'></img>
-
                 <p className="nombreLogin">Correo electrónico:</p>
                 <div className="form-group">
                     <div className='divcon'>
