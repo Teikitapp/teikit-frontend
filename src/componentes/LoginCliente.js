@@ -63,7 +63,6 @@ const LoginCliente = ({ setRespLoginComercio }) => {
                     <div className='divcon'>
                         <i className="icon bi bi-person-fill"></i>
                     </div>
-
                     <input onChange={(user) => { funUsuario(user) }} className="form-control" required="required" placeholder='Escriba aquí su correo' />
 
                 </div>
