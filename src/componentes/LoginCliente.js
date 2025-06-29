@@ -56,7 +56,6 @@ const LoginCliente = ({ setRespLoginComercio }) => {
                     <div></div>
                 </div>
                 <img className='imgLogin' src={teikit} alt='logo de freeCode'></img>
-
                 <p className="nombreLogin">Correo electrónico:</p>
                 <div className="form-group">
                     <div className='divcon'>
