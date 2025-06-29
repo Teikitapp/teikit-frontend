@@ -9,19 +9,6 @@ import Titulo from './Titulo';
 import ClienteService from '../servicios/ClienteService';
 import MenuInterior1 from './MenuInterior1';
 
-const useOnClickOutside1 = (ref, handler) => {
-    React.useEffect(() => {
-      const listener = event => {
-        if (!ref.current || ref.current.contains(event.target)) return;
-        handler(event);
-      };
-      document.addEventListener("mousedown1", listener);
-  
-      return () => {
-        document.removeEventListener("mousedown1", listener);
-      };
-    }, [ref, handler]);
-  };
 
 const Pedidos = ({
     allProducts,

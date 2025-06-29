@@ -6,7 +6,6 @@ import "react-datepicker/dist/react-datepicker.css";
 import es from 'date-fns/locale/es';
 import { isWeekend } from 'date-fns';
 import { Link } from 'react-router-dom';
-import Header from './Header';
 import MenuInterior1 from './MenuInterior1';
 
 

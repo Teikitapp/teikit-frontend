@@ -5,19 +5,7 @@ import '../estilos/DetallePedidoFin.css';
 import {Modal, ModalHeader, ModalBody, ModalFooter, FormGroup, Label, Button} from "reactstrap"
 import MenuInterior1 from './MenuInterior1';
 
-const useOnClickOutside1 = (ref, handler) => {
-    useEffect(() => {
-      const listener = event => {
-        if (!ref.current || ref.current.contains(event.target)) return;
-        handler(event);
-      };
-      document.addEventListener("mousedown1", listener);
-  
-      return () => {
-        document.removeEventListener("mousedown1", listener);
-      };
-    }, [ref, handler]);
-  };
+
 
 const PedidosEnCurso = ({
   allProducts,
@@ -34,7 +22,7 @@ const PedidosEnCurso = ({
     const [modalEnPreparacion, setModalEnPreparacion] = useState(false);  
     const [newNpedido, setnewNpedido] = useState(0);
     const [newNcasillero, setnewNcasillero] = useState(0);
-    const reload = document.getElementById("reload");
+    //const reload = document.getElementById("reload");
 
         useEffect(() => {
             if (usuario.id !== null && usuario.id !== undefined) {

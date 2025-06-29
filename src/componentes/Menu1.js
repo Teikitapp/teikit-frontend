@@ -55,13 +55,6 @@ const Menu1 = ({ open1 }) => {
 
   const [active, setActive] = useState(false);
 
-  const salir = () => {
-   
-    localStorage.setItem('clave', "");
-    localStorage.setItem('usuario', "");
-    Navigate("/login");
-} 
-
   return (
     <StyledMenu open1={open1}>
        <li href="/">

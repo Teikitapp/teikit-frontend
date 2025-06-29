@@ -4,7 +4,6 @@ import "../estilos/Login.css"
 import ClienteService from '../servicios/ClienteService';
 import { Link } from "react-router-dom";
 import validator from "validator";
-import imgCasillero from "../imagenes/img-login.png";
 
 
 const RegistrarUsuarios = () => {

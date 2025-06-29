@@ -4,7 +4,6 @@ import CardDetalle from './CardDetalle';
 //import BotonVolver from './BotonVolver';
 import ScrollTop from './ScrollTop';
 import Titulo from './Titulo';
-import Header from './Header';
 import MenuInterior1 from './MenuInterior1';
 //import { useLocation } from 'react-router-dom'
 

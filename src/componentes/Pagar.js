@@ -4,7 +4,6 @@ import logoBlanco2 from '../imagenes/logoTeikit2.png'
 import { initMercadoPago, Wallet } from '@mercadopago/sdk-react'
 import ClienteService from '../servicios/ClienteService';
 import ScrollTop from './ScrollTop';
-import Header from './Header';
 import MenuInterior1 from './MenuInterior1';
 
 const Pagar = ({

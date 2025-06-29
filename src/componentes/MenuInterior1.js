@@ -8,20 +8,6 @@ import Burger1 from './Burger1';
 import Menu1 from './Menu1';
 
 
-const useOnClickOutside1 = (ref, handler) => {
-  React.useEffect(() => {
-    const listener = event => {
-      if (!ref.current || ref.current.contains(event.target)) return;
-      handler(event);
-    };
-    document.addEventListener("mousedown1", listener);
-
-    return () => {
-      document.removeEventListener("mousedown1", listener);
-    };
-  }, [ref, handler]);
-};
-
 const MenuInterior1 = ({
   allProducts,
   setAllProducts,

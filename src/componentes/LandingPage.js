@@ -13,22 +13,6 @@ import MenuInterior from './MenuInterior';
 //npm install styled-components@4.3.2 react@16.8.6 react-dom@16.8.6 react-is@16.8.6
 //https://icons.getbootstrap.com/icons/person/
 
-
-
-const useOnClickOutside = (ref, handler) => {
-  React.useEffect(() => {
-    const listener = event => {
-      if (!ref.current || ref.current.contains(event.target)) return;
-      handler(event);
-    };
-    document.addEventListener("mousedown", listener);
-
-    return () => {
-      document.removeEventListener("mousedown", listener);
-    };
-  }, [ref, handler]);
-};
-
 const LandingPage = () => {
 
   /*const form = useRef();
