@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import ScrollTop from './ScrollTop'
 import ClienteService from '../servicios/ClienteService';
 import '../estilos/DetallePedidoFin.css';
 import {Modal, ModalHeader, ModalBody, ModalFooter, FormGroup, Label, Button} from "reactstrap"
 import MenuInterior1 from './MenuInterior1';
-
-
 
 const PedidosEnCurso = ({
   allProducts,
@@ -24,7 +22,7 @@ const PedidosEnCurso = ({
     const [newNcasillero, setnewNcasillero] = useState(0);
     //const reload = document.getElementById("reload");
 
-        useEffect(() => {
+       // useEffect(() => {
             if (usuario.id !== null && usuario.id !== undefined) {
                 ClienteService.getBuscarPorDosEstadosIdcliente(usuario.id).then(responseBuscarEstado => {
                    return setDetalle(responseBuscarEstado.data);
@@ -34,7 +32,7 @@ const PedidosEnCurso = ({
                     console.log(error);
                 })
             }
-        }, []); 
+       // }, []); 
 
       // 1: EN_PROCESO, 2: PAGADO(pagado), 3: EN_CASILLERO(listo para retiro), 4:ENTREGADO
   // CASILLERO 1: DISPONIBLE, 2:OCUPADO 
