@@ -16,7 +16,7 @@ import LoginCliente from './componentes/LoginCliente';
 import ProtegerRutasComercio from './componentes/ProtegerRutasComercio';
 import HomeComercio from './componentes/cafeteria/HomeComercio';
 import RegistrarUsuarios from './componentes/RegistrarUsuarios';
-import SubirExcel from './componentes/SubirExcel';
+import SubirExcel from './componentes/cafeteria/SubirExcel';
 import LandingPage from './componentes/LandingPage';
 import Contactanos from './componentes/Contactanos';
 import QueEs from './componentes/QueEs';
