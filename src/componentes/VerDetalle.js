@@ -5,6 +5,7 @@ import CardDetalle from './CardDetalle';
 import ScrollTop from './ScrollTop';
 import Titulo from './Titulo';
 import Header from './Header';
+import MenuInterior1 from './MenuInterior1';
 //import { useLocation } from 'react-router-dom'
 
 
@@ -22,7 +23,7 @@ const VerDetalle = ({
 
   return (
     <div>
-      <Header
+      {/* <Header
         allProducts={allProducts}
         setAllProducts={setAllProducts}
         total={total}
@@ -31,7 +32,18 @@ const VerDetalle = ({
         setCountProducts={setCountProducts}
         email={email}
         nombre={nombre}
-      />
+      /> */}
+      <MenuInterior1
+                allProducts={allProducts}
+                setAllProducts={setAllProducts}
+                total={total}
+                setTotal={setTotal}
+                countProducts={countProducts}
+                setCountProducts={setCountProducts}
+                email={email}
+                nombre={nombre}
+                 /> 
+
       <ScrollTop />
       <Titulo nombreComercio={nombreComercio} />
       <div className='contenedor'>
@@ -50,4 +62,5 @@ const VerDetalle = ({
     </div>
   )
 }
+
 export default VerDetalle;

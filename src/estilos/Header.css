@@ -23,7 +23,6 @@
 /* .desplegable{
     background: #1e1e1e;
 } */
- 
 .barras {
     display: none;
 }
@@ -46,7 +45,7 @@ nav a {
     font-size: 1.1rem;
 }
 
-li a {
+/* li a {
     padding: 10px;
     display: block;
     text-align: left;
@@ -54,7 +53,7 @@ li a {
 
 ul li a:hover {
     background: #ff5722;
-}
+} */
 
 /*aca configuro como se veria en tablet*/
 
@@ -76,11 +75,11 @@ ul li a:hover {
 
 
 
-li a {
+/* li a {
     padding: 10px 20px 2px 30px;
     display: block;
     text-align: center;
-}
+} */
 
 ul {
     padding: 0;
@@ -252,13 +251,6 @@ ul {
     color: white;
     padding-right: 55px;
 }
-@media(max-width: '1300px'){
-    .iconoCarrito{
-        padding-right: 40px;
-    }
-}
-
-
 
 
 .carrito {
@@ -342,7 +334,7 @@ ul {
 
 .container-icon {
 	position: relative;
-	width: 155;
+    width: 155px;
 }
 
 .count-products {
@@ -382,7 +374,7 @@ ul {
 	align-items: center;
 	justify-content: space-between;
 	padding: 20px;
-
+    color: #000;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
@@ -424,6 +416,7 @@ ul {
 	align-items: center;
 	padding: 20px 0;
 	gap: 20px;
+    color: #000;
 }
 
 .cart-total h3 {
@@ -495,6 +488,7 @@ ul {
 .cart-empty {
 	padding: 20px;
 	text-align: center;
+    color: #000;
 }
 
 .hidden {
@@ -546,31 +540,6 @@ ul {
 	border-bottom-right-radius: 10px;
 }
 
-/* Agrandar botones de + y - en el carrito */
-.cantidad-ajustable button {
-    font-size: 16px; /* Tamaño de la fuente más grande */
-    padding: 8px; /* Ajustar el padding para hacerlo más grande */
-    background-color: #ffffff; /* Color de fondo */
-    color: rgb(0, 0, 0); /* Color del texto */
-    border: 1px; 
-    border-radius: 8px; /* Bordes redondeados */
-    cursor: pointer; /* Aparece como puntero al pasar por encima */
-    transition: background-color 0.3s; /* Transición de color */
-}
-
-.cantidad-ajustable button:hover {
-    background-color: #ffc14e; /* Cambiar el color al pasar el ratón */
-}
-
-/* Si quieres ajustar el tamaño de los botones en pantallas más pequeñas */
-@media (max-width: 600px) {
-    .cantidad-ajustable button {
-        font-size: 12px; /* Reducir el tamaño de la fuente en pantallas pequeñas */
-        padding: 6px; /* Ajustar el padding en pantallas pequeñas */
-    }
-}
-
-
 @media screen and (max-width: 700px){
     .iconoCarrito{
         padding-right: 40px;
@@ -582,16 +551,17 @@ ul {
         padding: 10px 30px 0px 15px;
     }
     .logo {
-        height: 60px;
+        height:45px;
         background-color: rgba(245, 76, 9, 255);
         padding-right: 30px;
         padding-left: 65px;
+        width: 200px;
         /* padding-top: 16px; */
     }
     .carrito {
         cursor: pointer;
         height: 70px;
-        padding: 25px 0px 0px 0px;
+        padding: 15px 0px 0px 0px;
     }
     .container-icon {
         position: relative;

@@ -4,7 +4,6 @@ import Pedidos from './componentes/Pedidos';
 import Home from './componentes/Home';
 import VerDetalle from './componentes/VerDetalle';
 import React, { useEffect, useState } from 'react'
-import SubirExcel from './componentes/cafeteria/SubirExcel';
 
 import ClienteService from './servicios/ClienteService';
 import FinalizarPedidos from './componentes/FinalizarPedidos';
@@ -17,7 +16,15 @@ import LoginCliente from './componentes/LoginCliente';
 import ProtegerRutasComercio from './componentes/ProtegerRutasComercio';
 import HomeComercio from './componentes/cafeteria/HomeComercio';
 import RegistrarUsuarios from './componentes/RegistrarUsuarios';
+import SubirExcel from './componentes/SubirExcel';
 import LandingPage from './componentes/LandingPage';
+import Contactanos from './componentes/Contactanos';
+import QueEs from './componentes/QueEs';
+import QuienesSomos from './componentes/QuienesSomos';
+import Aliados from './componentes/Aliados';
+import Mision from './componentes/Mision';
+import Trayectoria from './componentes/Trayectoria';
+import Tecnologia from './componentes/Tecnologia';
 
 function App() {
   const [allProducts, setAllProducts] = useState([]);
@@ -36,12 +43,13 @@ function App() {
   let fechaHoy = dia + "/" + mes + "/" + anio;
 
   let d = fechaHoy.split('/');
-  let a = d[0];
-  let b = d[1];
-  let c = d[2];
-  if (a.length === 1) a = "0" + a;
-  if (b.length === 1) b = "0" + b;
-  fechaHoy = a + "/" + b + "/" + c;
+      let a = d[0];
+      let b = d[1];
+      let c = d[2];
+      if(a.length === 1){a = "0"+a; fechaHoy = a +"/"+ b +"/"+ c; }
+      if(b.length === 1){b = "0"+b; fechaHoy = a +"/"+ b +"/"+ c;}
+
+ 
 
 
   useEffect(() => {
@@ -69,6 +77,16 @@ function App() {
 
           <Routes>
             <Route path='/' element={<LandingPage />}></Route>
+            <Route path='/landing' element={<LandingPage />}></Route>
+            <Route path='/contactanos' element={<Contactanos />}></Route>
+            <Route path='/queEs' element={<QueEs />}></Route>
+            <Route path='/quienesSomos' element={<QuienesSomos />}></Route>
+
+            <Route path='/mision' element={<Mision />}></Route>
+            <Route path='/trayectoria' element={<Trayectoria />}></Route>
+            <Route path='/tecnologia' element={<Tecnologia />}></Route>
+
+            <Route path='/aliados' element={<Aliados />}></Route>
             <Route path='/registrarUsuario' element={<RegistrarUsuarios />}></Route>
 
             <Route path='/loginComercio' element={<LoginCliente setRespLoginComercio={setRespLoginComercio} />}></Route>

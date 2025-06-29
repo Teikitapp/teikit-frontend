@@ -23,6 +23,11 @@
     text-shadow: 1px 1px 1px #FC4B08;
     font-family: arial;
 }
+.textoNaranjoTeikit{
+    color: #FC4B08;
+    text-shadow: 1px 1px 1px #FC4B08;
+    font-family: arial;
+}
 .textoNegro{
     color: black;
     font-size: 18px;
@@ -42,6 +47,7 @@
     border-width: 0;
     color: #6c757d;
     background-color: #6c757d;
+    padding: 0px;
 }
 .contenedorTexto{
     padding: 25px 70px 0px 70px;
@@ -54,12 +60,6 @@
 .espacioTitulo{
     padding-block: 25px;
     text-shadow: 1px 1px 1px black;
-}
-
-.textoNaranjoTeikit{
-    color: #FC4B08;
-    text-shadow: 1px 1px 1px #FC4B08;
-    font-family: arial;
 }
 
 
@@ -100,13 +100,7 @@
         text-shadow: 1px 1px 1px #FC4B08;
         font-family: arial;
     }
-    .textoNaranjoTeikit{
-        color: #FC4B08;
-        text-shadow: 1px 1px 1px #FC4B08;
-        font-family: arial;
-    }
 }
-
 
 .whatsapp_float {
     position: fixed;

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 import '../estilos/FinalizarPedidos.css';
 import ScrollTop from './ScrollTop';
 import DatePicker, { registerLocale } from 'react-datepicker';
@@ -7,6 +7,9 @@ import es from 'date-fns/locale/es';
 import { isWeekend } from 'date-fns';
 import { Link } from 'react-router-dom';
 import Header from './Header';
+import MenuInterior1 from './MenuInterior1';
+
+
 
 registerLocale("es", es);
 
@@ -17,6 +20,7 @@ const FinalizarPedidos = ({
   setCountProducts,
   email,
   nombre,
+
   nombreComercio,
   allProducts,
   total,
@@ -38,64 +42,32 @@ const FinalizarPedidos = ({
 
   const tiempoRetiroChance = (t) => {
     setHoraRetiro(t.target.value);
-    setHorarioRetiro(t.target.value);
-  };
+    setHorarioRetiro(t.target.value)
 
-  const dateChance = (date) => {
-    if (!date) { 
-      setFecha(null); 
-      setFechaRetiro(null); 
-      return; 
-    }
-    
+  }
+  const dateChance = date =>  {
     setFecha(date);
-    let temp = date.toLocaleDateString('es-ES');
+    let temp = "";
+    temp = date.toLocaleDateString('es-ES');
     setFechaRetiro(formateaDate(temp));
-  };
+  }
 
-    const formateaDate = (temp) => {
+  const formateaDate = (temp) => {
       let d = temp.split('/');
       let a = d[0];
       let b = d[1];
       let c = d[2];
       if(a.length === 1){a = "0"+a; temp = a +"/"+ b +"/"+ c; }
       if(b.length === 1){b = "0"+b; temp = a +"/"+ b +"/"+ c;}
-      console.log(temp);
     return temp;
   }
-  
 
-  const isWeekendDay = (date) => {
-    return isWeekend(date);
-  };
-
-  const filterWeek = (date) => {
-    return !isWeekendDay(date);
-  };
-
-  // Obtener la hora actual y la hora del sistema
-  const currentHour = new Date().getHours();
-  const currentMinutes = new Date().getMinutes();
-
-  // Filtrar las horas según la hora actual
-  const filterHours = (hours) => {
-    // Si el día seleccionado es el mismo día, se filtran las horas posteriores a la hora actual
-    if (fecha && fecha.toLocaleDateString('es-ES') === new Date().toLocaleDateString('es-ES')) {
-      return hours.filter(hour => {
-        const [hourValue, minuteValue] = hour.split(':').map(Number);
-        return hourValue > currentHour || (hourValue === currentHour && minuteValue > currentMinutes);
-      });
-    }
-    return hours; // Si el día seleccionado no es hoy, no se filtran las horas
-  };
-
-  const availableHours = filterHours([
-    "8:00", "8:30", "9:00", "9:30", "10:00","10:30", "11:00", "11:30","12:00","12:30", "13:00", "13:30","14:00", "14:30","15:00","15:30", "16:00", "16:30", "17:00", "18:00"
-  ]);
+  const isWeekendDay = (date) => {return isWeekend(date);}
+  const filterWeek = (date) => {return !isWeekendDay(date)}
 
   return (
     <div>
-      <Header 
+      {/* <Header
         allProducts={allProducts}
         setAllProducts={setAllProducts}
         total={total}
@@ -104,20 +76,32 @@ const FinalizarPedidos = ({
         setCountProducts={setCountProducts}
         email={email}
         nombre={nombre}
-      />
+      /> */}
+      <MenuInterior1
+                allProducts={allProducts}
+                setAllProducts={setAllProducts}
+                total={total}
+                setTotal={setTotal}
+                countProducts={countProducts}
+                setCountProducts={setCountProducts}
+                email={email}
+                nombre={nombre}
+                 /> 
 
-      <div className='fondoPedidos'>
+
+      <div className='fondoPedidos' >
         <ScrollTop />
-
+       
         <div className='card-product-container-finalizar'>
           <div className='card-product-finalizar'>
             <div className='card-finalizar'>
 
               <div className='divCalendario'>
+
                 <DatePicker
                   showIcon
                   isClearable
-                  className='pitcher fa fa-calendar'
+                  className=' pitcher fa fa-calendar'
                   placeholderText="Seleccione fecha retiro"
                   selected={fecha}
                   onChange={(date) => { allProducts.length === 0 ? dateChance("Seleccione fecha retiro") : dateChance(date) }}
@@ -127,33 +111,30 @@ const FinalizarPedidos = ({
                   minDate={minDate}
                   maxDate={maxDate}
                   disabled={allProducts.length === 0}
-                />
-              </div>
 
-              <div className='divSelectTiempo'>
-                <select 
-                  onChange={(hora) => { tiempoRetiroChance(hora) }} 
-                  disabled={allProducts.length === 0} 
-                  className='select-tiempo'>
-                  <option>Seleccione hora retiro</option>
-                  {availableHours.map((hora, index) => (
-                    <option key={index} value={hora}>{hora}</option>
-                  ))}
+                />
+
+              </div>
+              <div className='divSelectTiempo '>
+                <select onChange={(hora) => { tiempoRetiroChance(hora) }} disabled={allProducts.length === 0} className='select-tiempo '>
+                  <option >Seleccione hora retiro</option>
+                  <option>10:15</option>
+                  <option>10:30</option>
+                  <option>10:45</option>
+                  <option>11:00</option>
                 </select>
               </div>
-
               <div className='divPagar'>
                 <Link to="/pedidos"><button className='botonSeguirComprando'>Seguir comprando </button></Link>
                 <Link to="/pagar"><button
-                  disabled={allProducts.length === 0 || (horaRetiro === null || horaRetiro === "Seleccione hora retiro") || fecha === null} 
-                  className='botonPagar'>Ir a Pagar </button></Link>
+                  disabled={allProducts.length === 0 || ((horaRetiro === null || horaRetiro === "Seleccione hora retiro") || fecha === null)} className='botonPagar'>ir a Pagar </button></Link>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
 export default FinalizarPedidos;

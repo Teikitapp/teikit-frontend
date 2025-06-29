@@ -12,7 +12,8 @@
 .imagen{
     vertical-align: middle;
     border-style: none;
-    width: 350px;
+    /*width: 350px;*/
+    width: 200px;
 }
 
 .divDos {
@@ -32,6 +33,8 @@
     flex-direction: column;
     align-content: stretch;
     align-items: center;
+    background: white;
+    padding-top: 53px;
 }
 
 .divCuatro {
@@ -179,7 +182,9 @@ input[type="submit"]:hover {
     display: block;
     font-size: 15px;
     color: #777;
-    padding-top: 50px;
+    /* padding-top: 50px; */
+    /* padding: 0px 30px 85px 0px; */
+    padding: 0px 20px 5px 20px;
 }
 
 .labelTexarea {
@@ -266,6 +271,94 @@ input[type="submit"] {
 .teikit{
     width: 40px;
     text-align: center;
+}
+
+.div-btn{
+    padding-bottom: 50px;
+}
+
+
+.div-menu-landing{
+    bottom: 0;
+    
+    height: 70px;
+    text-align: center;
+}
+
+.div-menu-landing1{
+    bottom: 0;
+    width: 2%;
+    height: 40px;
+    text-align: center;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+.todo-menu{
+  display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.icon-persona{
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+}
+.nombre-t{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    padding-left: 70px;
+}
+.nombre-t1{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+.noMasFila{
+    font-size: 22px;
+    color: #FC4B08;
+    font-weight: 900;
+}
+.ingresa{
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+.div-img-logo-pequenio{
+    display: flex;
+        justify-content: center;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: flex-start;
+}
+.div-img-logo-grande{
+
+}
+.img-logo-pequenio{
+    width: 4rem;
+    padding: 0px 0px 30px 12px;
+}
+.div-img{
+   display: flex;
+   padding: 30px 0px 23px 0px;
+}
+.img-logo-pequenio-2 {
+    width: 6rem;
+}
+.text-logo-pequenio{
+    padding: 0px 0px 25px 10px;
+}
+.textoInicio{
+    font-size: 27px;
+    color: #FC4B08;
+    padding: 0px 149px 15px 99px;
+    font-weight: 600;
+    /* inline-size: 9.1rem; */
+    letter-spacing: -0.05em;
+    /* word-spacing: -0.0em; */
+    line-height: 1.1;
 }
 
 @media screen and (max-width: 1050px) {
@@ -363,7 +456,7 @@ input[type="submit"] {
     }
 
     .texto {
-        color: #FC4B08;
+        /*color: #FC4B08;*/
         text-shadow: 1px 1px 1px #FC4B08;
         font-family: arial;
         /*width: 425px;*/
@@ -377,9 +470,10 @@ input[type="submit"] {
 
     .divInit {
         display: flex;
-        flex-wrap: nowrap;
-        flex-direction: row;
-        align-items: center;
+                flex-wrap: nowrap;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
 
     }
 
@@ -398,7 +492,7 @@ input[type="submit"] {
     }
 
     .textoSubTituloQueEs {
-        padding: 10px 30px 10px 30px;
+        padding: 0px 30px 10px 30px;
         text-align: center;
         color: #FC4B08;
         font-size: 20px;
@@ -444,7 +538,8 @@ input[type="submit"] {
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-    
+        /* padding-top: 20px; */
+        /* padding: 20px 0px 78px 0px; */
     }
     .textareaEmail {
         overflow: auto;
@@ -490,22 +585,41 @@ input[type="submit"] {
         flex-wrap: nowrap;
         justify-content: space-around;
     }
+    .divContenedorSocios{
+        display: flex;
+        justify-content: space-between;
+        /* width: 87%; */
+        text-align: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 20px 20px 30px 20px;
+        align-content: space-between;
+    }
 
 }
 
 @media screen and (max-width: 450px) {
     .imagen {
-        width: 300px;
+        width: 260px;
+        padding-top: 0px;
+        height: 580px;
+    }
+    .imagen-inicio {
+        width: 350px;
+        padding-top: 15px;
+        height: 425px;
     }
 
-    .textoComoFunciona {
-        padding: 0px 5px 0px 5px;
+    
+    .textoQuieresEnTuNegocio{
         text-align: center;
-        font-size: 60px;
+        font-size: 28px;
         color: #FC4B08;
         font-family: Arial, Helvetica, sans-serif;
         font-weight: bold;
-        padding-top: 150px;
+        padding-top: 15px;
+        /* padding: 0px 40px 30px 0px */
+        padding: 0px 20px 30px 20px;
     }
     .linea{
         width: 50px;
@@ -535,8 +649,9 @@ input[type="submit"] {
         border-radius: 10px;
         cursor: pointer;
         font-size: 25px;
-        margin: 20px 10px 0px 0px;
+        /*margin: 20px 10px 0px 0px;*/
         border: none;
+        margin: 13px 10px 0px 0px
     }
     .imagenComoFunciona {
         padding-top: 0px;
@@ -546,21 +661,248 @@ input[type="submit"] {
     }
     
     .textoComoFunciona {
-        padding: 0px 5px 15px 5px;
+        /* padding: 0px 5px 15px 5px;
         text-align: center;
         font-size: 30px;
         color: #FC4B08;
         font-family: Arial, Helvetica, sans-serif;
         font-weight: bold;
-        padding-top: 150px;
+        padding-top: 150px; */
+                
+                text-align: center;
+                font-size: 30px;
+                color: #FC4B08;
+                font-weight: bold;
+                padding: 0px 10px 20px 0px;
     }
     .divCuatro {
-        display: flex;
+        /* display: flex;
         flex-wrap: wrap;
         padding: 40px 0px 100px 25px;
         border-block: 15px;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: space-evenly; */
+
+        /* padding: 30px 0px 23px 60px; */
+        background-color: beige;
+        padding: 40px 0px 45px 0px;
     }
+    .textoQuienesSomos {
+        text-align: center;
+        font-size: 26px;
+        color: #FC4B08;
+        font-family: sans-serif;
+        font-weight: 800;
+        padding: 0px 20px 10px 19px;
+        width: 30px;
     
+    }
+    .textoAliados{
+        text-align: left;
+        font-size: 26px;
+        color: #FC4B08;
+        font-family: sans-serif;
+        font-weight: 800;
+        padding: 0px 15px 10px 20px;
+        width: 80%;
+    }
+    .tituloTrayectoria{
+        text-align: left;
+        font-size: 26px;
+        color: #FC4B08;
+        font-family: sans-serif;
+        font-weight: 800;
+        padding: 0px 15px 10px 20px;
+        width: 80%;
+        line-height: 0.7;
+    }
+    .divTQuienes {
+        display: flex;
+        padding-top: 40px;
+        border-block: 15px;
+        flex-direction: column;
+        align-items: flex-start;
+        background: white;
+        flex-wrap: wrap;
+        height: 825px;
+    }
+    .divAliados {
+        display: flex;
+        padding-top: 40px;
+        border-block: 15px;
+        flex-direction: column;
+        align-items: flex-start;
+        background: white;
+        flex-wrap: wrap;
+        height: 825px;
+    }
+    .textoSubTituloQueEs{
+        padding: 0px 20px 10px 20px;
+        text-align: justify;
+        font-weight: 400;
+        color: #003049;
+        font-size: 16px;
+    }
+    .textoQuienes {
+        padding: 0px 20px 10px 20px;
+        text-align: justify;
+        font-weight: 400;
+        color: #003049;
+        font-size: 16px;
+    }
+    .divImgSocios{
+        display: flex;
+        flex-direction: column;
+        padding-top: 50px;
+    }
+    .divContenedorSocios{
+        display: flex;
+        justify-content: space-between;
+        /* width: 87%; */
+        text-align: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 2px 2px 30px 2px;
+        align-content: space-between;
+    }
+    .imgSocio{
+        vertical-align: middle;
+        border-style: none;
+        height: 160px;
+        width: 180px;
+        /* border-radius: 80px; */
+    }
+    .imgAliado{
+        vertical-align: middle;
+        border-style: none;
+        
+        width: 125px;
+    }
+    .field {
+        display: block;
+        font-size: 15px;
+        color: #777;
+        /* padding-top: 50px; */
+        /* padding: 0px 30px 85px 0px; */
+        padding: 0px 0px 5px 20px;
+    }
+    .imgUC{
+        width: 25rem;
+    }
+    .imgMision{
+        vertical-align: middle;
+        border-style: none;
+        width: 390px;
+        padding: 10px 0px 0px 20px;
+        border-radius: 50px
+    }
+    .divTecnologia{
+        display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+            padding-top: 70px;
+    }
+    .subTextoTecnologia{
+        width: 215px;
+        padding: 0px 40px 0px 35px;
+    }
+    .imgTecnologia {
+        vertical-align: middle;
+        border-style: none;
+        width: 175px;
+    }
+    hr{ 
+        border:         none;
+        border-left:    1px solid hsla(200, 10%, 50%,100);
+        height:         3vh;
+        width:          1px;    
+        padding: 0px 0px 0px 300px;  
+    }
+    .divTrayectoria{
+        margin: 35px;
+        line-height: 0.40;
+    }
+    .contenedorTrayectoria{
+        display: flex;
+                padding-top: 40px;
+                border-block: 15px;
+                flex-direction: column;
+                align-items: flex-start;
+                background: white;
+                flex-wrap: nowrap;
+                height: 825px;
+                letter-spacing: -0.05em;
+    }
+    .divLineaTiempo{
+        .textoQuienes {
+            padding: 0px 0px 0px 20px;
+            text-align: justify;
+            font-weight: 400;
+            color: #003049;
+            font-size: 16px;
+        }
+    }
+    .nombresSocios{
+        margin-bottom: .5rem;
+        font-size: 21px;
+        font-weight: 500;   
+    }
+    .img-logo-pequenio-2 {
+        width: 4rem;
+    }
+    .text-logo-pequenio{
+        width: 10px;
+        padding: 0px 0px 25px 0px;
+    }
+}
+
+
+
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+ /*  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0d0c1d;
+  color: #effffa;
+  height: 100vh; */
+  text-rendering: optimizeLegibility;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+img {
+  border-radius: 5px;
+  height: auto;
+  width: 10rem;
+}
+
+
+
+small {
+  display: block;
+}
+
+a {
+  color: #343078;
+  text-decoration: none;
 }

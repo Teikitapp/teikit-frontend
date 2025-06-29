@@ -5,6 +5,7 @@ import { initMercadoPago, Wallet } from '@mercadopago/sdk-react'
 import ClienteService from '../servicios/ClienteService';
 import ScrollTop from './ScrollTop';
 import Header from './Header';
+import MenuInterior1 from './MenuInterior1';
 
 const Pagar = ({
   setAllProducts,
@@ -18,8 +19,7 @@ const Pagar = ({
   const [isLoading, setIsLoading] = useState(false);
   const [unClick, setUnClick] = useState(false);
 
-  //public key
-  initMercadoPago(process.env.REACT_APP_MERCADOPAGO_PUBLIC_KEY, { locale: "es-CL" });
+  initMercadoPago('APP_USR-ea0acb19-3225-4e42-8845-a528391f6cc0', { locale: "es-CL" });
   const [preferenciaId, setPreferenciaId] = useState(null);
   const handleBuy = async (idP) => {
     setUnClick(true)
@@ -117,7 +117,7 @@ const Pagar = ({
 
   return (
     <div>
-      <Header
+   {/*    <Header
         allProducts={allProducts}
         setAllProducts={setAllProducts}
         total={total}
@@ -126,8 +126,18 @@ const Pagar = ({
         setCountProducts={setCountProducts}
         email={email}
         nombre={nombre}
-      />
-
+      /> */}
+      
+      <MenuInterior1
+                allProducts={allProducts}
+                setAllProducts={setAllProducts}
+                total={total}
+                setTotal={setTotal}
+                countProducts={countProducts}
+                setCountProducts={setCountProducts}
+                email={email}
+                nombre={nombre}
+                 /> 
       <div className='fondoPedidos'>
         <ScrollTop></ScrollTop>
         <div className='card-product-container'>

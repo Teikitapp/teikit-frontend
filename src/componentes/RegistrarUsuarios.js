@@ -16,12 +16,12 @@ const RegistrarUsuarios = () => {
     const [nombre, setNombre] = useState("");
     const [ingresa, setIngresa] = useState(null);
     const [error, setError] = useState("");
-    //const [campoVacio, setCampoVacio] = useState("");
+    const [campoVacio, setCampoVacio] = useState("");
 
     const guardar = () => {
         if (!validator.isEmail(usuario)) {
             alert("Correo incorrecto.");
-            setError("Las contraseñas no coinciden.");
+            setError("Correo no cumple formato correcto.");
         } else if (pass !== passRepetida) {
             setError("Las contraseñas no coinciden. Por favor, repítalas correctamente.");
         } else {
@@ -47,6 +47,8 @@ const RegistrarUsuarios = () => {
                     console.log(error);
 
                 })
+            }else{
+                setCampoVacio("Ingrese datos para el registro");
             }
         }
     }
@@ -63,7 +65,7 @@ const RegistrarUsuarios = () => {
                 Registrar Usuario
                 </h2>
 
-                <form>
+                <form className='form'>
                     <Label className='labelLogin' for='usuario'>Nombre Usuario</Label>
                     <Input className='inputLogin' onChange={(name) => { funNombre(name) }} placeholder='' type="email" id="usuario" />
 
@@ -77,26 +79,24 @@ const RegistrarUsuarios = () => {
                     <Label className='labelLogin' for='passwordRepeat'>Repetir Contraseña</Label>
                     <Input className='inputLogin' onChange={(passRepeat) => { funPassRepetida(passRepeat) }} type='password' />
 
-                    {/* {campoVacio && <Label className='mensajeError'>{campoVacio}</Label>}*/}
+                    {campoVacio && <Label className='mensajeError'>{campoVacio}</Label>}
                     {error && <Label className='mensajeError'>{error}</Label>}
 
                     {/*  <Label className='mensajeError'> {ingresa === 0 ? "No se ha podido ingresar su solicitud, Intente mas atrde." : ""}</Label>*/}
                     <Label className='mensajeExito'> {ingresa === "Usuario ingresado con éxito" ? "Usuario ingresado con éxito." : ingresa === "Usuario ya existe" ? "Usuario ya existe" : ""}</Label>
                             
                     <div className='divIngresar'>
-                        <Button id="ingresar" className='btnIngresar' onClick={() => guardar()}>Registrar</Button>
+                        <Button id="ingresar" className='btnIngresarRegistrar' onClick={() => guardar()}>Registrar</Button>
                     </div>
 
-                    <div className='divBtnRegistrar'>
-                        <Link to="/registrarUsuario" className='' ><Button className='btnsLogin'> Registrar Usuario</Button></Link>
+                    <div className='divBtnRegistro'>
+                        
                         <Link to="/loginComercio" className=''><Button className='btnsLogin'>Login Cafetería</Button></Link>
                         <Link to="/login" className=''><Button className='btnsLogin'>Login Usuario</Button></Link>
                     </div>
                 </form>
             </div>
-            <div>
-                <img className='' src={imgCasillero} alt='logo'></img>
-            </div>
+           
 
            {/*  <Modal isOpen={verLogin === true}>
                 <ModalHeader>

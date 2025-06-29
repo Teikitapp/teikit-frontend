@@ -67,12 +67,12 @@
     text-align: right;
     height: 330px;
     height: 400px;
+    width: 270px;
 }
 .divHead{
     
   display: flex;
 
- /* padding: 10px 86px 2px 1px;  */
  /*padding: 9px 77px 5px 0px;*/
 
  background: rgba(245,76,9,255);
@@ -88,6 +88,21 @@ justify-content: space-between;
  z-index: 100;
 }
 
+.menu-div{
+    width: 360px;
+}
+
+@media screen and (max-width: 800px){
+    .menu-div{
+        width: 360px;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .menu-div{
+        width: 360px;
+    }
+}
 
 @media screen and (max-width: 700px){
     .contenedorNaranjo{
@@ -139,9 +154,18 @@ justify-content: space-between;
         height: 110px;
         z-index: 100;
         flex-wrap: nowrap;
+        width: 428px;
+    }
+    .menu-div{
+        width: 360px;
     }
     
 }
+
+
+
+
+
 
 
 
