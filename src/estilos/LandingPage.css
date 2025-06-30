@@ -294,22 +294,30 @@ input[type="submit"] {
     padding-top: 5px;
 }
 
-.todo-menu{
+.todo-menu {
   display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px; /* para que no queden pegados los extremos */
+  background-color: #FC4B08; /* ejemplo si quieres fondo */
+  height: 60px; /* altura fija para la barra */
+  color: white;
 }
 .icon-persona{
     color: white;
     padding: 10px;
     font-size: 20px;
 }
-.nombre-t{
-    color: white;
-    font-size: 30px;
-    font-weight: bold;
-    padding-left: 70px;
+.menu-test {
+  display: flex;
+  align-items: center;
+  width: 60px; /* ancho fijo para el menú burger */
+}
+.nombre-t {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  flex-grow: 1; /* toma el espacio restante */
 }
 .nombre-t1{
     color: white;
@@ -321,10 +329,13 @@ input[type="submit"] {
     color: #FC4B08;
     font-weight: 900;
 }
-.ingresa{
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
+.ingresa {
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 .div-img-logo-pequenio{
     display: flex;

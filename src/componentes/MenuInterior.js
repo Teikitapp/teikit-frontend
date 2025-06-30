@@ -31,15 +31,15 @@ const MenuInterior = () => {
     <div className='todo-menu'>
       <div ref={node} className='menu-test'>
           <Burger open={open} setOpen={setOpen} />
-          <Menu open={open} setOpen={setOpen} />
-          
+          <Menu open={open} setOpen={setOpen} />   
      </div>
      <div className='nombre-t'>
             TEIKIT
      </div>
      <div className='ingresa'>
-            
-            <Link to="/login" className='ingresa'>Ingresar<i className="bi bi-person icon-persona"></i></Link>
+            <Link to="/login" className='ingresa'>
+            Ingresar<i className="bi bi-person icon-persona"></i>
+          </Link>
      </div>
     </div>
   )
