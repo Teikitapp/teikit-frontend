@@ -33,11 +33,9 @@ const MenuInterior = () => {
           <Burger open={open} setOpen={setOpen} />
           <Menu open={open} setOpen={setOpen} />   
      </div>
-     <div className='nombre-t'>
-            TEIKIT
-     </div>
+     <div className='nombre-t'>TEIKIT</div>
      <div className='ingresa'>
-            <Link to="/login" className='ingresa'>
+          <Link to="/login" className='link-ingresa'>
             Ingresar<i className="bi bi-person icon-persona"></i>
           </Link>
      </div>

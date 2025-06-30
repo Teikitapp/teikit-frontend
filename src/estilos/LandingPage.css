@@ -298,26 +298,26 @@ input[type="submit"] {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px; /* para que no queden pegados los extremos */
-  background-color: #FC4B08; /* ejemplo si quieres fondo */
-  height: 60px; /* altura fija para la barra */
+  background-color: #fc4b08;
+  height: 60px;
+  padding: 0 20px;
   color: white;
-}
-.icon-persona{
-    color: white;
-    padding: 10px;
-    font-size: 20px;
+  font-family: Arial, sans-serif;
+  user-select: none;
 }
 .menu-test {
   display: flex;
   align-items: center;
-  width: 60px; /* ancho fijo para el menú burger */
+  width: 50px; /* ancho fijo para el menú */
+  justify-content: center; /* para que burger quede centrado */
 }
 .nombre-t {
+  flex-grow: 1;
+  text-align: center;
   font-size: 30px;
   font-weight: bold;
-  text-align: center;
-  flex-grow: 1; /* toma el espacio restante */
+  margin: 0;
+  padding: 0;
 }
 .nombre-t1{
     color: white;
@@ -330,13 +330,39 @@ input[type="submit"] {
     font-weight: 900;
 }
 .ingresa {
-  font-size: 16px;
+  width: 120px; /* ancho fijo para el botón ingresar */
+  display: flex;
+  justify-content: flex-end;
+}
+.link-ingresa {
+  color: white;
   font-weight: bold;
-  cursor: pointer;
+  font-size: 16px;
   display: flex;
   align-items: center;
   gap: 5px;
+  text-decoration: none;
 }
+.icon-persona {
+  font-size: 20px;
+  color: white;
+}
+.todo-menu {
+  border: 2px solid red;
+}
+
+.menu-test {
+  border: 2px solid blue;
+}
+
+.nombre-t {
+  border: 2px solid green;
+}
+
+.ingresa {
+  border: 2px solid yellow;
+}
+
 .div-img-logo-pequenio{
     display: flex;
         justify-content: center;

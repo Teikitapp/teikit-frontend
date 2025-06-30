@@ -88,20 +88,26 @@ justify-content: space-between;
  z-index: 100;
 }
 
-.menu-div{
-    width: 360px;
+.menu-div {
+    width: 100%;
+    max-width: 100%;
 }
 
+
 @media screen and (max-width: 800px){
-    .menu-div{
-        width: 360px;
+    .menu-div {
+    width: 100%;
+    max-width: 100%;
     }
+
 }
 
 @media screen and (max-width: 450px){
-    .menu-div{
-        width: 360px;
+   .menu-div {
+    width: 100%;
+    max-width: 100%;
     }
+
 }
 
 @media screen and (max-width: 700px){
@@ -156,9 +162,11 @@ justify-content: space-between;
         flex-wrap: nowrap;
         width: 428px;
     }
-    .menu-div{
-        width: 360px;
+    .menu-div {
+    width: 100%;
+    max-width: 100%;
     }
+
     
 }
 
