@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Label, Button } from "reactstrap"
+import {Button } from "reactstrap"
 import "../estilos/Login.css"
 import ClienteService from '../servicios/ClienteService';
 import { Link, useNavigate } from "react-router-dom";

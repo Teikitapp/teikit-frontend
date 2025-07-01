@@ -1,6 +1,5 @@
 import React from 'react'
 import landingPage from "../imagenes/imgInicio.png";
-import disenio from "../imagenes/disenioLineas.png";
 import "../estilos/LandingPage.css";
 import { Link } from 'react-router-dom'
 import MenuInterior from './MenuInterior';
