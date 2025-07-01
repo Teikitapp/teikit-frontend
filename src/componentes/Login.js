@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Button } from "reactstrap"
 import "../estilos/Login.css"
 import ClienteService from '../servicios/ClienteService';
-import { useNavigate } from 'react-router';
+import { useNavigate } from 'react-router-dom';
 import { Link } from "react-router-dom";
 import teikit from "../imagenes/teikitMenu.png";
 
