@@ -31,7 +31,7 @@ const Contactanos = () => {
         }
     };
     return (
-        <div>
+        <div style={{ background: "#fff", minHeight: "100vh", fontFamily: "'Poppins', Arial, Helvetica, sans-serif" }}>
             <div className='menu-div'>
                 <MenuInterior></MenuInterior>
             </div>

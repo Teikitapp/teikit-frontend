@@ -1,3 +1,13 @@
+.contenedorTexto,
+.tituloPedido,
+.divQr,
+.sinPedidos,
+.divConfirmacion,
+.botonAceptar,
+.botonRechazar {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif !important;
+}
+
 .contenedorTexto{
     display: flex;
     flex-direction: column;

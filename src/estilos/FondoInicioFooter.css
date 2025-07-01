@@ -135,3 +135,19 @@
         font-size: 22px;
     }
 }
+
+.footer,
+.formatoTextos,
+.textoNaranjo,
+.textoNaranjoTeikit,
+.textoNegro,
+.espacioTitulo,
+.espacioEnteTexto {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif !important;
+}
+.textoNaranjo,
+.textoNaranjoTeikit,
+.espacioTitulo,
+.espacioEnteTexto {
+    font-weight: 800 !important;
+}

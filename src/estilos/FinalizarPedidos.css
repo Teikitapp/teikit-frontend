@@ -1,3 +1,18 @@
+.contenedorFinalizarPedido,
+.card-product-container-finalizar,
+.card-product-finalizar,
+.card-finalizar,
+.divSelectTiempo,
+.formatoSelect,
+.divCalendario,
+.btnCalendario,
+.divPagar,
+.botonPagar,
+.botonSeguirComprando,
+.select-tiempo {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif !important;
+}
+
 .contenedorFinalizarPedido{
     /*  align-items: center;
      display: flex;
@@ -162,5 +177,4 @@
     align-items: center;
     position: static;
   }
-  
-  
+

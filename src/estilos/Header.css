@@ -571,3 +571,22 @@ ul {
         width: 80px;
     }
 }
+
+.headerMenu,
+.cardMenu,
+.cardTexto,
+.cardNombre,
+.textoNaranjo,
+.textoNaranjoTeikit,
+.textoNegro,
+.espacioTitulo,
+.espacioEnteTexto {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif !important;
+}
+.headerMenu,
+.cardMenu,
+.cardNombre,
+.espacioTitulo,
+.espacioEnteTexto {
+    font-weight: 800 !important;
+}

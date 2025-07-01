@@ -170,12 +170,15 @@ justify-content: space-between;
     
 }
 
-
-
-
-
-
-
+.fondoNaranjo,
+.texto,
+.botonPedirAhora {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif !important;
+}
+.texto,
+.botonPedirAhora {
+    font-weight: 700 !important;
+}
 
 /* linear-gradient(74deg, #FC4B08 100%, #F5F5F5 100%,#FFFFFF 100%) */
 

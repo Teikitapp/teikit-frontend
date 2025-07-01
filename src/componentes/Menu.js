@@ -2,16 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-
-
-
-const Menu = ({ open }) => {
-  const StyledMenu = styled.nav`
+// Cambia la fuente a Poppins en el menú hamburguesa
+const StyledMenu = styled.nav`
+  font-family: 'Poppins', Arial, Helvetica, sans-serif !important;
   display: flex;
   flex-direction: column;
   justify-content: center;
   background-color: #FC4B08;
-  color:white;
+  color: white;
   transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
   height: 100vh;
   text-align: left;
@@ -20,23 +18,20 @@ const Menu = ({ open }) => {
   top: 0;
   left: 0;
   transition: transform 0.3s ease-in-out;
-  
-  display: flex;
-        align-content: space-around;
-        align-items: center;
+  align-content: space-around;
+  align-items: center;
 
   @media (max-width: 576px) {
     width: 100%;
   }
 
   li {
-  color: white;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif !important;
+    color: white;
     font-size: 2rem;
     text-transform: uppercase;
-    
-    font-weight: bold;
+    font-weight: 700;
     letter-spacing: 0.5rem;
-    color: #0d0c1d;
     text-decoration: none;
     transition: color 0.3s linear;
     padding-top: 30px;
@@ -53,6 +48,7 @@ const Menu = ({ open }) => {
   }
 `;
 
+const Menu = ({ open }) => {
   return (
     <StyledMenu open={open}>
       <li>

@@ -1,14 +1,11 @@
 .fondoPedidos{
     background-color: white;
     align-items: center;
-    /* position: absolute; */
     display: flex;
     flex-direction: column;
-    /* height: 1448px; */
     padding-bottom: 200px;
-    /* width: 1420px; */
     width: 1425px; 
-    font-family: Arial;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif !important;
     line-height: 1.3;
 }
 
@@ -36,7 +33,8 @@
     padding-block-end: 13px;
     /* height: 184px; */
     width: 1425px;
-    font-weight: bold;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif !important;
+    font-weight: 800;
     font-size: 50px;
 }
 .divTitulocliente{

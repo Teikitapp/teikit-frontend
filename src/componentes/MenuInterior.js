@@ -63,7 +63,9 @@ const MenuInterior = () => {
                         background: "#FC4B08",
                         zIndex: 9999,
                         padding: "2rem",
-                        color: "white"
+                        color: "white",
+                        fontFamily: "'Poppins', Arial, Helvetica, sans-serif", // Fuente Poppins
+                        fontWeight: 400
                     }}
                 >
                     {/* Ejemplo de cierre */}
@@ -78,7 +80,9 @@ const MenuInterior = () => {
                             position: "absolute",
                             top: 10,
                             right: 10,
-                            cursor: "pointer"
+                            cursor: "pointer",
+                            fontFamily: "'Poppins', Arial, Helvetica, sans-serif", // Fuente Poppins
+                            fontWeight: 700
                         }}
                     >✕</button>
                     {/* ...aquí tus links... */}
