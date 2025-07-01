@@ -130,7 +130,7 @@ const LoginCliente = ({ setRespLoginComercio }) => {
                 </form>
                 <div className='divBtnRegistrar' style={{ width: "100%" }}>
                     <Link to="/login" className='' style={{ width: "100%" }}>
-                        <Button className='btnsLogin' style={{ width: "100%", maxWidth: 340 }}>Login Usuario</Button>
+                        <Button className='btnsLogin' style={{ width: "100%", maxWidth: 340 }}>Ingreso usuario</Button>
                     </Link>
                 </div>
             </div>
