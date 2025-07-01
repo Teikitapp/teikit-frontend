@@ -304,36 +304,50 @@ input[type="submit"] {
   color: white;
   font-family: Arial, sans-serif;
   user-select: none;
+  /* Quitar border para producción */
+  /* border: 2px solid red; */
+  position: relative;
 }
+
 .menu-test {
   display: flex;
   align-items: center;
-  width: 50px; /* ancho fijo para el menú */
-  justify-content: center; /* para que burger quede centrado */
+  width: 50px;
+  justify-content: center;
+  /* border: 2px solid blue; */
+  height: 100%;
 }
+
 .nombre-t {
-  flex-grow: 1;
+  flex: 1;
   text-align: center;
   font-size: 30px;
   font-weight: bold;
   margin: 0;
   padding: 0;
+  /* border: 2px solid green; */
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  pointer-events: none; /* para que no bloquee clicks */
 }
-.nombre-t1{
-    color: white;
-    font-size: 30px;
-    font-weight: bold;
+
+.nombre-t.hide-teikit {
+  display: none;
 }
-.noMasFila{
-    font-size: 22px;
-    color: #FC4B08;
-    font-weight: 900;
-}
+
 .ingresa {
-  width: 120px; /* ancho fijo para el botón ingresar */
+  width: 120px;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+  margin-left: auto;
+  /* border: 2px solid yellow; */
+  height: 100%;
 }
+
 .link-ingresa {
   color: white;
   font-weight: bold;
@@ -342,37 +356,19 @@ input[type="submit"] {
   align-items: center;
   gap: 5px;
   text-decoration: none;
-}
-.icon-persona {
-  font-size: 20px;
-  color: white;
-}
-.todo-menu {
-  border: 2px solid red;
+  height: 100%;
 }
 
-.menu-test {
-  border: 2px solid blue;
+.menu-test button, .menu-test .hamburger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
-.nombre-t {
-  border: 2px solid green;
-}
-
-.ingresa {
-  border: 2px solid yellow;
-}
-
-.div-img-logo-pequenio{
-    display: flex;
-        justify-content: center;
-        flex-wrap: nowrap;
-        flex-direction: column;
-        align-items: flex-start;
-}
-.div-img-logo-grande{
-
-}
 .img-logo-pequenio{
     width: 4rem;
     padding: 0px 0px 30px 12px;
@@ -935,6 +931,14 @@ img {
 
 
 
+small {
+  display: block;
+}
+
+a {
+  color: #343078;
+  text-decoration: none;
+}
 small {
   display: block;
 }

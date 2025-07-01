@@ -50,35 +50,28 @@ color: white;
 }
 `;
 
-
 const Menu1 = ({ open1 }) => {
-
   const [active, setActive] = useState(false);
 
   return (
     <StyledMenu open1={open1}>
-       <li href="/">
-        <Link to="/home"> 📩 Inicio</Link>
+      <li>
+        <Link to="/home">🏠 Inicio</Link>
       </li>
-     
-
-  
-                                <hr className='hrHorizontal' />
-                                <li>
-                                    <Link to="/pedidos"  >📩 Pedidos</Link>
-
-                                </li>
-                                <hr className='hrHorizontal' />
-                                <li> <Link to="/home" onClick={() => setActive(!active)} >📩 Carrito</Link></li>
-                                <hr className='hrHorizontal' />
-                                <li>
-                                    <Link to="/retirosPendientes">📩 Pedidos en curso</Link>
-                                </li>
-                                <hr className='hrHorizontal' />
-                               
-                                
-                                
-                                   {/* <div className='cardMenu'>
+      <hr className='hrHorizontal' />
+      <li>
+        <Link to="/pedidos">🧾 Pedidos</Link>
+      </li>
+      <hr className='hrHorizontal' />
+      <li>
+        <Link to="/home" onClick={() => setActive(!active)}>🛒 Carrito</Link>
+      </li>
+      <hr className='hrHorizontal' />
+      <li>
+        <Link to="/retirosPendientes">⏳ Pedidos en curso</Link>
+      </li>
+      <hr className='hrHorizontal' />
+      {/* <div className='cardMenu'>
                                  <div className='contenidoCard'>
                                         <div className='cardAvatar'><img className='imgAvatar' src={dog} alt='logo de freeCode'></img> </div>
                                         <div className='cardTexto'>

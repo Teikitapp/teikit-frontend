@@ -56,28 +56,28 @@ const Menu = ({ open }) => {
   return (
     <StyledMenu open={open}>
       <li>
-        <Link to="/Landing">  💁🏻‍♂️ Inicio</Link>
+        <Link to="/Landing">  🏠 Inicio</Link>
       </li>
       <li href="/">
-        <Link to="/QueEs">  💸 ¿Qué Es?</Link>
+        <Link to="/QueEs">  ❓ ¿Qué Es?</Link>
       </li>
       <li href="/">
-        <Link to="/quienesSomos"> 💸  ¿Quiénes somos?</Link>
+        <Link to="/quienesSomos"> 👥 ¿Quiénes somos?</Link>
       </li>
       <li href="/">
-        <Link to="/aliados"> 💸  Aliados</Link>
+        <Link to="/aliados"> 🤝 Aliados</Link>
       </li>
       <li href="/">
-        <Link to="/mision"> 💸  Misión</Link>
+        <Link to="/mision"> 🎯 Misión</Link>
       </li>
       <li href="/">
-        <Link to="/trayectoria"> 💸  Trayectoria</Link>
+        <Link to="/trayectoria"> 🛤️ Trayectoria</Link>
       </li>
       <li href="/">
-        <Link to="/tecnologia"> 💸  Tecnología</Link>
+        <Link to="/tecnologia"> 💡 Tecnología</Link>
       </li>
       <li href="/">
-        <Link to="/contactanos"> 📩 Contactanos</Link>
+        <Link to="/contactanos"> 📩 Contáctanos</Link>
       </li>
     </StyledMenu>
   );
