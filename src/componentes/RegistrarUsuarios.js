@@ -51,19 +51,20 @@ const RegistrarUsuarios = () => {
             minHeight: "100vh",
             width: "100vw",
             display: "flex",
-            alignItems: "center",
+            alignItems: "flex-start",
             justifyContent: "center",
             background: "#fff",
             position: "fixed",
             top: 0,
             left: 0,
-            zIndex: 1000
+            zIndex: 1000,
+            paddingTop: "40px"
         }}>
             <div className="panel-lite" style={{
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
-                justifyContent: "center",
+                justifyContent: "flex-start",
                 width: "100%",
                 maxWidth: 440,
                 minWidth: 340,
@@ -99,21 +100,21 @@ const RegistrarUsuarios = () => {
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
-                    marginBottom: 18
+                    marginBottom: 18,
+                    marginTop: 10
                 }}>
                     <img
                         className='imgLogin'
                         src={teikit}
                         alt='logo teikit'
                         style={{
-                            width: "220px",
-                            height: "220px",
+                            width: "330px",
+                            height: "330px",
                             objectFit: "contain",
                             display: "block"
                         }}
                     />
                 </div>
-                <h2 className='tituloLogin'>Registrar Usuario</h2>
                 <form className='form-login' style={{
                     width: "100%",
                     maxWidth: 340,

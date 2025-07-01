@@ -1,8 +1,7 @@
 import React from 'react'
 import landingPage from "../imagenes/imgInicio.png";
-
 import disenio from "../imagenes/disenioLineas.png";
-
+import teikitLogoBlanco from "../imagenes/teikit-logo-letras-blancas.png";
 import "../estilos/LandingPage.css";
 import { Link } from 'react-router-dom'
 //import emailjs from '@emailjs/browser';
@@ -45,41 +44,28 @@ const LandingPage = () => {
 
   return (
     <div>
-
       <div className='menu-div'>
-        <MenuInterior></MenuInterior>
+        <MenuInterior showLogo={true}></MenuInterior>
       </div>
-
       <div className='color-withe'>
-
-
         <div>
           <div className="divInit" >
             <div className=''>
               <img className='imgLineas' src={disenio} alt='logo'></img>
             </div>
-            <div className=''>
+            <div className='' style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", width: "100%" }}>
               <h1 className='textoTitulo'>PIDE</h1>
               <h1 className='textoTitulo'>ELIGE</h1>
               <h1 className='textoTitulo'>RETIRA</h1>
             </div>
           </div>
-
-          {/* <div className="divNav" >
-            <nav className='nav'>
-              <img className='teikit' src={teikit} alt='logo'></img>
-            </nav>
-          </div> */}
-
-
-
-
           <div className="divUno" >
             <span className='textoInicio'>Pide desde tu celular y retira en segundos.</span>
             <img className='imagen-inicio' src={landingPage} alt='logo'></img>
-            <Link to="/registrarUsuario" className='div-btn'><button className='botonIr'>PIDE AQUÍ</button></Link>
+            <Link to="/login" className='div-btn'>
+              <button className='botonIr'>PIDE AQUÍ</button>
+            </Link>
           </div>
-
           {/* <div className="divDos">      
           <h1 className='textoComoFunciona'>¿Cómo Funciona?</h1>
           <img className='imagenComoFunciona' src={funcionaImg} alt='logo'></img>
@@ -132,5 +118,4 @@ const LandingPage = () => {
     </div>
   )
 }
-
-export default LandingPage
+export default LandingPage;

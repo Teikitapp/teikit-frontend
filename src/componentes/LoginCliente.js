@@ -40,15 +40,16 @@ const LoginCliente = ({ setRespLoginComercio }) => {
             minHeight: "100vh",
             width: "100vw",
             display: "flex",
-            alignItems: "center",
+            alignItems: "flex-start",
             justifyContent: "center",
-            background: "#fff"
+            background: "#fff",
+            paddingTop: "40px"
         }}>
             <div className="panel-lite" style={{
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
-                justifyContent: "center",
+                justifyContent: "flex-start",
                 width: "100%",
                 maxWidth: 440,
                 minWidth: 340,
@@ -84,15 +85,16 @@ const LoginCliente = ({ setRespLoginComercio }) => {
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
-                    marginBottom: 18
+                    marginBottom: 18,
+                    marginTop: 10
                 }}>
                     <img
                         className='imgLogin'
                         src={teikit}
                         alt='logo teikit'
                         style={{
-                            width: "220px",
-                            height: "220px",
+                            width: "330px",
+                            height: "330px",
                             objectFit: "contain",
                             display: "block"
                         }}
