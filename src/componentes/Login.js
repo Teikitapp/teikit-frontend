@@ -147,3 +147,14 @@ const Login = ({ setRespLogin, setUsuarios }) => {
 }
 
 export default Login;
+
+// Asegúrate de que este componente (Login) esté siendo renderizado DENTRO de un <BrowserRouter> o <Router> en tu App principal.
+// Ejemplo en App.js:
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
+// ...
+// <BrowserRouter>
+//   <Routes>
+//     <Route path="/login" element={<Login ... />} />
+//     {/* ...otras rutas... */}
+//   </Routes>
+// </BrowserRouter>
