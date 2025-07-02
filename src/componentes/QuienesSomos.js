@@ -28,8 +28,8 @@ const integrantes = [
 
 const QuienesSomos = () => {
   return (
-    <div style={{ background: "#fff", minHeight: "100vh" }}>
-      <div className='menu-div'>
+    <div style={{ background: "#fff", minHeight: "100vh", position: "relative", zIndex: 0 }}>
+      <div className='menu-div' style={{ position: "relative", zIndex: 10 }}>
         <MenuInterior />
       </div>
       <div className="divTQuienes" style={{
@@ -39,7 +39,9 @@ const QuienesSomos = () => {
         flexDirection: "row",
         alignItems: "flex-start",
         minHeight: "100vh",
-        justifyContent: "center"
+        justifyContent: "center",
+        position: "relative",
+        zIndex: 1
       }}>
         {/* Columna izquierda: título y texto */}
         <div style={{
@@ -86,7 +88,9 @@ const QuienesSomos = () => {
           display: "flex",
           justifyContent: "center",
           alignItems: "flex-start",
-          minHeight: "100vh"
+          minHeight: "100vh",
+          position: "relative",
+          zIndex: 1
         }}>
           <div
             style={{
@@ -97,7 +101,9 @@ const QuienesSomos = () => {
               alignItems: "start",
               maxWidth: 400,
               width: "100%",
-              margin: "0 auto"
+              margin: "0 auto",
+              position: "relative",
+              zIndex: 1
             }}
           >
             {integrantes.map((int, idx) => (
@@ -106,7 +112,9 @@ const QuienesSomos = () => {
                 flexDirection: "column",
                 alignItems: "center",
                 width: 170,
-                justifyContent: "flex-start"
+                justifyContent: "flex-start",
+                position: "relative",
+                zIndex: 1
               }}>
                 <div style={{
                   position: "relative",
@@ -115,7 +123,8 @@ const QuienesSomos = () => {
                   marginBottom: 4,
                   display: "flex",
                   alignItems: "flex-end",
-                  justifyContent: "center"
+                  justifyContent: "center",
+                  zIndex: 1
                 }}>
                   {/* Fondo naranja cuadrado detrás de la parte inferior de la imagen */}
                   <div style={{
@@ -125,9 +134,7 @@ const QuienesSomos = () => {
                     width: 170,
                     height: 56,
                     background: "#FC4B08",
-                    zIndex: 0, // detrás de la imagen
-                    borderBottomLeftRadius: 0,
-                    borderBottomRightRadius: 0
+                    zIndex: 0 // fondo debajo de la imagen
                   }} />
                   <img
                     src={int.img}
@@ -139,7 +146,7 @@ const QuienesSomos = () => {
                       borderRadius: 0,
                       background: "transparent",
                       position: "relative",
-                      zIndex: 1 // sobre el fondo naranja
+                      zIndex: 1 // imagen sobre el fondo
                     }}
                   />
                 </div>
