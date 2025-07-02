@@ -1,4 +1,3 @@
-
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Pedidos from './componentes/Pedidos';
 import Home from './componentes/Home';
@@ -25,6 +24,7 @@ import Aliados from './componentes/Aliados';
 import Mision from './componentes/Mision';
 import Trayectoria from './componentes/Trayectoria';
 import Tecnologia from './componentes/Tecnologia';
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   const [allProducts, setAllProducts] = useState([]);
@@ -63,6 +63,7 @@ function App() {
 
 
   return (
+    <BrowserRouter>
     <div>
       <BrowserRouter>
         <div>
@@ -178,6 +179,7 @@ function App() {
         </div>
       </BrowserRouter>
     </div>
+    </BrowserRouter>
 
 
 
