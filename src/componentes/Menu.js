@@ -31,10 +31,12 @@ const StyledMenu = styled.nav`
     font-size: 2rem;
     text-transform: uppercase;
     font-weight: 700;
-    letter-spacing: 0.5rem;
+    letter-spacing: 0.02em; /* <--- Reduce el espaciado entre letras */
     text-decoration: none;
     transition: color 0.3s linear;
-    padding-top: 30px;
+    padding-top: 18px; /* <--- Reduce el espacio vertical */
+    padding-bottom: 0;
+    margin-bottom: 0;
 
     @media (max-width: 576px) {
       font-size: 1.5rem;
