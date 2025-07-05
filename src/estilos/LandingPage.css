@@ -294,48 +294,81 @@ input[type="submit"] {
     padding-top: 5px;
 }
 
-.todo-menu{
+.todo-menu {
   display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fc4b08;
+  height: 60px;
+  padding: 0 20px;
+  color: white;
+  font-family: Arial, sans-serif;
+  user-select: none;
+  /* Quitar border para producción */
+  /* border: 2px solid red; */
+  position: relative;
 }
-.icon-persona{
-    color: white;
-    padding: 10px;
-    font-size: 20px;
-}
-.nombre-t{
-    color: white;
-    font-size: 30px;
-    font-weight: bold;
-    padding-left: 70px;
-}
-.nombre-t1{
-    color: white;
-    font-size: 30px;
-    font-weight: bold;
-}
-.noMasFila{
-    font-size: 22px;
-    color: #FC4B08;
-    font-weight: 900;
-}
-.ingresa{
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-}
-.div-img-logo-pequenio{
-    display: flex;
-        justify-content: center;
-        flex-wrap: nowrap;
-        flex-direction: column;
-        align-items: flex-start;
-}
-.div-img-logo-grande{
 
+.menu-test {
+  display: flex;
+  align-items: center;
+  width: 50px;
+  justify-content: center;
+  /* border: 2px solid blue; */
+  height: 100%;
 }
+
+.nombre-t {
+  flex: 1;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  /* border: 2px solid green; */
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  pointer-events: none; /* para que no bloquee clicks */
+}
+
+.nombre-t.hide-teikit {
+  display: none;
+}
+
+.ingresa {
+  width: 120px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: auto;
+  /* border: 2px solid yellow; */
+  height: 100%;
+}
+
+.link-ingresa {
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  height: 100%;
+}
+
+.menu-test button, .menu-test .hamburger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
 .img-logo-pequenio{
     width: 4rem;
     padding: 0px 0px 30px 12px;
@@ -894,15 +927,4 @@ img {
   border-radius: 5px;
   height: auto;
   width: 10rem;
-}
-
-
-
-small {
-  display: block;
-}
-
-a {
-  color: #343078;
-  text-decoration: none;
 }

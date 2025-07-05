@@ -7,7 +7,9 @@ const StyledBurger = styled.button`
   left: 0.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+  gap: 7px; /* Aumenta la separación entre las líneas */
   width: 2rem;
   height: 2rem;
   background: transparent;

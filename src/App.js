@@ -1,4 +1,3 @@
-
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Pedidos from './componentes/Pedidos';
 import Home from './componentes/Home';
@@ -63,9 +62,11 @@ function App() {
 
 
   return (
-    <div>
-      <BrowserRouter>
-        <div>
+    // Asegúrate de que SOLO haya un <BrowserRouter> y que esté en el nivel más alto posible
+    <BrowserRouter>
+      {/* Si tienes un componente ScrollTop, asegúrate de que esté DENTRO del <BrowserRouter> */}
+      {/* <ScrollTop /> */}
+      <div>
           {/* <Routes>
             <Route path='/registrarUsuario' element={<RegistrarUsuarios />}></Route>
 
@@ -177,7 +178,6 @@ function App() {
 
         </div>
       </BrowserRouter>
-    </div>
 
 
 

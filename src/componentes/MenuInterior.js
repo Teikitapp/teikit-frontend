@@ -1,8 +1,8 @@
-import React, { useRef } from 'react'
+import React, { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import Burger from './Burger';
 import Menu from './Menu';
-import { Link } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import teikitLogoBlanco from "../imagenes/teikit-logo-letras-blancas.png";
 import "../estilos/LandingPage.css";
 
 const useOnClickOutside = (ref, handler) => {
@@ -19,30 +19,77 @@ const useOnClickOutside = (ref, handler) => {
     }, [ref, handler]);
   };
 
-  
 const MenuInterior = () => {
+    const [menuOpen, setMenuOpen] = useState(false);
+    const node = useRef();
+    useOnClickOutside(node, () => setMenuOpen(false));
 
+    return (
+        <div className="todo-menu">
+            <div className="menu-test">
+                <Burger open={menuOpen} setOpen={setMenuOpen} />
+                <Menu open={menuOpen} setOpen={setMenuOpen} />   
+            </div>
+            {/* Mostrar el logo solo si el menú lateral está cerrado */}
+            {!menuOpen && (
+                <div className="nombre-t" style={{ display: "flex", alignItems: "center", justifyContent: "center", height: "100%" }}>
+                    <img
+                        src={teikitLogoBlanco}
+                        alt="TEIKIT"
+                        style={{
+                            height: "27px",
+                            width: "auto",
+                            margin: "0 auto",
+                            display: "block"
+                        }}
+                    />
+                </div>
+            )}
+            <div className='ingresa'>
+                <Link to="/login" className='link-ingresa'>
+                    Ingresar<i className="bi bi-person icon-persona"></i>
+                </Link>
+            </div>
+            {/* Menú lateral */}
+            {menuOpen && (
+                <div
+                    className="desplegable"
+                    style={{
+                        position: "fixed",
+                        top: 0,
+                        left: 0,
+                        width: "300px",
+                        height: "100vh",
+                        background: "#FC4B08",
+                        zIndex: 9999,
+                        padding: "2rem",
+                        color: "white",
+                        fontFamily: "'Poppins', Arial, Helvetica, sans-serif", // Fuente Poppins
+                        fontWeight: 400
+                    }}
+                >
+                    {/* Ejemplo de cierre */}
+                    <button
+                        onClick={() => setMenuOpen(false)}
+                        aria-label="Cerrar menú"
+                        style={{
+                            background: "none",
+                            border: "none",
+                            color: "white",
+                            fontSize: 32,
+                            position: "absolute",
+                            top: 10,
+                            right: 10,
+                            cursor: "pointer",
+                            fontFamily: "'Poppins', Arial, Helvetica, sans-serif", // Fuente Poppins
+                            fontWeight: 700
+                        }}
+                    >✕</button>
+                    {/* ...aquí tus links... */}
+                </div>
+            )}
+        </div>
+    );
+};
 
-  const [open, setOpen] = useState(false);
-  const node = useRef();
-  useOnClickOutside(node, () => setOpen(false));
-
-  return (
-    <div className='todo-menu'>
-      <div ref={node} className='menu-test'>
-          <Burger open={open} setOpen={setOpen} />
-          <Menu open={open} setOpen={setOpen} />
-          
-     </div>
-     <div className='nombre-t'>
-            TEIKIT
-     </div>
-     <div className='ingresa'>
-            
-            <Link to="/login" className='ingresa'>Ingresar<i className="bi bi-person icon-persona"></i></Link>
-     </div>
-    </div>
-  )
-}
-
-export default MenuInterior
+export default MenuInterior;
